@@ -23,29 +23,23 @@ class ResPartner(models.Model):
 
     # 2. Fields declaration
     business_id = fields.Char('Business id')
-    businessid = fields.Char('Business id', compute='compute_businessid')
 
     # 3. Default methods
 
     # 4. Compute and search fields, in the same order that fields declaration
-    @api.model
-    @api.depends('business_id')
-    def compute_businessid(self):
-        for record in self:
-            record.businessid = record.business_id
 
     # 5. Constraints and onchanges
-    @api.onchange('businessid')
-    def onchange_businessid_update_format(self):
+    @api.onchange('business_id')
+    def onchange_business_id_update_format(self):
         # Reformat business id from 12345671 to 1234567-1
-        if isinstance(self.businessid, basestring) and re.match('^[0-9]{8}$', self.businessid):
-            self.businessid = self.businessid[:7] + '-' + self.businessid[7:]
+        if isinstance(self.business_id, basestring) and re.match('^[0-9]{8}$', self.business_id):
+            self.business_id = self.business_id[:7] + '-' + self.business_id[7:]
 
     @api.constrains('business_id')
     def _validate_business_id(self):
         business_id = self.business_id
 
-        # Contry code is not FI, skip this
+        # Country code is not FI, skip this
         if self.country_id.code != 'FI':
             return True
 
@@ -64,11 +58,11 @@ class ResPartner(models.Model):
             raise ValidationError("Your business id is invalid. Please use format 1234567-1")
 
         # The formal format is ok, check the validation number
-        multipliers = [7, 9, 10, 5, 8, 4, 2]  # Number-space spesific multipliers
-        validation_multiplier = 0  # Inital multiplier
+        multipliers = [7, 9, 10, 5, 8, 4, 2]  # Number-space specific multipliers
+        validation_multiplier = 0  # Initial multiplier
         number_index = 0  # The index of the number we are parsing
 
-        business_id_number = re.sub("[^0-9]", "", business_id)  # buisiness id without "-" for validation
+        business_id_number = re.sub("[^0-9]", "", business_id)  # business id without "-" for validation
         validation_bit = business_id_number[7:8]
 
         # Test the validation bit
@@ -90,15 +84,3 @@ class ResPartner(models.Model):
     # 7. Action methods
 
     # 8. Business methods
-    @api.model
-    def _init_business_ids(self):
-        # When the module is installed update business ids from alternatively named fields
-
-        partners = self.search([])
-
-        if not partners:
-            return False
-
-        if hasattr(partners[0], 'businessid'):
-            for partner in partners:
-                partner.business_id = partner.businessid
