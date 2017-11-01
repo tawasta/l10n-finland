@@ -1,39 +1,36 @@
 # -*- coding: utf-8 -*-
-
-# 1. Standard library imports:
 import logging
 import sys
 import datetime
 import StringIO
 
-# 2. Known third party imports:
 from dateutil.tz import tzlocal
-
-# 3. Odoo imports (openerp):
 from odoo import api, fields, models
 
-# 4. Imports from Odoo modules:
-
-# 5. Local imports in the relative form:
-
-# 6. Unknown third party imports:
+# Finvoice imports
 from finvoice.finvoice201 import Finvoice
+
+# Message transmission details
 from finvoice.finvoice201 import MessageTransmissionDetailsType
 from finvoice.finvoice201 import MessageSenderDetailsType
 from finvoice.finvoice201 import MessageReceiverDetailsType
 from finvoice.finvoice201 import MessageDetailsType
 
+# Seller party details
+from finvoice.finvoice201 import SellerPartyDetailsType
+from finvoice.finvoice201 import SellerPostalAddressDetailsType
+
 from finvoice.sender.senderinfo import ExternalEncoding
 from finvoice.sender.senderinfo import FinvoiceSenderInfo
 # from finvoice.sender.senderinfo import MessageDetailsType
-from finvoice.sender.senderinfo import SellerPartyDetailsType
-from finvoice.sender.senderinfo import SellerPostalAddressDetailsType
+# from finvoice.sender.senderinfo import SellerPartyDetailsType
+# from finvoice.sender.senderinfo import SellerPostalAddressDetailsType
 from finvoice.sender.senderinfo import SellerOrganisationNamesType
 from finvoice.sender.senderinfo import InvoiceSenderInformationDetailsType
 from finvoice.sender.senderinfo import SellerAccountDetailsType
 from finvoice.sender.senderinfo import SellerAccountIDType
 from finvoice.sender.senderinfo import SellerBicType
-from finvoice.sender.senderinfo import SellerInvoiceDetailsType
+#from finvoice.sender.senderinfo import SellerInvoiceDetailsType
 from finvoice.sender.senderinfo import SellerInvoiceTypeDetailsType
 from finvoice.sender.senderinfo import SellerInvoiceTypeTextType
 from finvoice.sender.senderinfo import SellerInvoiceIdentifierTextType
@@ -70,6 +67,7 @@ class AccountInvoice(models.Model):
         finvoice_object = Finvoice('2.01')
 
         self.add_message_transmission_details(finvoice_object)
+        self.add_seller_party_details(finvoice_object)
 
         finvoice_xml = finvoice_object.export(output, 0, name_='Finvoice', pretty_print=True)
 
@@ -78,7 +76,7 @@ class AccountInvoice(models.Model):
     def add_message_transmission_details(self, finvoice_object):
 
         MessageSenderDetails = MessageSenderDetailsType(
-            FromIdentifier=self.company_id.company_registry,
+            FromIdentifier=self.company_id.company_registry,  # Business id
             FromIntermediator='',
         )
 
@@ -101,7 +99,29 @@ class AccountInvoice(models.Model):
 
         finvoice_object.set_MessageTransmissionDetails(MessageTransmissionDetails)
 
-    def asd(self):
+    def add_seller_party_details(self, finvoice_object):
+        company = self.company_id
+
+        SellerPostalAddressDetails = SellerPostalAddressDetailsType(
+            SellerStreetName=[company.street, company.street2],
+            SellerTownName=company.city,
+            SellerPostCodeIdentifier=company.zip,
+            CountryCode=company.country_id.code,
+            CountryName=company.country_id.name,
+        )
+
+        SellerPartyDetails = SellerPartyDetailsType(
+            SellerPartyIdentifier=company.company_registry,  # Business id
+            SellerPartyIdentifierUrlText=company.website,
+            SellerOrganisationName=[company.name],
+            SellerOrganisationTaxCode=company.vat,
+            SellerOrganisationTaxCodeUrlText='',
+            SellerPostalAddressDetails=SellerPostalAddressDetails,
+        )
+
+        finvoice_object.set_SellerPartyDetails(SellerPartyDetails)
+
+    def test(self):
         _sellerOrganisationName = {
             'FI': 'Pullis Musiken Oy',
             'SV': 'Pullis Musiken Ab',
