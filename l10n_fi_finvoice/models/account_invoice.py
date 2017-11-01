@@ -17,9 +17,15 @@ from odoo import api, fields, models
 # 5. Local imports in the relative form:
 
 # 6. Unknown third party imports:
+from finvoice.finvoice201 import Finvoice
+from finvoice.finvoice201 import MessageTransmissionDetailsType
+from finvoice.finvoice201 import MessageSenderDetailsType
+from finvoice.finvoice201 import MessageReceiverDetailsType
+from finvoice.finvoice201 import MessageDetailsType
+
 from finvoice.sender.senderinfo import ExternalEncoding
 from finvoice.sender.senderinfo import FinvoiceSenderInfo
-from finvoice.sender.senderinfo import MessageDetailsType
+# from finvoice.sender.senderinfo import MessageDetailsType
 from finvoice.sender.senderinfo import SellerPartyDetailsType
 from finvoice.sender.senderinfo import SellerPostalAddressDetailsType
 from finvoice.sender.senderinfo import SellerOrganisationNamesType
@@ -36,8 +42,6 @@ from finvoice.sender.senderinfo import date
 from finvoice.soap.envelope import Envelope, Header, Body
 from finvoice.soap.msgheader import MessageHeader, From, To, PartyId, Service, MessageData
 from finvoice.soap.msgheader import Manifest, Reference, Schema
-
-
 
 _logger = logging.getLogger(__name__)
 
@@ -60,10 +64,44 @@ class AccountInvoice(models.Model):
             finvoice_xml = record._get_finvoice_xml()
             record.finvoice_xml = finvoice_xml
 
-
     def _get_finvoice_xml(self):
         output = StringIO.StringIO()
 
+        finvoice_object = Finvoice('2.01')
+
+        self.add_message_transmission_details(finvoice_object)
+
+        finvoice_xml = finvoice_object.export(output, 0, name_='Finvoice', pretty_print=True)
+
+        return output.getvalue()
+
+    def add_message_transmission_details(self, finvoice_object):
+
+        MessageSenderDetails = MessageSenderDetailsType(
+            FromIdentifier=self.company_id.company_registry,
+            FromIntermediator='',
+        )
+
+        MessageReceiverDetails = MessageReceiverDetailsType(
+            ToIdentifier=self.partner_id.edicode,
+            ToIntermediator=self.partner_id.einvoice_operator_identifier,
+        )
+
+        message_timestamp = datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S+00:00')
+        MessageDetails = MessageDetailsType(
+            MessageIdentifier=self.number,
+            MessageTimeStamp=message_timestamp,
+        )
+
+        MessageTransmissionDetails = MessageTransmissionDetailsType(
+            MessageSenderDetails=MessageSenderDetails,
+            MessageReceiverDetails=MessageReceiverDetails,
+            MessageDetails=MessageDetails,
+        )
+
+        finvoice_object.set_MessageTransmissionDetails(MessageTransmissionDetails)
+
+    def asd(self):
         _sellerOrganisationName = {
             'FI': 'Pullis Musiken Oy',
             'SV': 'Pullis Musiken Ab',
@@ -268,3 +306,4 @@ class AccountInvoice(models.Model):
                           pretty_print=True)
 
         return output.getvalue()
+
