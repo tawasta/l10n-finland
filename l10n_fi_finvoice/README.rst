@@ -6,7 +6,7 @@
 Account invoice Finvoice
 ========================
 
-Converts between Odoo invoice and Finvoice 2.00
+Converts between Odoo invoice and Finvoice 2.01
 
 Configuration
 =============
