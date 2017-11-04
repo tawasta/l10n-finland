@@ -26,6 +26,10 @@ from finvoice.finvoice201 import SellerAccountDetailsType
 from finvoice.finvoice201 import SellerAccountIDType
 from finvoice.finvoice201 import SellerBicType
 
+# Buyer party details
+from finvoice.finvoice201 import BuyerPartyDetailsType
+from finvoice.finvoice201 import BuyerPostalAddressDetailsType
+
 from finvoice.sender.senderinfo import ExternalEncoding
 from finvoice.sender.senderinfo import FinvoiceSenderInfo
 # from finvoice.sender.senderinfo import MessageDetailsType
@@ -73,8 +77,11 @@ class AccountInvoice(models.Model):
         finvoice_object = Finvoice('2.01')
 
         self.add_message_transmission_details(finvoice_object)
+
         self.add_seller_party_details(finvoice_object)
         self.add_seller_information_details(finvoice_object)
+
+        self.add_buyer_party_details(finvoice_object)
 
         finvoice_xml = finvoice_object.export(output, 0, name_='Finvoice', pretty_print=True)
 
@@ -148,6 +155,27 @@ class AccountInvoice(models.Model):
         )
 
         finvoice_object.set_SellerInformationDetails(SellerInformationDetails)
+
+    def add_buyer_party_details(self, finvoice_object):
+        partner = self.partner_id
+
+        BuyerPostalAddressDetails = BuyerPostalAddressDetailsType(
+            BuyerStreetName=[partner.street, partner.street2],
+            BuyerTownName=partner.city,
+            BuyerPostCodeIdentifier=partner.zip,
+            CountryCode=partner.country_id.code,
+            CountryName=partner.country_id.name,
+        )
+
+        BuyerPartyDetails = BuyerPartyDetailsType(
+            BuyerPartyIdentifier=partner.business_id,
+            BuyerOrganisationName=[partner.name],
+            BuyerOrganisationDepartment='',
+            BuyerOrganisationTaxCode=partner.vat,
+            BuyerPostalAddressDetails=BuyerPostalAddressDetails,
+        )
+
+        finvoice_object.set_BuyerPartyDetails(BuyerPartyDetails)
 
     def test(self):
         _sellerOrganisationName = {
