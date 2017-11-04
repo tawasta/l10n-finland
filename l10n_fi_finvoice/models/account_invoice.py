@@ -20,6 +20,12 @@ from finvoice.finvoice201 import MessageDetailsType
 from finvoice.finvoice201 import SellerPartyDetailsType
 from finvoice.finvoice201 import SellerPostalAddressDetailsType
 
+# Seller information details
+from finvoice.finvoice201 import SellerInformationDetailsType
+from finvoice.finvoice201 import SellerAccountDetailsType
+from finvoice.finvoice201 import SellerAccountIDType
+from finvoice.finvoice201 import SellerBicType
+
 from finvoice.sender.senderinfo import ExternalEncoding
 from finvoice.sender.senderinfo import FinvoiceSenderInfo
 # from finvoice.sender.senderinfo import MessageDetailsType
@@ -68,6 +74,7 @@ class AccountInvoice(models.Model):
 
         self.add_message_transmission_details(finvoice_object)
         self.add_seller_party_details(finvoice_object)
+        self.add_seller_information_details(finvoice_object)
 
         finvoice_xml = finvoice_object.export(output, 0, name_='Finvoice', pretty_print=True)
 
@@ -120,6 +127,27 @@ class AccountInvoice(models.Model):
         )
 
         finvoice_object.set_SellerPartyDetails(SellerPartyDetails)
+
+    def add_seller_information_details(self, finvoice_object):
+        SellerAccountID = SellerAccountIDType(
+            IdentificationSchemeName='IBAN',
+            valueOf_=self.partner_bank_id.acc_number,
+        )
+        SellerBic = SellerBicType(
+            IdentificationSchemeName='BIC',
+            valueOf_=self.partner_bank_id.bank_bic,
+        )
+
+        SellerAccountDetails = SellerAccountDetailsType(
+            SellerAccountID=SellerAccountID,
+            SellerBic=SellerBic,
+        )
+
+        SellerInformationDetails = SellerInformationDetailsType(
+            SellerAccountDetails=[SellerAccountDetails],
+        )
+
+        finvoice_object.set_SellerInformationDetails(SellerInformationDetails)
 
     def test(self):
         _sellerOrganisationName = {
