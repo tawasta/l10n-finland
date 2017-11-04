@@ -30,6 +30,10 @@ from finvoice.finvoice201 import SellerBicType
 from finvoice.finvoice201 import BuyerPartyDetailsType
 from finvoice.finvoice201 import BuyerPostalAddressDetailsType
 
+# Delivery party details
+from finvoice.finvoice201 import DeliveryPartyDetailsType
+from finvoice.finvoice201 import DeliveryPostalAddressDetailsType
+
 from finvoice.sender.senderinfo import ExternalEncoding
 from finvoice.sender.senderinfo import FinvoiceSenderInfo
 # from finvoice.sender.senderinfo import MessageDetailsType
@@ -82,6 +86,8 @@ class AccountInvoice(models.Model):
         self.add_seller_information_details(finvoice_object)
 
         self.add_buyer_party_details(finvoice_object)
+
+        self.add_delivery_party_details(finvoice_object)
 
         finvoice_xml = finvoice_object.export(output, 0, name_='Finvoice', pretty_print=True)
 
@@ -176,6 +182,25 @@ class AccountInvoice(models.Model):
         )
 
         finvoice_object.set_BuyerPartyDetails(BuyerPartyDetails)
+
+    def add_delivery_party_details(self, finvoice_object):
+        partner = self.partner_shipping_id or self.partner_id
+
+        DeliveryPostalAddressDetails = DeliveryPostalAddressDetailsType(
+            DeliveryStreetName=[partner.street, partner.street2],
+            DeliveryTownName=partner.city,
+            DeliveryPostCodeIdentifier=partner.zip,
+            CountryCode=partner.country_id.code,
+            CountryName=partner.country_id.name,
+        )
+
+        DeliveryPartyDetails = DeliveryPartyDetailsType(
+            DeliveryPartyIdentifier=partner.business_id,
+            DeliveryOrganisationName=[partner.name],
+            DeliveryPostalAddressDetails=DeliveryPostalAddressDetails,
+        )
+
+        finvoice_object.set_DeliveryPartyDetails(DeliveryPartyDetails)
 
     def test(self):
         _sellerOrganisationName = {
