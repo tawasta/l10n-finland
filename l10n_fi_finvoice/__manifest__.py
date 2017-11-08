@@ -22,7 +22,7 @@
 {
     'name': 'Account invoice Finvoice',
     'summary': 'Converts between Odoo invoice and Finvoice 2.01',
-    'version': '10.0.0.1.6',
+    'version': '10.0.0.1.7',
     'category': 'Accounting & Finance',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
@@ -37,6 +37,7 @@
         'account',
         'l10n_fi_business_code_validate',
         'l10n_fi_edicode',
+        'sale',
     ],
     'data': [
     ],

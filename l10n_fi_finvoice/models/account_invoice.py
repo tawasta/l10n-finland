@@ -3,6 +3,7 @@ import logging
 import sys
 import datetime
 import StringIO
+import re
 
 from dateutil.tz import tzlocal
 from odoo import api, fields, models
@@ -34,22 +35,12 @@ from finvoice.finvoice201 import BuyerPostalAddressDetailsType
 from finvoice.finvoice201 import DeliveryPartyDetailsType
 from finvoice.finvoice201 import DeliveryPostalAddressDetailsType
 
-from finvoice.sender.senderinfo import ExternalEncoding
-from finvoice.sender.senderinfo import FinvoiceSenderInfo
-# from finvoice.sender.senderinfo import MessageDetailsType
-# from finvoice.sender.senderinfo import SellerPartyDetailsType
-# from finvoice.sender.senderinfo import SellerPostalAddressDetailsType
-from finvoice.sender.senderinfo import SellerOrganisationNamesType
-from finvoice.sender.senderinfo import InvoiceSenderInformationDetailsType
-from finvoice.sender.senderinfo import SellerAccountDetailsType
-from finvoice.sender.senderinfo import SellerAccountIDType
-from finvoice.sender.senderinfo import SellerBicType
-#from finvoice.sender.senderinfo import SellerInvoiceDetailsType
-from finvoice.sender.senderinfo import SellerInvoiceTypeDetailsType
-from finvoice.sender.senderinfo import SellerInvoiceTypeTextType
-from finvoice.sender.senderinfo import SellerInvoiceIdentifierTextType
-from finvoice.sender.senderinfo import date
+# Invoice details
+from finvoice.finvoice201 import InvoiceDetailsType
+from finvoice.finvoice201 import InvoiceTypeCodeType
 
+from finvoice.finvoice201 import date
+from finvoice.finvoice201 import amount
 from finvoice.soap.envelope import Envelope, Header, Body
 from finvoice.soap.msgheader import MessageHeader, From, To, PartyId, Service, MessageData
 from finvoice.soap.msgheader import Manifest, Reference, Schema
@@ -63,10 +54,20 @@ class AccountInvoice(models.Model):
 
     # Please do not add this field to any view, as the computation is resource-intense
     # This is only to act as a helper
+    invoice_number = fields.Char(
+        string='Invoice number',
+        compute='compute_invoice_number',
+    )
+
     finvoice_xml = fields.Text(
         string='Finvoice XML',
         compute='compute_finvoice_xml'
     )
+
+    def compute_invoice_number(self):
+        for record in self:
+            if record.number:
+                record.invoice_number = re.sub(r'\D', '', record.number)
 
     def compute_finvoice_xml(self):
         for record in self:
@@ -89,6 +90,8 @@ class AccountInvoice(models.Model):
 
         self.add_delivery_party_details(finvoice_object)
 
+        self.add_invoice_details(finvoice_object)
+
         finvoice_xml = finvoice_object.export(output, 0, name_='Finvoice', pretty_print=True)
 
         return output.getvalue()
@@ -106,8 +109,9 @@ class AccountInvoice(models.Model):
         )
 
         message_timestamp = datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S+00:00')
+
         MessageDetails = MessageDetailsType(
-            MessageIdentifier=self.number,
+            MessageIdentifier=self.invoice_number,
             MessageTimeStamp=message_timestamp,
         )
 
@@ -201,6 +205,53 @@ class AccountInvoice(models.Model):
         )
 
         finvoice_object.set_DeliveryPartyDetails(DeliveryPartyDetails)
+
+    def add_invoice_details(self, finvoice_object):
+
+        # Normal invoices
+        CodeListAgencyIdentifier = ''
+        TypeCode = 'INV01'
+        OriginCode = 'Original'
+
+        # Refund invoice
+        if self.type == 'out_refund':
+            TypeCode = 'INV02'
+            CodeListAgencyIdentifier = 'SPY'
+            OriginCode = 'Cancel'
+
+        InvoiceTypeCode = InvoiceTypeCodeType(
+            CodeListAgencyIdentifier=CodeListAgencyIdentifier,
+            valueOf_=TypeCode,
+        )
+
+        InvoiceTotalVatExcludedAmount = amount(
+            AmountCurrencyIdentifier=self.currency_id.name,
+            valueOf_=self.amount_untaxed,
+        )
+
+        InvoiceTotalVatAmount = amount(
+            AmountCurrencyIdentifier=self.currency_id.name,
+            valueOf_=self.amount_tax,
+        )
+
+        InvoiceTotalVatIncludedAmount = amount(
+            AmountCurrencyIdentifier=self.currency_id.name,
+            valueOf_=self.amount_total,
+        )
+
+        InvoiceDetails = InvoiceDetailsType(
+            InvoiceTypeCode=InvoiceTypeCode,
+            InvoiceTypeText=self.get_invoice_finvoice_type_text(TypeCode),
+            OriginCode=OriginCode,
+            InvoiceNumber=self.invoice_number,
+            InvoiceDate=date('CCYYMMDD', self.get_date_unhyphenated(self.date_invoice)),
+            OrderIdentifier=self.invoice_number,
+            InvoiceTotalVatExcludedAmount=InvoiceTotalVatExcludedAmount,
+            InvoiceTotalVatAmount=InvoiceTotalVatAmount,
+            InvoiceTotalVatIncludedAmount=InvoiceTotalVatIncludedAmount,
+        )
+
+        finvoice_object.set_InvoiceDetails(InvoiceDetails)
 
     def test(self):
         _sellerOrganisationName = {
@@ -408,3 +459,52 @@ class AccountInvoice(models.Model):
 
         return output.getvalue()
 
+    @staticmethod
+    def get_invoice_finvoice_type_text(InvoiceTypeCode):
+        # Returns Finvoice 2.01 InvoiceTypeText if applicable
+
+        InvoiceTypeText = False
+
+        InvoiceTypes = {
+            'REQ01': 'TARJOUSPYYNTÖ',
+            'QUO01': 'TARJOUS',
+            'ORD01': 'TILAUS',
+            'ORC01': 'TILAUSVAHVISTUS',
+            'DEV01': 'TOIMITUSILMOITUS',
+            'INV01': 'LASKU',
+            'INV02': 'HYVITYSLASKU',
+            'INV03': 'KORKOLASKU',
+            'INV04': 'SISÄINEN LASKU',
+            'INV05': 'PERINTÄLASKU',
+            'INV06': 'PROFORMALASKU',
+            'INV07': 'ITSELASKUTUS',
+            'INV08': 'HUOMAUTUSLASKU',
+            'INV09': 'SUORAMAKSU',
+            'TES01': 'TESTILASKU',
+            'PRI01': 'HINNASTO',
+            'INF01': 'TIEDOTE',
+            'DEN01': 'TOIMITUSVIRHEILMOITUS',
+            'SEI01-09': 'TURVALASKU',
+        }
+
+        if InvoiceTypeCode in InvoiceTypes:
+            InvoiceTypeText = InvoiceTypes[InvoiceTypeCode]
+
+        return InvoiceTypeText
+
+    @staticmethod
+    def get_date_unhyphenated(date_string):
+        # Returns unhyphenated ISO-8601 date
+        # CCYY-MM-DD becomes CCYYMMDD
+        # 2020-01-02 becomes 20200102
+
+        if not date_string:
+            return False
+
+        # This only validates the format. Not if the string is actually a valid date
+        iso_8601_format = re.compile('[0-9]{4}[-][0-9]{2}[-][0-9]{2}')
+
+        if not iso_8601_format.match(date_string):
+            return False
+
+        return date_string.replace('-', '')
