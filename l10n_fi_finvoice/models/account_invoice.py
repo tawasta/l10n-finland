@@ -38,6 +38,9 @@ from finvoice.finvoice201 import DeliveryPostalAddressDetailsType
 # Invoice details
 from finvoice.finvoice201 import InvoiceDetailsType
 from finvoice.finvoice201 import InvoiceTypeCodeType
+from finvoice.finvoice201 import VatSpecificationDetailsType
+from finvoice.finvoice201 import PaymentTermsDetailsType
+from finvoice.finvoice201 import PaymentOverDueFineDetailsType
 
 from finvoice.finvoice201 import date
 from finvoice.finvoice201 import amount
@@ -239,6 +242,22 @@ class AccountInvoice(models.Model):
             valueOf_=self.amount_total,
         )
 
+        # TODO: separate different VAT rates
+        VatSpecificationDetails = VatSpecificationDetailsType(
+            VatBaseAmount=InvoiceTotalVatExcludedAmount,
+            VatRateAmount=InvoiceTotalVatAmount,
+        )
+
+        PaymentTermsDetails = PaymentTermsDetailsType(
+            PaymentTermsFreeText=[self.payment_term_id.name],
+            InvoiceDueDate=date('CCYYMMDD', self.get_date_unhyphenated(self.date_due)),
+        )
+
+        PaymentOverDueFineDetails = PaymentOverDueFineDetailsType(
+            PaymentOverDueFineFreeText='',  # TODO
+            PaymentOverDueFinePercent='',  # TODO
+        )
+
         InvoiceDetails = InvoiceDetailsType(
             InvoiceTypeCode=InvoiceTypeCode,
             InvoiceTypeText=self.get_invoice_finvoice_type_text(TypeCode),
@@ -249,6 +268,9 @@ class AccountInvoice(models.Model):
             InvoiceTotalVatExcludedAmount=InvoiceTotalVatExcludedAmount,
             InvoiceTotalVatAmount=InvoiceTotalVatAmount,
             InvoiceTotalVatIncludedAmount=InvoiceTotalVatIncludedAmount,
+            VatSpecificationDetails=[VatSpecificationDetails],
+            PaymentTermsDetails=[PaymentTermsDetails],
+            # PaymentOverDueFineDetails = PaymentOverDueFineDetails,
         )
 
         finvoice_object.set_InvoiceDetails(InvoiceDetails)
