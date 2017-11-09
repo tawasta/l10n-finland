@@ -8,13 +8,28 @@ Account invoice Finvoice
 
 Converts between Odoo invoice and Finvoice 2.01
 
+
+
+Based on the documentation (static files also in `docs/`)
+
+http://www.finanssiala.fi/finvoice/dokumentit/Finvoice_2_1_soveltamisohje.pdf
+http://www.finanssiala.fi/finvoice/dokumentit/Finvoice_def_2_1_18102013.xls
+
 Configuration
 =============
-\-
+Install py-finvoice
+
+.. code-block:: bash
+
+   pip install git+https://github.com/Tawasta/py-finvoice
+
+   # This should be fine too, but use with own risk
+   pip install py-finvoice
 
 Usage
 =====
-\-
+- This module only adds a field `finvoice_xml` and the logic behind it.
+- Field is supposed to be used as a helper for methods. Please avoid adding it directly to any views, as it is a large non-stored computed field. Using it in views will increase view load times.
 
 Known issues / Roadmap
 ======================
