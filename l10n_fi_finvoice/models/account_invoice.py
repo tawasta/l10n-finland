@@ -45,6 +45,10 @@ from finvoice.finvoice201 import PaymentOverDueFineDetailsType
 # Payment status details
 from finvoice.finvoice201 import PaymentStatusDetailsType
 
+# Invoice rows
+from finvoice.finvoice201 import InvoiceRowType
+from finvoice.finvoice201 import QuantityType
+
 # General imports
 from finvoice.finvoice201 import date
 from finvoice.finvoice201 import amount
@@ -98,6 +102,8 @@ class AccountInvoice(models.Model):
         self.add_delivery_party_details(finvoice_object)
 
         self.add_invoice_details(finvoice_object)
+
+        self.add_invoice_rows(finvoice_object)
 
         finvoice_xml = finvoice_object.export(output, 0, name_='Finvoice', pretty_print=True)
 
@@ -287,6 +293,38 @@ class AccountInvoice(models.Model):
         )
 
         finvoice_object.set_PaymentStatusDetails(PaymentStatusDetails)
+
+    def add_invoice_rows(self, finvoice_object):
+        InvoiceRows = list()
+
+        for line in self.invoice_line_ids:
+            DeliveredQuantity = QuantityType(
+                QuantityUnitCode=line.uom_id.name.encode('utf-8'),  # TODO: fix this in the library
+                valueOf_=line.quantity,
+            )
+
+            UnitPriceAmount = amount(
+                AmountCurrencyIdentifier=self.currency_id.name,
+                valueOf_=line.price_unit,
+            )
+
+            RowVatExcludedAmount = amount(
+                AmountCurrencyIdentifier=self.currency_id.name,
+                valueOf_=(line.quantity * line.price_unit),
+            )
+
+            InvoiceRow = InvoiceRowType(
+                ArticleIdentifier=line.product_id.default_code,
+                ArticleName=line.product_id.name,
+                DeliveredQuantity=[DeliveredQuantity],
+                UnitPriceAmount=UnitPriceAmount,
+                RowFreeText=[line.name],
+                RowVatExcludedAmount=RowVatExcludedAmount,
+            )
+
+            InvoiceRows.append(InvoiceRow)
+
+        finvoice_object.set_InvoiceRow([InvoiceRow])
 
     def test(self):
         _sellerOrganisationName = {
