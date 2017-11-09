@@ -42,6 +42,10 @@ from finvoice.finvoice201 import VatSpecificationDetailsType
 from finvoice.finvoice201 import PaymentTermsDetailsType
 from finvoice.finvoice201 import PaymentOverDueFineDetailsType
 
+# Payment status details
+from finvoice.finvoice201 import PaymentStatusDetailsType
+
+# General imports
 from finvoice.finvoice201 import date
 from finvoice.finvoice201 import amount
 from finvoice.soap.envelope import Envelope, Header, Body
@@ -274,6 +278,15 @@ class AccountInvoice(models.Model):
         )
 
         finvoice_object.set_InvoiceDetails(InvoiceDetails)
+
+    def add_payment_status_details(self, finvoice_object):
+        # TODO: get PaymentStatusCode based on invoice payments and reconcile state
+
+        PaymentStatusDetails = PaymentStatusDetailsType(
+            PaymentStatusCode='NOTPAID',
+        )
+
+        finvoice_object.set_PaymentStatusDetails(PaymentStatusDetails)
 
     def test(self):
         _sellerOrganisationName = {

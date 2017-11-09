@@ -35,6 +35,7 @@ Known issues / Roadmap
 ======================
 - Does not separate different VAT classes on invoice details level
 - Does not support payment overdue fine
+- Does not support partial payments (PaymentStatusCode)
 
 Credits
 =======
