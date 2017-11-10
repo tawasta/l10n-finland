@@ -119,6 +119,9 @@ class AccountInvoice(models.Model):
 
         self.add_epi_details(finvoice_object)
 
+        self.add_invoice_url_name_text(finvoice_object)
+        self.add_invoice_url_text(finvoice_object)
+
         finvoice_xml = finvoice_object.export(output, 0, name_='Finvoice', pretty_print=True)
 
         return output.getvalue()
@@ -352,6 +355,16 @@ class AccountInvoice(models.Model):
         )
 
         finvoice_object.set_EpiDetails(EpiDetails)
+
+    def add_invoice_url_name_text(self, finvoice_object):
+        # Override this to match your need
+        # finvoice_object.set_InvoiceUrlNameText('InvoiceUrlNameText value here')
+        pass
+
+    def add_invoice_url_text(self, finvoice_object):
+        # Override this to match your need
+        # finvoice_object.set_InvoiceUrlText('InvoiceUrlText value here')
+        pass
 
     def _get_epi_party_details(self):
         BfiEpiAccountID = EpiBfiIdentifierType(
