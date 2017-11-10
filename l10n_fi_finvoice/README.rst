@@ -36,6 +36,8 @@ Known issues / Roadmap
 - Does not separate different VAT classes on invoice details level
 - Does not support payment overdue fine
 - Does not support partial payments (PaymentStatusCode)
+- Does not add discounts to Finvoice (discounts work, but they arent separated from the amount
+- Only supports domestic invoices
 
 Credits
 =======

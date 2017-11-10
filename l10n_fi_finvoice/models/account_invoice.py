@@ -49,6 +49,18 @@ from finvoice.finvoice201 import PaymentStatusDetailsType
 from finvoice.finvoice201 import InvoiceRowType
 from finvoice.finvoice201 import QuantityType
 
+# EPI details
+from finvoice.finvoice201 import EpiDetailsType
+from finvoice.finvoice201 import EpiIdentificationDetailsType
+from finvoice.finvoice201 import EpiPartyDetailsType
+from finvoice.finvoice201 import EpiBfiPartyDetailsType
+from finvoice.finvoice201 import EpiBeneficiaryPartyDetailsType
+from finvoice.finvoice201 import EpiAccountIDType
+from finvoice.finvoice201 import EpiBfiIdentifierType
+from finvoice.finvoice201 import EpiPaymentInstructionDetailsType
+from finvoice.finvoice201 import EpiRemittanceInfoIdentifierType
+from finvoice.finvoice201 import EpiChargeType
+
 # General imports
 from finvoice.finvoice201 import date
 from finvoice.finvoice201 import amount
@@ -104,6 +116,8 @@ class AccountInvoice(models.Model):
         self.add_invoice_details(finvoice_object)
 
         self.add_invoice_rows(finvoice_object)
+
+        self.add_epi_details(finvoice_object)
 
         finvoice_xml = finvoice_object.export(output, 0, name_='Finvoice', pretty_print=True)
 
@@ -325,6 +339,75 @@ class AccountInvoice(models.Model):
             InvoiceRows.append(InvoiceRow)
 
         finvoice_object.set_InvoiceRow([InvoiceRow])
+
+    def add_epi_details(self, finvoice_object):
+        EpiIdentificationDetails = EpiIdentificationDetailsType(
+            EpiDate=date('CCYYMMDD', datetime.datetime.now().strftime("%Y%m%d")),
+        )
+
+        EpiDetails = EpiDetailsType(
+            EpiIdentificationDetails=EpiIdentificationDetails,
+            EpiPartyDetails=self._get_epi_party_details(),
+            EpiPaymentInstructionDetails=self._get_epi_payment_instruction_details(),
+        )
+
+        finvoice_object.set_EpiDetails(EpiDetails)
+
+    def _get_epi_party_details(self):
+        BfiEpiAccountID = EpiBfiIdentifierType(
+            IdentificationSchemeName='BIC',
+            valueOf_=self.partner_bank_id.bank_bic,
+        )
+
+        # Sellers bank
+        EpiBfiPartyDetails = EpiBfiPartyDetailsType(
+            EpiBfiIdentifier=BfiEpiAccountID,
+        )
+
+        BeneficiaryEpiAccountID = EpiAccountIDType(
+            IdentificationSchemeName='IBAN',
+            valueOf_=self.partner_bank_id.acc_number,
+        )
+
+        # Seller
+        EpiBeneficiaryPartyDetails=EpiBeneficiaryPartyDetailsType(
+            EpiNameAddressDetails=self.partner_id.name,
+            EpiBei=self.company_id.company_registry,
+            EpiAccountID=BeneficiaryEpiAccountID,
+        )
+
+        EpiPartyDetails = EpiPartyDetailsType(
+            EpiBfiPartyDetails=EpiBfiPartyDetails,
+            EpiBeneficiaryPartyDetails=EpiBeneficiaryPartyDetails,
+        )
+
+        return EpiPartyDetails
+
+    def _get_epi_payment_instruction_details(self):
+        EpiRemittanceInfoIdentifier = EpiRemittanceInfoIdentifierType(
+            IdentificationSchemeName='ISO',
+            valueOf_=self.invoice_number.zfill(20)  # TODO: change to invoice ref number
+        )
+
+        EpiInstructedAmount = amount(
+            AmountCurrencyIdentifier=self.currency_id.name,
+            valueOf_=self.amount_total,
+        )
+
+        EpiCharge = EpiChargeType(
+            ChargeOption='SHA',  # TODO: add SLEV-option for non-domestic invoices
+            valueOf_='SHA',
+        )
+
+        EpiPaymentInstructionDetails = EpiPaymentInstructionDetailsType(
+            EpiPaymentInstructionId=self.invoice_number,  # TODO: change this to invoice ref number and add a sequence?
+            EpiRemittanceInfoIdentifier=EpiRemittanceInfoIdentifier,
+            EpiInstructedAmount=EpiInstructedAmount,
+            EpiCharge=EpiCharge,
+            EpiDateOptionDate=date('CCYYMMDD', self.get_date_unhyphenated(self.date_due)),
+        )
+
+        return EpiPaymentInstructionDetails
 
     def test(self):
         _sellerOrganisationName = {
