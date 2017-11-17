@@ -399,7 +399,7 @@ class AccountInvoice(models.Model):
     def _get_epi_payment_instruction_details(self):
         EpiRemittanceInfoIdentifier = EpiRemittanceInfoIdentifierType(
             IdentificationSchemeName='ISO',
-            valueOf_=self.invoice_number.zfill(20)  # TODO: change to invoice ref number
+            valueOf_=self.invoice_number and self.invoice_number.zfill(20)  # TODO: change to invoice ref number
         )
 
         EpiInstructedAmount = amount(
