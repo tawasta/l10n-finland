@@ -124,7 +124,7 @@ class AccountInvoice(models.Model):
         return finvoice_object
 
     def _get_finvoice_xml(self):
-        finvoice_object = self._get_finvoice_xml()
+        finvoice_object = self._get_finvoice_object()
         output = StringIO.StringIO()
 
         finvoice_xml = finvoice_object.export(output, 0, name_='Finvoice', pretty_print=True)
