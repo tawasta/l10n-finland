@@ -123,13 +123,17 @@ class AccountInvoice(models.Model):
 
         return finvoice_object
 
-    def _get_finvoice_xml(self):
+    def _get_finvoice_xml(self, encoding='ISO-8859-15'):
         finvoice_object = self._get_finvoice_object()
         output = StringIO.StringIO()
 
-        finvoice_xml = finvoice_object.export(output, 0, name_='Finvoice', pretty_print=True)
+        finvoice_object.export(output, 0, name_='Finvoice', pretty_print=True)
 
-        return output.getvalue()
+        # Finvoice export doesn't support encoding in write. Add it here
+        xml_declaration = "<?xml version='1.0' encoding='%s'?>\n" % encoding
+        finvoice_xml = xml_declaration + output.getvalue().encode(encoding)
+
+        return finvoice_xml
 
     def add_finvoice_message_transmission_details(self, finvoice_object):
 
