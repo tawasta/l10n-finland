@@ -99,8 +99,7 @@ class AccountInvoice(models.Model):
             finvoice_xml = record._get_finvoice_xml()
             record.finvoice_xml = finvoice_xml
 
-    def _get_finvoice_xml(self):
-        output = StringIO.StringIO()
+    def _get_finvoice_object(self):
 
         finvoice_object = Finvoice('2.01')
 
@@ -121,6 +120,12 @@ class AccountInvoice(models.Model):
 
         self.add_invoice_url_name_text(finvoice_object)
         self.add_invoice_url_text(finvoice_object)
+
+        return finvoice_object
+
+    def _get_finvoice_xml(self):
+        finvoice_object = self._get_finvoice_xml()
+        output = StringIO.StringIO()
 
         finvoice_xml = finvoice_object.export(output, 0, name_='Finvoice', pretty_print=True)
 
