@@ -250,7 +250,7 @@ class AccountInvoice(models.Model):
     def add_finvoice_invoice_details(self, finvoice_object):
 
         # Normal invoices
-        CodeListAgencyIdentifier = ''
+        CodeListAgencyIdentifier = None
         TypeCode = 'INV01'
         OriginCode = 'Original'
 
