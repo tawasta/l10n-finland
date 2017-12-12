@@ -103,23 +103,23 @@ class AccountInvoice(models.Model):
 
         finvoice_object = Finvoice('2.01')
 
-        self.add_message_transmission_details(finvoice_object)
+        self.add_finvoice_message_transmission_details(finvoice_object)
 
-        self.add_seller_party_details(finvoice_object)
-        self.add_seller_information_details(finvoice_object)
+        self.add_finvoice_seller_party_details(finvoice_object)
+        self.add_finvoice_seller_information_details(finvoice_object)
 
-        self.add_buyer_party_details(finvoice_object)
+        self.add_finvoice_buyer_party_details(finvoice_object)
 
-        self.add_delivery_party_details(finvoice_object)
+        self.add_finvoice_delivery_party_details(finvoice_object)
 
-        self.add_invoice_details(finvoice_object)
+        self.add_finvoice_invoice_details(finvoice_object)
 
-        self.add_invoice_rows(finvoice_object)
+        self.add_finvoice_invoice_rows(finvoice_object)
 
-        self.add_epi_details(finvoice_object)
+        self.add_finvoice_epi_details(finvoice_object)
 
-        self.add_invoice_url_name_text(finvoice_object)
-        self.add_invoice_url_text(finvoice_object)
+        self.add_finvoice_invoice_url_name_text(finvoice_object)
+        self.add_finvoice_invoice_url_text(finvoice_object)
 
         return finvoice_object
 
@@ -131,7 +131,7 @@ class AccountInvoice(models.Model):
 
         return output.getvalue()
 
-    def add_message_transmission_details(self, finvoice_object):
+    def add_finvoice_message_transmission_details(self, finvoice_object):
 
         MessageSenderDetails = MessageSenderDetailsType(
             FromIdentifier=self.company_id.company_registry,  # Business id
@@ -158,7 +158,7 @@ class AccountInvoice(models.Model):
 
         finvoice_object.set_MessageTransmissionDetails(MessageTransmissionDetails)
 
-    def add_seller_party_details(self, finvoice_object):
+    def add_finvoice_seller_party_details(self, finvoice_object):
         company = self.company_id
 
         SellerPostalAddressDetails = SellerPostalAddressDetailsType(
@@ -180,7 +180,7 @@ class AccountInvoice(models.Model):
 
         finvoice_object.set_SellerPartyDetails(SellerPartyDetails)
 
-    def add_seller_information_details(self, finvoice_object):
+    def add_finvoice_seller_information_details(self, finvoice_object):
         SellerAccountID = SellerAccountIDType(
             IdentificationSchemeName='IBAN',
             valueOf_=self.partner_bank_id.acc_number,
@@ -201,7 +201,7 @@ class AccountInvoice(models.Model):
 
         finvoice_object.set_SellerInformationDetails(SellerInformationDetails)
 
-    def add_buyer_party_details(self, finvoice_object):
+    def add_finvoice_buyer_party_details(self, finvoice_object):
         partner = self.partner_id
 
         BuyerPostalAddressDetails = BuyerPostalAddressDetailsType(
@@ -222,7 +222,7 @@ class AccountInvoice(models.Model):
 
         finvoice_object.set_BuyerPartyDetails(BuyerPartyDetails)
 
-    def add_delivery_party_details(self, finvoice_object):
+    def add_finvoice_delivery_party_details(self, finvoice_object):
         partner = self.partner_shipping_id or self.partner_id
 
         DeliveryPostalAddressDetails = DeliveryPostalAddressDetailsType(
@@ -241,7 +241,7 @@ class AccountInvoice(models.Model):
 
         finvoice_object.set_DeliveryPartyDetails(DeliveryPartyDetails)
 
-    def add_invoice_details(self, finvoice_object):
+    def add_finvoice_invoice_details(self, finvoice_object):
 
         # Normal invoices
         CodeListAgencyIdentifier = ''
@@ -307,7 +307,7 @@ class AccountInvoice(models.Model):
 
         finvoice_object.set_InvoiceDetails(InvoiceDetails)
 
-    def add_payment_status_details(self, finvoice_object):
+    def add_finvoice_payment_status_details(self, finvoice_object):
         # TODO: get PaymentStatusCode based on invoice payments and reconcile state
 
         PaymentStatusDetails = PaymentStatusDetailsType(
@@ -316,7 +316,7 @@ class AccountInvoice(models.Model):
 
         finvoice_object.set_PaymentStatusDetails(PaymentStatusDetails)
 
-    def add_invoice_rows(self, finvoice_object):
+    def add_finvoice_invoice_rows(self, finvoice_object):
         InvoiceRows = list()
 
         for line in self.invoice_line_ids:
@@ -348,30 +348,30 @@ class AccountInvoice(models.Model):
 
         finvoice_object.set_InvoiceRow([InvoiceRow])
 
-    def add_epi_details(self, finvoice_object):
+    def add_finvoice_epi_details(self, finvoice_object):
         EpiIdentificationDetails = EpiIdentificationDetailsType(
             EpiDate=date('CCYYMMDD', datetime.datetime.now().strftime("%Y%m%d")),
         )
 
         EpiDetails = EpiDetailsType(
             EpiIdentificationDetails=EpiIdentificationDetails,
-            EpiPartyDetails=self._get_epi_party_details(),
-            EpiPaymentInstructionDetails=self._get_epi_payment_instruction_details(),
+            EpiPartyDetails=self._get_finvoice_epi_party_details(),
+            EpiPaymentInstructionDetails=self._get_finvoice_epi_payment_instruction_details(),
         )
 
         finvoice_object.set_EpiDetails(EpiDetails)
 
-    def add_invoice_url_name_text(self, finvoice_object):
+    def add_finvoice_invoice_url_name_text(self, finvoice_object):
         # Override this to match your need
         # finvoice_object.set_InvoiceUrlNameText('InvoiceUrlNameText value here')
         pass
 
-    def add_invoice_url_text(self, finvoice_object):
+    def add_finvoice_invoice_url_text(self, finvoice_object):
         # Override this to match your need
         # finvoice_object.set_InvoiceUrlText('InvoiceUrlText value here')
         pass
 
-    def _get_epi_party_details(self):
+    def _get_finvoice_epi_party_details(self):
         BfiEpiAccountID = EpiBfiIdentifierType(
             IdentificationSchemeName='BIC',
             valueOf_=self.partner_bank_id.bank_bic,
@@ -401,7 +401,7 @@ class AccountInvoice(models.Model):
 
         return EpiPartyDetails
 
-    def _get_epi_payment_instruction_details(self):
+    def _get_finvoice_epi_payment_instruction_details(self):
         EpiRemittanceInfoIdentifier = EpiRemittanceInfoIdentifierType(
             IdentificationSchemeName='ISO',
             valueOf_=self.invoice_number and self.invoice_number.zfill(20)  # TODO: change to invoice ref number
