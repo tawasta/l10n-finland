@@ -38,6 +38,7 @@ Known issues / Roadmap
 - Does not support partial payments (PaymentStatusCode)
 - Does not add discounts to Finvoice (discounts work, but they arent separated from the amount
 - Only supports domestic invoices
+- Error when there is no due date
 
 Credits
 =======

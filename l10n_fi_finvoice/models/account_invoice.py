@@ -144,10 +144,7 @@ class AccountInvoice(models.Model):
 
         MessageSenderDetails = self._get_finvoice_message_sender_details()
 
-        MessageReceiverDetails = MessageReceiverDetailsType(
-            ToIdentifier=self.partner_id.edicode,
-            ToIntermediator=self.partner_id.einvoice_operator_identifier,
-        )
+        MessageReceiverDetails = self._get_finvoice_message_receiver_details()
 
         message_timestamp = datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S+00:00')
 
@@ -384,6 +381,13 @@ class AccountInvoice(models.Model):
         )
 
         return MessageSenderDetails
+
+    def _get_finvoice_message_receiver_details(self):
+        MessageReceiverDetails = MessageReceiverDetailsType(
+            ToIdentifier=self.partner_id.edicode,
+            ToIntermediator=self.partner_id.einvoice_operator_identifier,
+        )
+        return MessageReceiverDetails
 
     def _get_finvoice_epi_party_details(self):
         BfiEpiAccountID = EpiBfiIdentifierType(
