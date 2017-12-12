@@ -142,6 +142,8 @@ class AccountInvoice(models.Model):
             FromIntermediator='',
         )
 
+        MessageSenderDetails = self._get_finvoice_message_sender_details()
+
         MessageReceiverDetails = MessageReceiverDetailsType(
             ToIdentifier=self.partner_id.edicode,
             ToIntermediator=self.partner_id.einvoice_operator_identifier,
@@ -374,6 +376,14 @@ class AccountInvoice(models.Model):
         # Override this to match your need
         # finvoice_object.set_InvoiceUrlText('InvoiceUrlText value here')
         pass
+
+    def _get_finvoice_message_sender_details(self):
+        MessageSenderDetails = MessageSenderDetailsType(
+            FromIdentifier=self.company_id.company_registry,  # Business id
+            FromIntermediator='',
+        )
+
+        return MessageSenderDetails
 
     def _get_finvoice_epi_party_details(self):
         BfiEpiAccountID = EpiBfiIdentifierType(
