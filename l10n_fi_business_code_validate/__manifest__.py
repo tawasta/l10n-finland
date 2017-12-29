@@ -19,8 +19,8 @@
 #
 {
     "name": "Partner business code validate",
-    "summary": "Adds validation for l10n_fi_business_code",
-    "version": "10.0.1.2.0",
+    "summary": "Adds validation for partner_business_code",
+    "version": "10.0.1.2.3",
     "category": "CRM",
     "website": "https://odoo-community.org/",
     "author": "Oy Tawasta Technologies Ltd., Odoo Community Association (OCA)",
