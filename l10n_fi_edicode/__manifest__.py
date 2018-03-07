@@ -26,7 +26,7 @@
     "author": "Oy Tawasta Technologies Ltd., Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "application": False,
-    "installable": False,
+    "installable": True,
     "external_dependencies": {
         "python": [],
         "bin": [],
@@ -36,6 +36,7 @@
     ],
     "data": [
         'data/res_partner_operator_einvoice.xml',
+        'security/ir.model.access.csv',
         'view/res_partner.xml',
     ],
     "demo": [
