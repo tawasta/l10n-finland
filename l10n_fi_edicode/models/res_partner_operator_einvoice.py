@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from odoo import api, fields, models
+from odoo import fields, models
 
 
 class ResPartnerOperatorEinvoice(models.Model):
@@ -7,7 +7,9 @@ class ResPartnerOperatorEinvoice(models.Model):
 
     name = fields.Char(
         string='Operator',
+        required=True,
     )
     identifier = fields.Char(
         string='Identifier',
+        required=True,
     )
