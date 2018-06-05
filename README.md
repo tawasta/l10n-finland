@@ -12,8 +12,11 @@ Available addons
 ----------------
 addon | version | summary
 --- | --- | ---
-[l10n_fi_banks](l10n_fi_banks/) | 10.0.1.0.0 | Finnish banks and their addresses
-[l10n_fi_business_code](l10n_fi_business_code/) | 10.0.1.1.1 | Adds a business code (business id) for partners
-[l10n_fi_business_code_validate](l10n_fi_business_code_validate/) | 10.0.1.2.0 | Adds validation for l10n_fi_business_code
-[l10n_fi_edicode](l10n_fi_edicode/) | 10.0.0.3.6 | Finnish Electronic Data Interchange code
-[l10n_fi_payment_terms](l10n_fi_payment_terms/) | 10.0.1.0.0 | Common Finnish invoice payment terms
+[l10n_fi_banks](l10n_fi_banks/) | 10.0.1.0.0 | Finnish banks and their addresses
+[l10n_fi_business_code](l10n_fi_business_code/) | 10.0.1.2.0 | Adds a business code (business id) for partners
+[l10n_fi_business_code_validate](l10n_fi_business_code_validate/) | 10.0.1.2.3 | Adds validation for partner_business_code
+[l10n_fi_edicode](l10n_fi_edicode/) | 10.0.1.1.2 | Adds EDI code field and operators
+[l10n_fi_finvoice](l10n_fi_finvoice/) | 10.0.0.1.21 | Converts between Odoo invoice and Finvoice 2.01
+[l10n_fi_payment_terms](l10n_fi_payment_terms/) | 10.0.1.1.1 | Common Finnish invoice payment terms
+
+[//]: # (end addons)
