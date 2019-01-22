@@ -80,6 +80,7 @@ class AccountInvoice(models.Model):
     invoice_number = fields.Char(
         string='Invoice number',
         compute='compute_invoice_number',
+        store=True,
     )
 
     finvoice_xml = fields.Text(
@@ -87,6 +88,8 @@ class AccountInvoice(models.Model):
         compute='compute_finvoice_xml'
     )
 
+    @api.multi
+    @api.depends('number', 'state')
     def compute_invoice_number(self):
         for record in self:
             if record.number:
