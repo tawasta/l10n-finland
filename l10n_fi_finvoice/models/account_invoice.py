@@ -288,7 +288,8 @@ class AccountInvoice(models.Model):
 
         PaymentTermsDetails = PaymentTermsDetailsType(
             PaymentTermsFreeText=[self.payment_term_id.name],
-            InvoiceDueDate=date('CCYYMMDD', self.get_date_unhyphenated(self.date_due)),
+            InvoiceDueDate=date(
+                'CCYYMMDD', self.get_date_unhyphenated(self.date_due)),
         )
 
         PaymentOverDueFineDetails = PaymentOverDueFineDetailsType(
@@ -301,7 +302,8 @@ class AccountInvoice(models.Model):
             InvoiceTypeText=self.get_invoice_finvoice_type_text(TypeCode),
             OriginCode=OriginCode,
             InvoiceNumber=self.invoice_number,
-            InvoiceDate=date('CCYYMMDD', self.get_date_unhyphenated(self.date_invoice)),
+            InvoiceDate=date(
+                'CCYYMMDD', self.get_date_unhyphenated(self.date_invoice)),
             OrderIdentifier=self.invoice_number,
             InvoiceTotalVatExcludedAmount=InvoiceTotalVatExcludedAmount,
             InvoiceTotalVatAmount=InvoiceTotalVatAmount,
@@ -314,7 +316,8 @@ class AccountInvoice(models.Model):
         finvoice_object.set_InvoiceDetails(InvoiceDetails)
 
     def add_finvoice_payment_status_details(self, finvoice_object):
-        # TODO: get PaymentStatusCode based on invoice payments and reconcile state
+        # TODO: get PaymentStatusCode based on invoice payments and
+        #  reconcile state
 
         PaymentStatusDetails = PaymentStatusDetailsType(
             PaymentStatusCode='NOTPAID',
@@ -327,7 +330,8 @@ class AccountInvoice(models.Model):
 
         for line in self.invoice_line_ids:
             DeliveredQuantity = QuantityType(
-                QuantityUnitCode=line.uom_id.name.encode('utf-8'),  # TODO: fix this in the library
+                # TODO: fix this in the library
+                QuantityUnitCode=line.uom_id.name.encode('utf-8'),
                 valueOf_=line.quantity,
             )
 
@@ -356,20 +360,22 @@ class AccountInvoice(models.Model):
 
     def add_finvoice_epi_details(self, finvoice_object):
         EpiIdentificationDetails = EpiIdentificationDetailsType(
-            EpiDate=date('CCYYMMDD', datetime.datetime.now().strftime("%Y%m%d")),
+            EpiDate=date(
+                'CCYYMMDD', datetime.datetime.now().strftime("%Y%m%d")),
         )
 
         EpiDetails = EpiDetailsType(
             EpiIdentificationDetails=EpiIdentificationDetails,
             EpiPartyDetails=self._get_finvoice_epi_party_details(),
-            EpiPaymentInstructionDetails=self._get_finvoice_epi_payment_instruction_details(),
+            EpiPaymentInstructionDetails=self.
+                _get_finvoice_epi_payment_instruction_details(),
         )
 
         finvoice_object.set_EpiDetails(EpiDetails)
 
     def add_finvoice_invoice_url_name_text(self, finvoice_object):
         # Override this to match your need
-        # finvoice_object.set_InvoiceUrlNameText('InvoiceUrlNameText value here')
+        # finvoice_object.set_InvoiceUrlNameText('InvoiceUrlNameText here')
         pass
 
     def add_finvoice_invoice_url_text(self, finvoice_object):
@@ -423,9 +429,20 @@ class AccountInvoice(models.Model):
         return EpiPartyDetails
 
     def _get_finvoice_epi_payment_instruction_details(self):
+        # TODO: default to payment_reference in versions 11.0 ->
+        if hasattr(self, 'ref_number'):
+            payment_reference = self.ref_number
+        elif hasattr(self, 'payment_reference'):
+            payment_reference = self.payment_reference
+        else:
+            # TODO: this will usually fail in validation
+            payment_reference = self.ref
+
+        payment_reference = payment_reference.zfill(20)
+
         EpiRemittanceInfoIdentifier = EpiRemittanceInfoIdentifierType(
             IdentificationSchemeName='ISO',
-            valueOf_=self.invoice_number and self.invoice_number.zfill(20)  # TODO: change to invoice ref number
+            valueOf_=payment_reference
         )
 
         EpiInstructedAmount = amount(
@@ -434,16 +451,17 @@ class AccountInvoice(models.Model):
         )
 
         EpiCharge = EpiChargeType(
-            ChargeOption='SHA',  # TODO: add SLEV-option for non-domestic invoices
+            ChargeOption='SHA',  # TODO: SLEV-option for non-domestic invoices
             valueOf_='SHA',
         )
 
         EpiPaymentInstructionDetails = EpiPaymentInstructionDetailsType(
-            EpiPaymentInstructionId=self.invoice_number,  # TODO: change this to invoice ref number and add a sequence?
+            EpiPaymentInstructionId=payment_reference,
             EpiRemittanceInfoIdentifier=EpiRemittanceInfoIdentifier,
             EpiInstructedAmount=EpiInstructedAmount,
             EpiCharge=EpiCharge,
-            EpiDateOptionDate=date('CCYYMMDD', self.get_date_unhyphenated(self.date_due)),
+            EpiDateOptionDate=date(
+                'CCYYMMDD', self.get_date_unhyphenated(self.date_due)),
         )
 
         return EpiPaymentInstructionDetails
@@ -490,7 +508,8 @@ class AccountInvoice(models.Model):
         if not date_string:
             return False
 
-        # This only validates the format. Not if the string is actually a valid date
+        # This only validates the format.
+        # Not if the string is actually a valid date
         iso_8601_format = re.compile('[0-9]{4}[-][0-9]{2}[-][0-9]{2}')
 
         if not iso_8601_format.match(date_string):
