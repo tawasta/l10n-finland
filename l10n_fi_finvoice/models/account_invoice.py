@@ -5,7 +5,6 @@ import datetime
 import StringIO
 import re
 
-from dateutil.tz import tzlocal
 from odoo import api, fields, models
 
 # Finvoice imports
@@ -64,9 +63,6 @@ from finvoice.finvoice201 import EpiChargeType
 # General imports
 from finvoice.finvoice201 import date
 from finvoice.finvoice201 import amount
-from finvoice.soap.envelope import Envelope, Header, Body
-from finvoice.soap.msgheader import MessageHeader, From, To, PartyId, Service, MessageData
-from finvoice.soap.msgheader import Manifest, Reference, Schema
 
 _logger = logging.getLogger(__name__)
 
@@ -75,7 +71,8 @@ class AccountInvoice(models.Model):
 
     _inherit = 'account.invoice'
 
-    # Please do not add this field to any view, as the computation is resource-intense
+    # Please do not add this field to any view,
+    # as the computation is resource-intense
     # This is only to act as a helper
     invoice_number = fields.Char(
         string='Invoice number',
@@ -130,11 +127,12 @@ class AccountInvoice(models.Model):
         finvoice_object = self._get_finvoice_object()
         output = StringIO.StringIO()
 
-        finvoice_object.export(output, 0, name_='Finvoice', pretty_print=True)
+        finvoice_object.export(
+            output, 0, name_='Finvoice', pretty_print=True)
 
         # Finvoice export doesn't support encoding in write. Add it here
         xml_declaration = "<?xml version='1.0' encoding='%s'?>\n" % encoding
-        finvoice_xml = xml_declaration + output.getvalue().encode(encoding)
+        finvoice_xml = xml_declaration + output.getvalue()
 
         return finvoice_xml
 
@@ -149,7 +147,8 @@ class AccountInvoice(models.Model):
 
         MessageReceiverDetails = self._get_finvoice_message_receiver_details()
 
-        message_timestamp = datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S+00:00')
+        message_timestamp = datetime.datetime.utcnow().strftime(
+            '%Y-%m-%dT%H:%M:%S+00:00')
 
         MessageDetails = MessageDetailsType(
             MessageIdentifier=self.invoice_number,
@@ -162,7 +161,8 @@ class AccountInvoice(models.Model):
             MessageDetails=MessageDetails,
         )
 
-        finvoice_object.set_MessageTransmissionDetails(MessageTransmissionDetails)
+        finvoice_object.set_MessageTransmissionDetails(
+            MessageTransmissionDetails)
 
     def add_finvoice_seller_party_details(self, finvoice_object):
         company = self.company_id
@@ -330,8 +330,7 @@ class AccountInvoice(models.Model):
 
         for line in self.invoice_line_ids:
             DeliveredQuantity = QuantityType(
-                # TODO: fix this in the library
-                QuantityUnitCode=line.uom_id.name.encode('utf-8'),
+                QuantityUnitCode=line.uom_id.name,
                 valueOf_=line.quantity,
             )
 
