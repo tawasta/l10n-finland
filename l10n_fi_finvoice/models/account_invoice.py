@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 import logging
-import sys
 import datetime
-import StringIO
 import re
+import os
 
 from odoo import api, fields, models
+from odoo.tools import config
 
 # Finvoice imports
 from finvoice.finvoice201 import Finvoice
@@ -125,14 +125,26 @@ class AccountInvoice(models.Model):
 
     def _get_finvoice_xml(self, encoding='ISO-8859-15'):
         finvoice_object = self._get_finvoice_object()
-        output = StringIO.StringIO()
-
-        finvoice_object.export(
-            output, 0, name_='Finvoice', pretty_print=True)
-
-        # Finvoice export doesn't support encoding in write. Add it here
         xml_declaration = "<?xml version='1.0' encoding='%s'?>\n" % encoding
-        finvoice_xml = xml_declaration + output.getvalue()
+
+        data_dir = config['data_dir'].rstrip(
+            "/") + "/filestore/" + self._cr.dbname + "/finvoice/"
+
+        # Create a data dir if it doesn't exist
+        if not os.path.exists(data_dir):
+            os.makedirs(data_dir)
+
+        file_path = data_dir + "finvoice_%s.xml" % self.id
+        fh = open(file_path, mode='w')
+        fh.write(xml_declaration)
+
+        finvoice_object.export(fh, 0, name_='Finvoice', pretty_print=True)
+        fh.close()
+
+        fh = open(file_path, mode='r')
+        finvoice_xml = fh.read()
+
+        fh.close()
 
         return finvoice_xml
 
