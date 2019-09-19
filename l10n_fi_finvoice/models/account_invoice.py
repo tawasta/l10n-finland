@@ -449,7 +449,8 @@ class AccountInvoice(models.Model):
             # TODO: this will usually fail in validation
             payment_reference = self.ref
 
-        payment_reference = payment_reference.zfill(20)
+        if payment_reference:
+            payment_reference = payment_reference.zfill(20)
 
         EpiRemittanceInfoIdentifier = EpiRemittanceInfoIdentifierType(
             IdentificationSchemeName='ISO',
