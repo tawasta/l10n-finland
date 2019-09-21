@@ -220,7 +220,10 @@ class AccountInvoice(models.Model):
         finvoice_object.set_SellerInformationDetails(SellerInformationDetails)
 
     def add_finvoice_buyer_party_details(self, finvoice_object):
-        partner = self.partner_id
+        if hasattr(self, 'partner_invoice_id'):
+            partner = self.partner_invoice_id
+        else:
+            partner = self.partner_id
 
         BuyerPostalAddressDetails = BuyerPostalAddressDetailsType(
             BuyerStreetName=[partner.street, partner.street2],
@@ -403,9 +406,14 @@ class AccountInvoice(models.Model):
         return MessageSenderDetails
 
     def _get_finvoice_message_receiver_details(self):
+        if hasattr(self, 'partner_invoice_id'):
+            partner = self.partner_invoice_id
+        else:
+            partner = self.partner_id
+
         MessageReceiverDetails = MessageReceiverDetailsType(
-            ToIdentifier=self.partner_id.edicode,
-            ToIntermediator=self.partner_id.einvoice_operator_identifier,
+            ToIdentifier=partner.edicode,
+            ToIntermediator=partner.einvoice_operator_identifier,
         )
         return MessageReceiverDetails
 
@@ -427,7 +435,7 @@ class AccountInvoice(models.Model):
 
         # Seller
         EpiBeneficiaryPartyDetails=EpiBeneficiaryPartyDetailsType(
-            EpiNameAddressDetails=self.partner_id.name,
+            EpiNameAddressDetails=self.company_id.partner_id.name,
             EpiBei=self.company_id.company_registry,
             EpiAccountID=BeneficiaryEpiAccountID,
         )
