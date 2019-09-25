@@ -359,6 +359,12 @@ class AccountInvoice(models.Model):
                 valueOf_=(line.quantity * line.price_unit),
             )
 
+            if line.invoice_line_tax_ids:
+                # TODO: allow multiple taxes
+                RowVatRatePercent = line.invoice_line_tax_ids[0].amount
+            else:
+                RowVatRatePercent = 0
+
             InvoiceRow = InvoiceRowType(
                 ArticleIdentifier=line.product_id.default_code,
                 ArticleName=line.product_id.name,
@@ -366,6 +372,7 @@ class AccountInvoice(models.Model):
                 UnitPriceAmount=UnitPriceAmount,
                 RowFreeText=[line.name],
                 RowVatExcludedAmount=RowVatExcludedAmount,
+                RowVatRatePercent=RowVatRatePercent,
             )
 
             InvoiceRows.append(InvoiceRow)
