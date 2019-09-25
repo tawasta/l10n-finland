@@ -370,7 +370,7 @@ class AccountInvoice(models.Model):
 
             InvoiceRows.append(InvoiceRow)
 
-        finvoice_object.set_InvoiceRow([InvoiceRow])
+            finvoice_object.set_InvoiceRow([InvoiceRow])
 
     def add_finvoice_epi_details(self, finvoice_object):
         EpiIdentificationDetails = EpiIdentificationDetailsType(
