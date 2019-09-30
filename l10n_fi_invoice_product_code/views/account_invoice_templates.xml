@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_invoice_finnish_document"
+              inherit_id="l10n_fi_invoice.report_invoice_finnish_document">
+
+        <xpath expr="//table[@class='table table-condensed products-table']//tr/th[1]" position="after">
+             <th>Product code</th>
+        </xpath>
+
+        <xpath expr="//table[@class='table table-condensed products-table']//tr/td[1]" position="after">
+            <td><span t-field="l.product_id.default_code"/></td>
+        </xpath>
+
+        <!--
+        <xpath expr="//div[@class='padding-correction']/table//td[first()]" position="after">
+            <td>
+                <span t-field="l.product_id.default_code"/>
+            </td>
+        </xpath>
+        -->
+
+        <!--
+        <xpath expr="//div[@class='padding-correction']/table/thead/tr/th[first()]" position="after">
+             <th>Product code</th>
+        </xpath>
+        -->
+
+        <!--
+        <xpath expr="//tbody[@class='invoice_tbody']/tr/td[first()]" position="after">
+            <td>
+                <span t-field="l.product_id.default_code"/>
+            </td>
+        </xpath>
+        -->
+
+    </template>
+
+</odoo>
