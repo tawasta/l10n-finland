@@ -27,6 +27,7 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
+    "auto-install": True,
     "external_dependencies": {
         "python": [],
         "bin": [],
