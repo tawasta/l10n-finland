@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_invoice_finnish_document"
+              inherit_id="l10n_fi_invoice.report_invoice_finnish_document">
+
+        <xpath expr ="//t[@t-esc='o.partner_bank_id.acc_number']" position="after">
+            <tr t-if="o.partner_bank_id and o.partner_bank_id.bank_id and o.partner_bank_id.bank_id.bic">
+                <br/>BIC <t t-esc="o.partner_bank_id.bank_id.bic"/>
+            </tr>
+        </xpath>
+
+    </template>
+
+</odoo>
