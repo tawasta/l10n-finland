@@ -150,11 +150,6 @@ class AccountInvoice(models.Model):
 
     def add_finvoice_message_transmission_details(self, finvoice_object):
 
-        MessageSenderDetails = MessageSenderDetailsType(
-            FromIdentifier=self.company_id.company_registry,  # Business id
-            FromIntermediator='',
-        )
-
         MessageSenderDetails = self._get_finvoice_message_sender_details()
 
         MessageReceiverDetails = self._get_finvoice_message_receiver_details()
