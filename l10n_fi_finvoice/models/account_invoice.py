@@ -94,7 +94,7 @@ class AccountInvoice(models.Model):
 
     def compute_finvoice_xml(self):
         for record in self:
-            _logger.debug('Generating Finvoice for %s', self.name)
+            _logger.debug('Generating Finvoice for %s', record.name)
 
             finvoice_xml = record._get_finvoice_xml()
             record.finvoice_xml = finvoice_xml
