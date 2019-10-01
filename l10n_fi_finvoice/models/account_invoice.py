@@ -106,9 +106,11 @@ class AccountInvoice(models.Model):
         self.add_finvoice_message_transmission_details(finvoice_object)
 
         self.add_finvoice_seller_party_details(finvoice_object)
+        self.add_finvoice_seller_contact_person_name(finvoice_object)
         self.add_finvoice_seller_information_details(finvoice_object)
 
         self.add_finvoice_buyer_party_details(finvoice_object)
+        self.add_finvoice_buyer_contact_person_name(finvoice_object)
 
         self.add_finvoice_delivery_party_details(finvoice_object)
 
@@ -193,6 +195,14 @@ class AccountInvoice(models.Model):
 
         finvoice_object.set_SellerPartyDetails(SellerPartyDetails)
 
+    def add_finvoice_seller_contact_person_name(self, finvoice_object):
+        """ Set SellerContactPersonName (our contact person) """
+
+        SellerContactPersonName = \
+            self.user_id and self.user_id.name or ''
+
+        finvoice_object.set_SellerContactPersonName(SellerContactPersonName)
+
     def add_finvoice_seller_information_details(self, finvoice_object):
         SellerAccountID = SellerAccountIDType(
             IdentificationSchemeName='IBAN',
@@ -215,6 +225,8 @@ class AccountInvoice(models.Model):
         finvoice_object.set_SellerInformationDetails(SellerInformationDetails)
 
     def add_finvoice_buyer_party_details(self, finvoice_object):
+
+        # Non-standard field. This comes from account_invoice_invoice_address
         if hasattr(self, 'partner_invoice_id'):
             partner = self.partner_invoice_id
         else:
@@ -237,6 +249,14 @@ class AccountInvoice(models.Model):
         )
 
         finvoice_object.set_BuyerPartyDetails(BuyerPartyDetails)
+
+    def add_finvoice_buyer_contact_person_name(self, finvoice_object):
+        """ Set BuyerContactPersonName (customer contact person) """
+
+        # Non-standard field. This comes from from sale_order_customer_contact
+        if hasattr(self, 'customer_contact'):
+            BuyerContactPersonName = self.customer_contact.name
+            finvoice_object.set_BuyerContactPersonName(BuyerContactPersonName)
 
     def add_finvoice_delivery_party_details(self, finvoice_object):
         partner = self.partner_shipping_id or self.partner_id
@@ -321,6 +341,10 @@ class AccountInvoice(models.Model):
             VatSpecificationDetails=[VatSpecificationDetails],
             PaymentTermsDetails=[PaymentTermsDetails],
             # PaymentOverDueFineDetails = PaymentOverDueFineDetails,
+            SellerReferenceIdentifier=self.name or '',
+            # TODO: it is debatable if this field can be used as
+            #  BuyerReferenceIdentifier
+            BuyerReferenceIdentifier=self.reference or '',
         )
 
         finvoice_object.set_InvoiceDetails(InvoiceDetails)
