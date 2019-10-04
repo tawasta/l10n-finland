@@ -330,6 +330,7 @@ class AccountInvoice(models.Model):
         InvoiceDetails = InvoiceDetailsType(
             InvoiceTypeCode=InvoiceTypeCode,
             InvoiceTypeText=self.get_invoice_finvoice_type_text(TypeCode),
+            InvoiceFreeText=[self.comment],
             OriginCode=OriginCode,
             InvoiceNumber=self.invoice_number,
             InvoiceDate=date(
