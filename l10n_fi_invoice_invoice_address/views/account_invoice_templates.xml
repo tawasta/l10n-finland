@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_invoice_finnish_document"
+              inherit_id="l10n_fi_invoice.report_invoice_finnish_document">
+
+        <xpath expr ="//address[@t-field='o.partner_id']" position="replace">
+            <address t-field="o.partner_invoice_id"
+                     t-field-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'/>
+        </xpath>
+
+        <xpath expr ="//span[@t-field='o.partner_id.vat']" position="replace">
+            <span t-field="o.partner_invoice_id.vat"/>
+        </xpath>
+
+        <xpath expr ="//div[@id='payer-info']/div" position="replace">
+            <div t-field="o.partner_invoice_id"
+                 t-field-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'
+                 style="font-size: .8em;"/>
+        </xpath>
+
+    </template>
+
+</odoo>
