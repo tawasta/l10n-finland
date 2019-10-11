@@ -18,9 +18,9 @@
 #    along with this program. If not, see http://www.gnu.org/licenses/agpl.html
 #
 {
-    "name": "Finnish Invoice: Header text",
-    "summary": "Add Header text to Finnish Invoice template",
-    "version": "10.0.1.0.2",
+    "name": "Finnish Invoice: Use invoice address",
+    "summary": "Use invoice address Finnish Invoice template",
+    "version": "10.0.1.0.1",
     "category": "CRM",
     "website": "https://github.com/Tawasta/l10n-finland",
     "author": "Oy Tawasta Technologies Ltd., Odoo Community Association (OCA)",
@@ -34,7 +34,7 @@
     },
     "depends": [
         "l10n_fi_invoice",
-        "sale_order_header",
+        "account_invoice_invoice_address",
     ],
     "data": [
         'views/account_invoice_templates.xml',
