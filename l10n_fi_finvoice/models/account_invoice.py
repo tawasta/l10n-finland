@@ -283,12 +283,18 @@ class AccountInvoice(models.Model):
         CodeListAgencyIdentifier = None
         TypeCode = 'INV01'
         OriginCode = 'Original'
+        multiplier = 1
 
-        # Refund invoice
         if self.type == 'out_refund':
+            # Refund invoice
             TypeCode = 'INV02'
             CodeListAgencyIdentifier = 'SPY'
             OriginCode = 'Cancel'
+            multiplier = -1
+
+        print TypeCode
+        print self.type
+        print multiplier
 
         InvoiceTypeCode = InvoiceTypeCodeType(
             CodeListAgencyIdentifier=CodeListAgencyIdentifier,
@@ -297,17 +303,17 @@ class AccountInvoice(models.Model):
 
         InvoiceTotalVatExcludedAmount = amount(
             AmountCurrencyIdentifier=self.currency_id.name,
-            valueOf_=self.amount_untaxed,
+            valueOf_=self.amount_untaxed*multiplier,
         )
 
         InvoiceTotalVatAmount = amount(
             AmountCurrencyIdentifier=self.currency_id.name,
-            valueOf_=self.amount_tax,
+            valueOf_=self.amount_tax*multiplier,
         )
 
         InvoiceTotalVatIncludedAmount = amount(
             AmountCurrencyIdentifier=self.currency_id.name,
-            valueOf_=self.amount_total,
+            valueOf_=self.amount_total*multiplier,
         )
 
         # TODO: separate different VAT rates
@@ -363,6 +369,11 @@ class AccountInvoice(models.Model):
     def add_finvoice_invoice_rows(self, finvoice_object):
         InvoiceRows = list()
 
+        multiplier = 1
+        if self.type == 'out_refund':
+            # Refund invoice
+            multiplier = -1
+
         for line in self.invoice_line_ids:
             DeliveredQuantity = QuantityType(
                 QuantityUnitCode=line.uom_id.name,
@@ -371,12 +382,12 @@ class AccountInvoice(models.Model):
 
             UnitPriceAmount = amount(
                 AmountCurrencyIdentifier=self.currency_id.name,
-                valueOf_=line.price_unit,
+                valueOf_=line.price_unit*multiplier,
             )
 
             RowVatExcludedAmount = amount(
                 AmountCurrencyIdentifier=self.currency_id.name,
-                valueOf_=(line.quantity * line.price_unit),
+                valueOf_=(line.quantity * line.price_unit)*multiplier,
             )
 
             if line.invoice_line_tax_ids:
@@ -487,6 +498,11 @@ class AccountInvoice(models.Model):
         if payment_reference:
             payment_reference = payment_reference.zfill(20)
 
+        multiplier = 1
+        if self.type == 'out_refund':
+            # Refund invoice
+            multiplier = -1
+
         EpiRemittanceInfoIdentifier = EpiRemittanceInfoIdentifierType(
             IdentificationSchemeName='ISO',
             valueOf_=payment_reference
@@ -494,7 +510,7 @@ class AccountInvoice(models.Model):
 
         EpiInstructedAmount = amount(
             AmountCurrencyIdentifier=self.currency_id.name,
-            valueOf_=self.amount_total,
+            valueOf_=self.amount_total*multiplier,
         )
 
         EpiCharge = EpiChargeType(
