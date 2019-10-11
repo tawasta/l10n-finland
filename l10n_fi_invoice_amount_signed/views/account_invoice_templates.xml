@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_invoice_finnish_document"
+              inherit_id="l10n_fi_invoice.report_invoice_finnish_document">
+
+        <!-- Taxes and unit price use a dumb "minus"-string as there are no
+        signed fields. Using computed multiplier wouldn't work with t-field -->
+
+        <!-- Line amounts -->
+        <xpath expr ="//span[@t-field='l.price_unit']" position="replace">
+            <span t-if="o.type =='out_refund' and l.price_unit > 0">-</span><span t-field="l.price_unit"/>
+        </xpath>
+
+        <xpath expr ="//span[@t-field='l.price_subtotal']" position="replace">
+            <span t-field="l.price_subtotal_signed"
+                  t-field-options='{"widget": "monetary", "display_currency": "o.currency_id"}'/>
+        </xpath>
+        <!-- / Line amounts -->
+
+        <!-- Invoice amounts -->
+        <xpath expr ="//span[@t-field='o.amount_untaxed']" position="replace">
+            <span t-field="o.amount_untaxed_signed"
+                  t-field-options='{"widget": "monetary", "display_currency": "o.currency_id"}'/>
+        </xpath>
+
+        <xpath expr ="//span[@t-field='o.amount_tax']" position="replace">
+
+            <span t-if="o.type =='out_refund' and o.amount_tax > 0">-</span><span t-field="o.amount_tax"
+                  t-field-options='{"widget": "monetary", "display_currency": "o.currency_id"}'/>
+        </xpath>
+
+        <xpath expr ="//span[@t-field='o.amount_total']" position="replace">
+            <span t-field="o.amount_total_signed"
+                  t-field-options='{"widget": "monetary", "display_currency": "o.currency_id"}'/>
+        </xpath>
+        <!-- / Invoice amounts -->
+
+        <!-- Tax amounts -->
+        <xpath expr ="//span[@t-field='t.base']" position="replace">
+            <span t-if="o.type =='out_refund' and t.base > 0">-</span><span t-field="t.base"
+                  t-field-options='{"widget": "monetary", "display_currency": "o.currency_id"}'/>
+        </xpath>
+        <xpath expr ="//span[@t-field='t.amount']" position="replace">
+            <span t-if="o.type =='out_refund' and t.amount > 0">-</span><span t-field="t.amount"
+                  t-field-options='{"widget": "monetary", "display_currency": "o.currency_id"}'/>
+        </xpath>
+        <!-- / Tax amounts -->
+
+    </template>
+
+</odoo>
