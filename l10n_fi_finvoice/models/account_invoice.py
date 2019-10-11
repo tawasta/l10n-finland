@@ -292,10 +292,6 @@ class AccountInvoice(models.Model):
             OriginCode = 'Cancel'
             multiplier = -1
 
-        print TypeCode
-        print self.type
-        print multiplier
-
         InvoiceTypeCode = InvoiceTypeCodeType(
             CodeListAgencyIdentifier=CodeListAgencyIdentifier,
             valueOf_=TypeCode,
