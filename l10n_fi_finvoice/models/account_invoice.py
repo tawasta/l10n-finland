@@ -71,18 +71,10 @@ class AccountInvoice(models.Model):
 
     _inherit = 'account.invoice'
 
-    # Please do not add this field to any view,
-    # as the computation is resource-intense
-    # This is only to act as a helper
     invoice_number = fields.Char(
         string='Invoice number',
         compute='compute_invoice_number',
         store=True,
-    )
-
-    finvoice_xml = fields.Text(
-        string='Finvoice XML',
-        compute='compute_finvoice_xml'
     )
 
     @api.multi
@@ -91,13 +83,6 @@ class AccountInvoice(models.Model):
         for record in self:
             if record.number:
                 record.invoice_number = re.sub(r'\D', '', record.number)
-
-    def compute_finvoice_xml(self):
-        for record in self:
-            _logger.debug('Generating Finvoice for %s', record.name)
-
-            finvoice_xml = record._get_finvoice_xml()
-            record.finvoice_xml = finvoice_xml
 
     def _get_finvoice_object(self):
 
@@ -125,7 +110,11 @@ class AccountInvoice(models.Model):
 
         return finvoice_object
 
-    def _get_finvoice_xml(self, encoding='ISO-8859-15'):
+    def _get_finvoice_xml(self, encoding):
+        """ For legacy support only """
+        return self.get_finvoice_xml(encoding)
+
+    def get_finvoice_xml(self, encoding='ISO-8859-15'):
         finvoice_object = self._get_finvoice_object()
         xml_declaration = "<?xml version='1.0' encoding='%s'?>\n" % encoding
 
