@@ -110,7 +110,7 @@ class AccountInvoice(models.Model):
 
         return finvoice_object
 
-    def _get_finvoice_xml(self, encoding):
+    def _get_finvoice_xml(self, encoding=False):
         """ For legacy support only """
         return self.get_finvoice_xml(encoding)
 
