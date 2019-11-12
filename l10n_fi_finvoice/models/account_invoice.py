@@ -286,22 +286,24 @@ class AccountInvoice(models.Model):
             valueOf_=TypeCode,
         )
 
+        # The valueOf_ amounts are forced to 5 decimals to avoid errors with
+        # unintentional rounding before sending
         amount_untaxed = self.amount_untaxed or 0.00
         InvoiceTotalVatExcludedAmount = amount(
             AmountCurrencyIdentifier=self.currency_id.name,
-            valueOf_=amount_untaxed*multiplier,
+            valueOf_='%.5f' % amount_untaxed*multiplier,
         )
 
         amount_tax = self.amount_tax or 0.00
         InvoiceTotalVatAmount = amount(
             AmountCurrencyIdentifier=self.currency_id.name,
-            valueOf_=amount_tax*multiplier,
+            valueOf_='%.5f' % amount_tax*multiplier,
         )
 
         amount_total = self.amount_total or 0.00
         InvoiceTotalVatIncludedAmount = amount(
             AmountCurrencyIdentifier=self.currency_id.name,
-            valueOf_=amount_total*multiplier,
+            valueOf_='%.5f' % amount_total*multiplier,
         )
 
         # TODO: separate different VAT rates
