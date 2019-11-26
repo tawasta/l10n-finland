@@ -291,19 +291,19 @@ class AccountInvoice(models.Model):
         amount_untaxed = self.amount_untaxed or 0.00
         InvoiceTotalVatExcludedAmount = amount(
             AmountCurrencyIdentifier=self.currency_id.name,
-            valueOf_='%.5f' % amount_untaxed*multiplier,
+            valueOf_='%.5f' % (amount_untaxed*multiplier),
         )
 
         amount_tax = self.amount_tax or 0.00
         InvoiceTotalVatAmount = amount(
             AmountCurrencyIdentifier=self.currency_id.name,
-            valueOf_='%.5f' % amount_tax*multiplier,
+            valueOf_='%.5f' % (amount_tax*multiplier),
         )
 
         amount_total = self.amount_total or 0.00
         InvoiceTotalVatIncludedAmount = amount(
             AmountCurrencyIdentifier=self.currency_id.name,
-            valueOf_='%.5f' % amount_total*multiplier,
+            valueOf_='%.5f' % (amount_total*multiplier),
         )
 
         # TODO: separate different VAT rates

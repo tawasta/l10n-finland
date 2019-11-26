@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_invoice_finnish_document"
+              inherit_id="l10n_fi_invoice.report_invoice_finnish_document">
+
+        <xpath expr="//span[@t-field='l.name']" position="attributes">
+            <attribute name="class">line-name</attribute>
+        </xpath>
+
+        <xpath expr="//span[@class='line_number']" position="after">
+            <span class="col-xs-offset-2 product-id">
+                <strong t-field="l.product_id.name" />
+            </span><br/>
+        </xpath>
+
+    </template>
+
+</odoo>
