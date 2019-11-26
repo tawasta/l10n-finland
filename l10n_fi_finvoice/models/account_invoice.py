@@ -372,12 +372,13 @@ class AccountInvoice(models.Model):
 
             UnitPriceAmount = amount(
                 AmountCurrencyIdentifier=self.currency_id.name,
-                valueOf_=line.price_unit*multiplier,
+                valueOf_='%.5f' % (line.price_unit*multiplier),
             )
 
+            vat_excluded = (line.quantity * line.price_unit)*multiplier
             RowVatExcludedAmount = amount(
                 AmountCurrencyIdentifier=self.currency_id.name,
-                valueOf_=(line.quantity * line.price_unit)*multiplier,
+                valueOf_='%.5f' % vat_excluded
             )
 
             if line.invoice_line_tax_ids:
