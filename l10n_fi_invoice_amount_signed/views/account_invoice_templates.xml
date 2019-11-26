@@ -7,6 +7,12 @@
         <!-- Taxes and unit price use a dumb "minus"-string as there are no
         signed fields. Using computed multiplier wouldn't work with t-field -->
 
+        <!-- Invoice term -->
+        <xpath expr="//span[1]" position="replace">
+            <span t-if="o.type == 'out_refund'">Refund</span>
+            <span t-else="">Invoice</span>
+        </xpath>
+
         <!-- Line amounts -->
         <xpath expr ="//span[@t-field='l.price_unit']" position="replace">
             <span t-if="o.type =='out_refund' and l.price_unit > 0">-</span><span t-field="l.price_unit"/>

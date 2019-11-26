@@ -20,7 +20,7 @@
 {
     "name": "Finnish Invoice: Signed amounts",
     "summary": "Show negative refund amounts on Finnish Invoice template",
-    "version": "10.0.1.0.0",
+    "version": "10.0.1.1.0",
     "category": "CRM",
     "website": "https://github.com/Tawasta/l10n-finland",
     "author": "Oy Tawasta Technologies Ltd., Odoo Community Association (OCA)",
