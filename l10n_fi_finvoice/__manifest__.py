@@ -30,7 +30,7 @@
     'installable': True,
     'external_dependencies': {
         'python': [
-            'finvoice',
+            'py-finvoice',
         ],
         'bin': [],
     },
