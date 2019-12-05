@@ -16,7 +16,6 @@ addon | version | summary
 [l10n_fi_province](l10n_fi_province/) | 12.0.1.0.0 | All of Finland's provinces
 
 [//]: # (end addons)
-=======
 
 
 Translation Status
