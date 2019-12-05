@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2015 Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
+#    Copyright 2015 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -21,7 +21,7 @@
 {
     'name': 'Finnish Banks',
     'summary': 'Finnish banks and their addresses',
-    'version': '11.0.1.0.0',
+    'version': '12.0.1.0.0',
     'category': 'Localization',
     'website': 'https://odoo-community.org/',
     'author': 'Oy Tawasta Technologies Ltd., Odoo Community Association (OCA)',
