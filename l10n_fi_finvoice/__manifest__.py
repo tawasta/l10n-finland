@@ -1,8 +1,7 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2017 Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
+#    Copyright 2017 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -22,15 +21,17 @@
 {
     'name': 'Account invoice Finvoice',
     'summary': 'Converts between Odoo invoice and Finvoice 2.01',
-    'version': '0.1.25',
+    'version': '12.0.0.1.25',
     'category': 'Accounting & Finance',
-    'website': 'http://www.tawasta.fi',
+    'website': 'https://tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
     'application': False,
     'installable': True,
     'external_dependencies': {
-        'python': [],
+        'python': [
+            'py-finvoice',
+        ],
         'bin': [],
     },
     'depends': [

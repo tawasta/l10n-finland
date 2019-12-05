@@ -1,8 +1,7 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2015 Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
+#    Copyright 2015 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -22,7 +21,7 @@
 {
     'name': 'Finnish Payment Terms',
     'summary': 'Common Finnish invoice payment terms',
-    'version': '1.1.1',
+    'version': '12.0.1.1.1',
     'category': 'Localization',
     'website': 'https://odoo-community.org/',
     'author': 'Oy Tawasta Technologies Ltd., Odoo Community Association (OCA)',

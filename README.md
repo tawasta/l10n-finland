@@ -1,11 +1,22 @@
-[![Runbot Status](https://runbot.odoo-community.org/runbot/badge/flat/178/12.0.svg)](https://runbot.odoo-community.org/runbot/repo/github-com-oca-l10n-finland-178)
-[![Build Status](https://travis-ci.org/OCA/l10n-finland.svg?branch=12.0)](https://travis-ci.org/OCA/l10n-finland)
-[![codecov](https://codecov.io/gh/OCA/l10n-finland/branch/12.0/graph/badge.svg)](https://codecov.io/gh/OCA/l10n-finland)
+[![Build Status](https://travis-ci.org/Tawasta/l10n-finland.svg?branch=12.0)](https://travis-ci.org/Tawasta/l10n-finland)
 
 Finnish localisation
 
 ...
 
+[//]: # (addons)
+
+Available addons
+----------------
+addon | version | summary
+--- | --- | ---
+[l10n_fi_banks](l10n_fi_banks/) | 12.0.1.0.0 | Finnish banks and their addresses
+[l10n_fi_finvoice](l10n_fi_finvoice/) | 12.0.0.1.25 | Converts between Odoo invoice and Finvoice 2.01
+[l10n_fi_payment_terms](l10n_fi_payment_terms/) | 12.0.1.1.1 | Common Finnish invoice payment terms
+[l10n_fi_province](l10n_fi_province/) | 12.0.1.0.0 | All of Finland's provinces
+
+[//]: # (end addons)
+=======
 
 
 Translation Status
