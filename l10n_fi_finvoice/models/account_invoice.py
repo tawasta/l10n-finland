@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import logging
 import datetime
 import re
@@ -76,23 +75,23 @@ class AccountInvoice(models.Model):
     # This is only to act as a helper
     invoice_number = fields.Char(
         string='Invoice number',
-        compute='compute_invoice_number',
+        compute='_compute_invoice_number',
         store=True,
     )
 
     finvoice_xml = fields.Text(
         string='Finvoice XML',
-        compute='compute_finvoice_xml'
+        compute='_compute_finvoice_xml'
     )
 
     @api.multi
     @api.depends('number', 'state')
-    def compute_invoice_number(self):
+    def _compute_invoice_number(self):
         for record in self:
             if record.number:
                 record.invoice_number = re.sub(r'\D', '', record.number)
 
-    def compute_finvoice_xml(self):
+    def _compute_finvoice_xml(self):
         for record in self:
             _logger.debug('Generating Finvoice for %s', self.name)
 
@@ -308,6 +307,7 @@ class AccountInvoice(models.Model):
             PaymentOverDueFineFreeText='',  # TODO
             PaymentOverDueFinePercent='',  # TODO
         )
+        _logger.debug(PaymentOverDueFineDetails)
 
         InvoiceDetails = InvoiceDetailsType(
             InvoiceTypeCode=InvoiceTypeCode,
@@ -379,7 +379,7 @@ class AccountInvoice(models.Model):
             EpiIdentificationDetails=EpiIdentificationDetails,
             EpiPartyDetails=self._get_finvoice_epi_party_details(),
             EpiPaymentInstructionDetails=self.
-                _get_finvoice_epi_payment_instruction_details(),
+            _get_finvoice_epi_payment_instruction_details(),
         )
 
         finvoice_object.set_EpiDetails(EpiDetails)
@@ -426,7 +426,7 @@ class AccountInvoice(models.Model):
         )
 
         # Seller
-        EpiBeneficiaryPartyDetails=EpiBeneficiaryPartyDetailsType(
+        EpiBeneficiaryPartyDetails = EpiBeneficiaryPartyDetailsType(
             EpiNameAddressDetails=self.partner_id.name,
             EpiBei=self.company_id.company_registry,
             EpiAccountID=BeneficiaryEpiAccountID,
