@@ -4,11 +4,11 @@
     <template id="report_invoice_finnish_document"
               inherit_id="l10n_fi_invoice.report_invoice_finnish_document">
 
-        <xpath expr ="//t[@t-esc='o.partner_bank_id.acc_number']" position="after">
-            <tr t-if="o.partner_bank_id and o.partner_bank_id.bank_id and o.partner_bank_id.bank_id.bic">
-                <br/>BIC <t t-esc="o.partner_bank_id.bank_id.bic"/>
-            </tr>
+        <xpath expr="//div[@class='row border-bottom medium-row']/div[2]" position="inside">
+            <t t-if="o.partner_bank_id and o.partner_bank_id.bank_id and o.partner_bank_id.bank_id.bic">BIC <t t-esc="o.partner_bank_id.bank_id.bic"/></t>
         </xpath>
+
+        <xpath expr="//div[@class='row border-bottom medium-row']/div[1]" position="replace" />
 
     </template>
 
