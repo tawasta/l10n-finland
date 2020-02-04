@@ -29,6 +29,7 @@
     'application': False,
     'installable': True,
     'depends': [
+        'base_address_city',
         'l10n_fi_province',
     ],
     'data': [
