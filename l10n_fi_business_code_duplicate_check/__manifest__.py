@@ -32,6 +32,7 @@
     'depends': [
         'base',
         'l10n_fi_business_code',
+        'onchange_helper',
     ],
     'data': [
     ],
