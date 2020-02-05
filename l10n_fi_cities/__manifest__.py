@@ -24,7 +24,7 @@
     'version': '12.0.1.0.0',
     'category': 'Location',
     'website': 'https://odoo-community.org/',
-    'author': 'Oy Tawasta Technologies Ltd., Odoo Community Association (OCA)',
+    'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
     'application': False,
     'installable': True,
