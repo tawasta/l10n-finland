@@ -11,17 +11,17 @@ class ResPartner(models.Model):
 
     _inherit = 'res.partner'
 
-    def fetched_business_ids(self, id_family):
-        """Python generator for fetched business_id-values"""
+    def fetched_matched_partners(self, id_family, business_id):
+        """Fetch partners outside id_family that have same business_id as
+        selected partner"""
 
-        business_id_numbers = self.env['res.partner'].search([
+        matched_partners = self.env['res.partner'].search([
             ('id', 'not in', id_family),
-            ('is_company', '=', True)
-        ]).mapped('business_id')
+            ('is_company', '=', True),
+            ('business_id', '=', business_id)
+        ])
 
-        for business_id in business_id_numbers:
-            if business_id:
-                yield business_id
+        return matched_partners
 
     def check_duplicate_business_id(self, own_id):
         """Raises ValidationError if Business ID exists on partners
@@ -33,8 +33,10 @@ class ResPartner(models.Model):
         parent_id = self.parent_id and [self.parent_id.id] or []
         id_family = address_ids + own_id + parent_id
 
-        if self.business_id and self.business_id in \
-                self.fetched_business_ids(id_family):
+        business_id = self.business_id
+
+        if business_id and len(self.fetched_matched_partners(
+                id_family, business_id)) > 1:
             error = _('Business ID has to be unique!')
             raise ValidationError(error)
 
@@ -62,6 +64,7 @@ class ResPartner(models.Model):
         id_number_recs = self.env['res.partner.id_number'].search([
             ('partner_id', '=', partner_id)
         ])
+
         return id_number_recs
 
     @api.onchange('business_id')
