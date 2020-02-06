@@ -36,7 +36,7 @@ class ResPartner(models.Model):
         business_id = self.business_id
 
         if business_id and len(self.fetched_matched_partners(
-                id_family, business_id)) > 1:
+                id_family, business_id)) > 0:
             error = _('Business ID has to be unique!')
             raise ValidationError(error)
 
