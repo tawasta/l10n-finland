@@ -344,6 +344,9 @@ class AccountInvoice(models.Model):
             BuyerReferenceIdentifier=self.reference or '',
         )
 
+        if hasattr(self, 'agreement_identifier'):
+            InvoiceDetails.AgreementIdentifier = self.agreement_identifier
+
         finvoice_object.set_InvoiceDetails(InvoiceDetails)
 
     def add_finvoice_payment_status_details(self, finvoice_object):
