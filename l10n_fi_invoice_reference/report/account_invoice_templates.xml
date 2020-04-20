@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <template id="report_invoice_finnish_document"
+              inherit_id="l10n_fi_invoice.report_invoice_finnish_document">
+        <xpath expr ="//table[@class='invoice-info']/tr[last()]" position="after">
+            <tr t-if="o.reference and o.reference != o.origin">
+                <td>Order reference</td>
+                <td>
+                    <span t-field="o.reference"/>
+                </td>
+            </tr>
+        </xpath>
+    </template>
+</odoo>
