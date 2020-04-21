@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <template id="report_invoice_finnish_document"
+              inherit_id="l10n_fi_invoice.report_invoice_finnish_document">
+        <xpath expr ="//table[@class='invoice-info']//span[@t-field='o.payment_term_id']/../.." position="after">
+            <tr>
+                <td>Late payment interest</td>
+                <td>
+                    <span t-field="o.overdue_interest"/> %
+                </td>
+            </tr>
+        </xpath>
+    </template>
+</odoo>
