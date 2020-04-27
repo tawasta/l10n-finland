@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <template id="report_invoice_finnish_document" inherit_id="l10n_fi_invoice.report_invoice_finnish_document">
+        <!--Unit Price-->
+        <xpath expr ="//span[@t-field='l.price_unit']" position="attributes">
+            <attribute name="t-options">{'widget': 'float', 'precision': 2}</attribute>
+        </xpath>
+
+        <!--Amount-->
+        <xpath expr ="//span[@t-field='l.price_subtotal']" position="attributes">
+            <attribute name="t-options">{'widget': 'float', 'precision': 2}</attribute>
+        </xpath>
+        <xpath expr ="//span[@t-field='l.price_subtotal']" position="after">
+            <t t-esc="o.currency_id.symbol"/>
+        </xpath>
+
+        <!--Total Without Taxes-->
+        <xpath expr ="//span[@t-field='o.amount_untaxed']" position="attributes">
+            <attribute name="t-options">{'widget': 'float', 'precision': 2}</attribute>
+        </xpath>
+        <xpath expr ="//span[@t-field='o.amount_untaxed']" position="after">
+            <t t-esc="o.currency_id.symbol"/>
+        </xpath>
+
+        <!--Taxes-->
+        <xpath expr ="//span[@t-field='o.amount_tax']" position="attributes">
+            <attribute name="t-options">{'widget': 'float', 'precision': 2}</attribute>
+        </xpath>
+        <xpath expr ="//span[@t-field='o.amount_tax']" position="after">
+            <t t-esc="o.currency_id.symbol"/>
+        </xpath>
+
+        <!--Total-->
+        <xpath expr ="//table[@class='table table-condensed products-table-totals']//span[@t-field='o.amount_total']" position="attributes">
+            <attribute name="t-options">{'widget': 'float', 'precision': 2}</attribute>
+        </xpath>
+        <xpath expr ="//table[@class='table table-condensed products-table-totals']//span[@t-field='o.amount_total']" position="after">
+            <t t-esc="o.currency_id.symbol"/>
+        </xpath>
+
+        <!--Base-->
+        <xpath expr ="//span[@t-field='t.base']" position="attributes">
+            <attribute name="t-options">{'widget': 'float', 'precision': 2}</attribute>
+        </xpath>
+        <xpath expr ="//span[@t-field='t.base']" position="after">
+            <t t-esc="o.currency_id.symbol"/>
+        </xpath>
+
+        <!--Amount-->
+        <xpath expr ="//span[@t-field='t.amount']" position="attributes">
+            <attribute name="t-options">{'widget': 'float', 'precision': 2}</attribute>
+        </xpath>
+        <xpath expr ="//span[@t-field='t.amount']" position="after">
+            <t t-esc="o.currency_id.symbol"/>
+        </xpath>
+    </template>
+</odoo>
