@@ -2,11 +2,11 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-=====================================
-Finland States Latitude and Longitude
-=====================================
+==============
+Country Groups
+==============
 
-Finland States Latitude and Longitude
+Country Groups
 
 Installation
 ============
