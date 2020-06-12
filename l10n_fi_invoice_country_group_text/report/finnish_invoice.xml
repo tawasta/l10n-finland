@@ -3,8 +3,8 @@
 <odoo>
     <template id="finnish_invoice_country_group_text_report"
         inherit_id="l10n_fi_invoice.report_invoice_finnish_document">
-        <xpath expr="//div[@class='page']"
-            position="inside">
+        <xpath expr="//hr[last()]"
+            position="before">
             <div class="row">
                 <div class="col-12">
                     <t t-foreach="o.partner_id.country_id.country_group_ids"
