@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2017 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2019 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -16,32 +16,29 @@
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program. If not, see http://www.gnu.org/licenses/agpl.html
 #
-##############################################################################
-
 {
-    'name': 'Account invoice Finvoice',
-    'summary': 'Converts between Odoo invoice and Finvoice 2.01',
-    'version': '12.0.0.1.25',
-    'category': 'Accounting & Finance',
-    'website': 'https://tawasta.fi',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'external_dependencies': {
-        'python': [
-            'py-finvoice',
-        ],
-        'bin': [],
+    "name": "Finnish Invoice: BIC code",
+    "summary": "Add BIC code to Finnish Invoice template",
+    "version": "12.0.1.0.1",
+    "category": "CRM",
+    "website": "https://github.com/Tawasta/l10n-finland",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "auto-install": True,
+    "external_dependencies": {
+        "python": [],
+        "bin": [],
     },
-    'depends': [
-        'account',
-        'l10n_fi_business_code_validate',
-        'l10n_fi_edicode',
-        'sale',
+    "depends": [
+        "l10n_fi_invoice",
     ],
-    'data': [
+    "data": [
+        'views/account_invoice_templates.xml',
     ],
-    'demo': [
+    "demo": [
     ],
+    "qweb": [
+    ]
 }

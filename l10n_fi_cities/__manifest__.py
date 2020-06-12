@@ -20,11 +20,11 @@
 
 {
     'name': 'Finnish Cities',
-    'summary': 'List of finnish cities as res.city',
+    'summary': 'List of Finnish cities as res.city',
     'version': '12.0.1.0.0',
     'category': 'Location',
-    'website': 'https://odoo-community.org/',
-    'author': 'Oy Tawasta Technologies Ltd.',
+    'website': 'https://github.com/Tawasta/l10n-finland',
+    'author': 'Tawasta',
     'license': 'AGPL-3',
     'application': False,
     'installable': True,
