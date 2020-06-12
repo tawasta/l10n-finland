@@ -19,12 +19,12 @@
 ##############################################################################
 
 {
-    'name': 'Finland States Latitude Longitude',
-    'summary': '',
+    'name': 'Finland States Latitude and Longitude',
+    'summary': 'Finland States Latitude and Longitude',
     'version': '12.0.1.0.0',
     'category': 'Location',
-    'website': 'http://www.tawasta.fi',
-    'author': 'Oy Tawasta Technologies Ltd.',
+    'website': 'https://github.com/Tawasta/l10n-finland',
+    'author': 'Tawasta',
     'license': 'AGPL-3',
     'application': False,
     'installable': True,
