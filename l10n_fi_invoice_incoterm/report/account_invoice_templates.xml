@@ -4,10 +4,10 @@
     <template id="report_invoice_finnish_document"
               inherit_id="l10n_fi_invoice.report_invoice_finnish_document">
         <xpath expr ="//table[@class='invoice-info']/tr[last()]" position="after">
-            <tr t-if="o.reference">
+            <tr t-if="o.incoterm_id">
                 <td>Incoterm:</td>
                 <td>
-                    <span t-field="o.incoterm"/>
+                    <span t-field="o.incoterm_id.name"/>
                 </td>
             </tr>
         </xpath>
