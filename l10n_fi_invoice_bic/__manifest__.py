@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
@@ -20,10 +19,10 @@
 {
     "name": "Finnish Invoice: BIC code",
     "summary": "Add BIC code to Finnish Invoice template",
-    "version": "10.0.1.0.1",
+    "version": "12.0.1.0.1",
     "category": "CRM",
     "website": "https://github.com/Tawasta/l10n-finland",
-    "author": "Oy Tawasta Technologies Ltd., Odoo Community Association (OCA)",
+    "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
