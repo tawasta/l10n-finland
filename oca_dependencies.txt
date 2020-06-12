@@ -1,2 +1,3 @@
+avoinsystems-addons https://github.com/avoinsystems/avoinsystems-addons
 l10n-finland https://github.com/OCA/l10n-finland
 partner-contact https://github.com/OCA/partner-contact
