@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="country_group_form_inherit" model="ir.ui.view">
+        <field name="name">country.group.form.inherit</field>
+        <field name="model">res.country.group</field>
+        <field name="inherit_id" ref="base.view_country_group_form"/>
+        <field name="arch" type="xml">
+            <group name="country_group" position="after">
+                <group name="finnish_invoices">
+                    <field name="finnish_invoice_text"/>
+                </group>
+            </group>
+        </field>
+    </record>
+</odoo>
