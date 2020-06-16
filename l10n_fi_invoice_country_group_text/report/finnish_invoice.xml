@@ -10,7 +10,7 @@
                     <t t-foreach="o.partner_id.country_id.country_group_ids"
                         t-as="country_group">
                         <br/>
-                        <t t-esc="country_group.finnish_invoice_text"></t>
+                        <span t-field="country_group.finnish_invoice_text"></span>
                     </t>
                 </div>
             </div>
