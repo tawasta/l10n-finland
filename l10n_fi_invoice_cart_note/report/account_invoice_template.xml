@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template id="report_invoice_finnish_document" inherit_id="l10n_fi_invoice.report_invoice_finnish_document">
+        <xpath expr="//div[@t-if='o.tax_line_ids']" position="after">
+            <tr t-foreach="o.invoice_line_ids" t-as="line">
+                <td t-if="line.product_id.website_cart_note and line.product_id.website_cart_note != '&lt;p&gt;&lt;br&gt;&lt;/p&gt;'">
+                    <div class="small col-8" style="padding: initial;">
+                    <strong><span t-esc="line.product_id.name"/>:</strong>
+                    <span t-raw="line.product_id.website_cart_note"/>
+                    </div>
+                </td>
+            </tr>
+        </xpath>
+    </template>
+</odoo>
