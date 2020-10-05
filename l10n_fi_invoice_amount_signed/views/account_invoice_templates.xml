@@ -40,6 +40,10 @@
             <span t-field="o.amount_total_signed"
                   t-field-options='{"widget": "monetary", "display_currency": "o.currency_id"}'/>
         </xpath>
+        
+        <xpath expr="//div[@class='bank-transfer-wrap last-page']//span[@t-field='o.amount_total']" position="replace">
+            <span t-field="o.amount_total_signed" class="bank-transfer-value" style="float: right;"/>
+        </xpath>        
         <!-- / Invoice amounts -->
 
         <!-- Tax amounts -->
