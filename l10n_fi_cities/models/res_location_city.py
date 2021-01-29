@@ -3,6 +3,7 @@ from odoo import models, fields
 
 class ResLocationCity(models.Model):
     _name = "res.location_city"
+    _description = "Cities"
 
     name = fields.Char(string="Name")
     display_name = fields.Char(string="Display Name")
