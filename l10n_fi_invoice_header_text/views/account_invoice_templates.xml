@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_invoice_finnish_document"
+              inherit_id="l10n_fi_invoice.report_invoice_finnish_document">
+
+        <xpath expr="//div[@style='margin-bottom: 1em;']" position="before">
+            <div t-if="o.header_text"
+                 id="header-text-div"
+                 style="margin-bottom: 1em;">
+                <b><span t-field="o.header_text"/></b><br/>
+            </div>
+        </xpath>
+
+    </template>
+
+</odoo>
