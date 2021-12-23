@@ -9,4 +9,5 @@ class CountryGroup(models.Model):
         string="Finnish Invoice Text",
         help="Text to be added on finnish invoices going to customers in this "
         + "country group.",
+        translate=True,
     )
