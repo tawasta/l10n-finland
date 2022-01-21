@@ -11,6 +11,7 @@
             <p>l10n_fi_municipalities - Kuntien tiedot</p>
         </field>
     </record>
+
     <menuitem id="menu_municipalities"
         name="Municipalities"
         parent="contacts.menu_localisation"

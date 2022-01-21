@@ -16,7 +16,7 @@ Information on Finnish municipalities:
 
 License:
 ------------
-* The municipality data for the module was provided by avoindata.fi (https://www.avoindata.fi/data/fi/dataset/kunnat/resource/b1cb9870-191f-4616-9c53-5388b7ca6beb), licensed under CC BY 4.0.
+\-
 
 Configuration
 =============
