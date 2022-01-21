@@ -20,8 +20,8 @@
 ##############################################################################
 
 {
-    'name': 'Finland municipalities',
-    'summary': "Finland municipalities",
+    'name': 'Finland municipality',
+    'summary': "Finland municipality",
     'version': '12.0.0.1.1',
     'category': 'Specific Industry Applications',
     'website': 'http://www.tawasta.fi',
