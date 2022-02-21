@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
+
   <record model="ir.ui.view" id="municipalities_form">
         <field name="name">municipalities.form</field>
         <field name="model">res.municipality</field>
@@ -29,4 +30,5 @@
       </tree>
       </field>
   </record>
+
 </odoo>

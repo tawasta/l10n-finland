@@ -2,9 +2,9 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-======================
-Finland municipalities
-======================
+====================
+Finland municipality
+====================
 
 Information on Finnish municipalities:
 ------------
@@ -16,7 +16,7 @@ Information on Finnish municipalities:
 
 License:
 ------------
-* The municipality data for the module was provided by avoindata.fi (https://www.avoindata.fi/data/fi/dataset/kunnat/resource/b1cb9870-191f-4616-9c53-5388b7ca6beb), licensed under CC BY 4.0.
+\-
 
 Configuration
 =============
