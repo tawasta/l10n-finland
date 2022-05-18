@@ -1,0 +1,2483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="city_fi_01" model="res.location_city">
+        <field name="name">Akaa</field>
+        <field name="display_name">Akaa</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_06"></field>
+    </record>
+
+
+    <record id="city_fi_02" model="res.location_city">
+        <field name="name">Alajärvi</field>
+        <field name="display_name">Alajärvi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_14"></field>
+    </record>
+
+
+    <record id="city_fi_03" model="res.location_city">
+        <field name="name">Alavieska</field>
+        <field name="display_name">Alavieska</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_17"></field>
+    </record>
+
+
+    <record id="city_fi_04" model="res.location_city">
+        <field name="name">Alavus</field>
+        <field name="display_name">Alavus</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_14"></field>
+    </record>
+
+
+    <record id="city_fi_05" model="res.location_city">
+        <field name="name">Asikkala</field>
+        <field name="display_name">Asikkala</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_07"></field>
+    </record>
+
+
+    <record id="city_fi_06" model="res.location_city">
+        <field name="name">Askola</field>
+        <field name="display_name">Askola</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_01"></field>
+    </record>
+
+
+    <record id="city_fi_07" model="res.location_city">
+        <field name="name">Aura</field>
+        <field name="display_name">Aura</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_02"></field>
+    </record>
+
+
+    <record id="city_fi_08" model="res.location_city">
+        <field name="name">Brändö</field>
+        <field name="display_name">Brändö</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_21"></field>
+    </record>
+
+
+    <record id="city_fi_09" model="res.location_city">
+        <field name="name">Eckerö</field>
+        <field name="display_name">Eckerö</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_21"></field>
+    </record>
+
+
+    <record id="city_fi_10" model="res.location_city">
+        <field name="name">Enonkoski</field>
+        <field name="display_name">Enonkoski</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_10"></field>
+    </record>
+
+
+    <record id="city_fi_11" model="res.location_city">
+        <field name="name">Enontekiö</field>
+        <field name="display_name">Enontekiö</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_19"></field>
+    </record>
+
+
+    <record id="city_fi_12" model="res.location_city">
+        <field name="name">Espoo</field>
+        <field name="display_name">Espoo</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_01"></field>
+    </record>
+
+
+    <record id="city_fi_13" model="res.location_city">
+        <field name="name">Eura</field>
+        <field name="display_name">Eura</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_04"></field>
+    </record>
+
+
+    <record id="city_fi_14" model="res.location_city">
+        <field name="name">Eurajoki</field>
+        <field name="display_name">Eurajoki</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_04"></field>
+    </record>
+
+
+    <record id="city_fi_15" model="res.location_city">
+        <field name="name">Evijärvi</field>
+        <field name="display_name">Evijärvi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_14"></field>
+    </record>
+
+
+    <record id="city_fi_16" model="res.location_city">
+        <field name="name">Finström</field>
+        <field name="display_name">Finström</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_21"></field>
+    </record>
+
+
+    <record id="city_fi_17" model="res.location_city">
+        <field name="name">Forssa</field>
+        <field name="display_name">Forssa</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_05"></field>
+    </record>
+
+
+    <record id="city_fi_18" model="res.location_city">
+        <field name="name">Föglö</field>
+        <field name="display_name">Föglö</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_21"></field>
+    </record>
+
+
+    <record id="city_fi_19" model="res.location_city">
+        <field name="name">Geta</field>
+        <field name="display_name">Geta</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_21"></field>
+    </record>
+
+
+    <record id="city_fi_20" model="res.location_city">
+        <field name="name">Haapajärvi</field>
+        <field name="display_name">Haapajärvi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_17"></field>
+    </record>
+
+
+    <record id="city_fi_21" model="res.location_city">
+        <field name="name">Haapavesi</field>
+        <field name="display_name">Haapavesi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_17"></field>
+    </record>
+
+
+    <record id="city_fi_22" model="res.location_city">
+        <field name="name">Hailuoto</field>
+        <field name="display_name">Hailuoto</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_17"></field>
+    </record>
+
+
+    <record id="city_fi_23" model="res.location_city">
+        <field name="name">Halsua</field>
+        <field name="display_name">Halsua</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_16"></field>
+    </record>
+
+
+    <record id="city_fi_24" model="res.location_city">
+        <field name="name">Hamina</field>
+        <field name="display_name">Hamina</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_08"></field>
+    </record>
+
+
+    <record id="city_fi_25" model="res.location_city">
+        <field name="name">Hammarland</field>
+        <field name="display_name">Hammarland</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_21"></field>
+    </record>
+
+
+    <record id="city_fi_26" model="res.location_city">
+        <field name="name">Hankasalmi</field>
+        <field name="display_name">Hankasalmi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_13"></field>
+    </record>
+
+
+    <record id="city_fi_27" model="res.location_city">
+        <field name="name">Hanko</field>
+        <field name="display_name">Hanko</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_01"></field>
+    </record>
+
+
+    <record id="city_fi_28" model="res.location_city">
+        <field name="name">Harjavalta</field>
+        <field name="display_name">Harjavalta</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_04"></field>
+    </record>
+
+
+    <record id="city_fi_29" model="res.location_city">
+        <field name="name">Hartola</field>
+        <field name="display_name">Hartola</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_07"></field>
+    </record>
+
+
+    <record id="city_fi_30" model="res.location_city">
+        <field name="name">Hattula</field>
+        <field name="display_name">Hattula</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_05"></field>
+    </record>
+
+
+    <record id="city_fi_31" model="res.location_city">
+        <field name="name">Hausjärvi</field>
+        <field name="display_name">Hausjärvi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_05"></field>
+    </record>
+
+
+    <record id="city_fi_32" model="res.location_city">
+        <field name="name">Heinola</field>
+        <field name="display_name">Heinola</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_07"></field>
+    </record>
+
+
+    <record id="city_fi_33" model="res.location_city">
+        <field name="name">Heinävesi</field>
+        <field name="display_name">Heinävesi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_10"></field>
+    </record>
+
+
+    <record id="city_fi_34" model="res.location_city">
+        <field name="name">Helsinki</field>
+        <field name="display_name">Helsinki</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_01"></field>
+    </record>
+
+
+    <record id="city_fi_35" model="res.location_city">
+        <field name="name">Hirvensalmi</field>
+        <field name="display_name">Hirvensalmi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_10"></field>
+    </record>
+
+
+    <record id="city_fi_36" model="res.location_city">
+        <field name="name">Hollola</field>
+        <field name="display_name">Hollola</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_07"></field>
+    </record>
+
+
+    <record id="city_fi_37" model="res.location_city">
+        <field name="name">Honkajoki</field>
+        <field name="display_name">Honkajoki</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_04"></field>
+    </record>
+
+
+    <record id="city_fi_38" model="res.location_city">
+        <field name="name">Huittinen</field>
+        <field name="display_name">Huittinen</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_04"></field>
+    </record>
+
+
+    <record id="city_fi_39" model="res.location_city">
+        <field name="name">Humppila</field>
+        <field name="display_name">Humppila</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_05"></field>
+    </record>
+
+
+    <record id="city_fi_40" model="res.location_city">
+        <field name="name">Hyrynsalmi</field>
+        <field name="display_name">Hyrynsalmi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_18"></field>
+    </record>
+
+
+    <record id="city_fi_41" model="res.location_city">
+        <field name="name">Hyvinkää</field>
+        <field name="display_name">Hyvinkää</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_01"></field>
+    </record>
+
+
+    <record id="city_fi_42" model="res.location_city">
+        <field name="name">Hämeenkyrö</field>
+        <field name="display_name">Hämeenkyrö</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_06"></field>
+    </record>
+
+
+    <record id="city_fi_43" model="res.location_city">
+        <field name="name">Hämeenlinna</field>
+        <field name="display_name">Hämeenlinna</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_05"></field>
+    </record>
+
+
+    <record id="city_fi_44" model="res.location_city">
+        <field name="name">Ii</field>
+        <field name="display_name">Ii</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_17"></field>
+    </record>
+
+
+    <record id="city_fi_45" model="res.location_city">
+        <field name="name">Iisalmi</field>
+        <field name="display_name">Iisalmi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_11"></field>
+    </record>
+
+
+    <record id="city_fi_46" model="res.location_city">
+        <field name="name">Iitti</field>
+        <field name="display_name">Iitti</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_08"></field>
+    </record>
+
+
+    <record id="city_fi_47" model="res.location_city">
+        <field name="name">Ikaalinen</field>
+        <field name="display_name">Ikaalinen</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_06"></field>
+    </record>
+
+
+    <record id="city_fi_48" model="res.location_city">
+        <field name="name">Ilmajoki</field>
+        <field name="display_name">Ilmajoki</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_14"></field>
+    </record>
+
+
+    <record id="city_fi_49" model="res.location_city">
+        <field name="name">Ilomantsi</field>
+        <field name="display_name">Ilomantsi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_12"></field>
+    </record>
+
+
+    <record id="city_fi_50" model="res.location_city">
+        <field name="name">Imatra</field>
+        <field name="display_name">Imatra</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_09"></field>
+    </record>
+
+
+    <record id="city_fi_51" model="res.location_city">
+        <field name="name">Inari</field>
+        <field name="display_name">Inari</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_19"></field>
+    </record>
+
+
+    <record id="city_fi_52" model="res.location_city">
+        <field name="name">Inkoo</field>
+        <field name="display_name">Inkoo</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_01"></field>
+    </record>
+
+
+    <record id="city_fi_53" model="res.location_city">
+        <field name="name">Isojoki</field>
+        <field name="display_name">Isojoki</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_14"></field>
+    </record>
+
+
+    <record id="city_fi_54" model="res.location_city">
+        <field name="name">Isokyrö</field>
+        <field name="display_name">Isokyrö</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_15"></field>
+    </record>
+
+
+    <record id="city_fi_55" model="res.location_city">
+        <field name="name">Janakkala</field>
+        <field name="display_name">Janakkala</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_05"></field>
+    </record>
+
+
+    <record id="city_fi_56" model="res.location_city">
+        <field name="name">Joensuu</field>
+        <field name="display_name">Joensuu</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_12"></field>
+    </record>
+
+
+    <record id="city_fi_57" model="res.location_city">
+        <field name="name">Jokioinen</field>
+        <field name="display_name">Jokioinen</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_05"></field>
+    </record>
+
+
+    <record id="city_fi_58" model="res.location_city">
+        <field name="name">Jomala</field>
+        <field name="display_name">Jomala</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_21"></field>
+    </record>
+
+
+    <record id="city_fi_59" model="res.location_city">
+        <field name="name">Joroinen</field>
+        <field name="display_name">Joroinen</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_10"></field>
+    </record>
+
+
+    <record id="city_fi_60" model="res.location_city">
+        <field name="name">Joutsa</field>
+        <field name="display_name">Joutsa</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_13"></field>
+    </record>
+
+
+    <record id="city_fi_61" model="res.location_city">
+        <field name="name">Juuka</field>
+        <field name="display_name">Juuka</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_12"></field>
+    </record>
+
+
+    <record id="city_fi_62" model="res.location_city">
+        <field name="name">Juupajoki</field>
+        <field name="display_name">Juupajoki</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_06"></field>
+    </record>
+
+
+    <record id="city_fi_63" model="res.location_city">
+        <field name="name">Juva</field>
+        <field name="display_name">Juva</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_10"></field>
+    </record>
+
+
+    <record id="city_fi_64" model="res.location_city">
+        <field name="name">Jyväskylä</field>
+        <field name="display_name">Jyväskylä</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_13"></field>
+    </record>
+
+
+    <record id="city_fi_65" model="res.location_city">
+        <field name="name">Jämijärvi</field>
+        <field name="display_name">Jämijärvi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_04"></field>
+    </record>
+
+
+    <record id="city_fi_66" model="res.location_city">
+        <field name="name">Jämsä</field>
+        <field name="display_name">Jämsä</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_13"></field>
+    </record>
+
+
+    <record id="city_fi_67" model="res.location_city">
+        <field name="name">Järvenpää</field>
+        <field name="display_name">Järvenpää</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_01"></field>
+    </record>
+
+
+    <record id="city_fi_68" model="res.location_city">
+        <field name="name">Kaarina</field>
+        <field name="display_name">Kaarina</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_02"></field>
+    </record>
+
+
+    <record id="city_fi_69" model="res.location_city">
+        <field name="name">Kaavi</field>
+        <field name="display_name">Kaavi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_11"></field>
+    </record>
+
+
+    <record id="city_fi_70" model="res.location_city">
+        <field name="name">Kajaani</field>
+        <field name="display_name">Kajaani</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_18"></field>
+    </record>
+
+
+    <record id="city_fi_71" model="res.location_city">
+        <field name="name">Kalajoki</field>
+        <field name="display_name">Kalajoki</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_17"></field>
+    </record>
+
+
+    <record id="city_fi_72" model="res.location_city">
+        <field name="name">Kangasala</field>
+        <field name="display_name">Kangasala</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_06"></field>
+    </record>
+
+
+    <record id="city_fi_73" model="res.location_city">
+        <field name="name">Kangasniemi</field>
+        <field name="display_name">Kangasniemi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_10"></field>
+    </record>
+
+
+    <record id="city_fi_74" model="res.location_city">
+        <field name="name">Kankaanpää</field>
+        <field name="display_name">Kankaanpää</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_04"></field>
+    </record>
+
+
+    <record id="city_fi_75" model="res.location_city">
+        <field name="name">Kannonkoski</field>
+        <field name="display_name">Kannonkoski</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_13"></field>
+    </record>
+
+
+    <record id="city_fi_76" model="res.location_city">
+        <field name="name">Kannus</field>
+        <field name="display_name">Kannus</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_16"></field>
+    </record>
+
+
+    <record id="city_fi_77" model="res.location_city">
+        <field name="name">Karijoki</field>
+        <field name="display_name">Karijoki</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_14"></field>
+    </record>
+
+
+    <record id="city_fi_78" model="res.location_city">
+        <field name="name">Karkkila</field>
+        <field name="display_name">Karkkila</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_01"></field>
+    </record>
+
+
+    <record id="city_fi_79" model="res.location_city">
+        <field name="name">Karstula</field>
+        <field name="display_name">Karstula</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_13"></field>
+    </record>
+
+
+    <record id="city_fi_80" model="res.location_city">
+        <field name="name">Karvia</field>
+        <field name="display_name">Karvia</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_04"></field>
+    </record>
+
+
+    <record id="city_fi_81" model="res.location_city">
+        <field name="name">Kaskinen</field>
+        <field name="display_name">Kaskinen</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_15"></field>
+    </record>
+
+
+    <record id="city_fi_82" model="res.location_city">
+        <field name="name">Kauhajoki</field>
+        <field name="display_name">Kauhajoki</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_14"></field>
+    </record>
+
+
+    <record id="city_fi_83" model="res.location_city">
+        <field name="name">Kauhava</field>
+        <field name="display_name">Kauhava</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_14"></field>
+    </record>
+
+
+    <record id="city_fi_84" model="res.location_city">
+        <field name="name">Kauniainen</field>
+        <field name="display_name">Kauniainen</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_01"></field>
+    </record>
+
+
+    <record id="city_fi_85" model="res.location_city">
+        <field name="name">Kaustinen</field>
+        <field name="display_name">Kaustinen</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_16"></field>
+    </record>
+
+
+    <record id="city_fi_86" model="res.location_city">
+        <field name="name">Keitele</field>
+        <field name="display_name">Keitele</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_11"></field>
+    </record>
+
+
+    <record id="city_fi_87" model="res.location_city">
+        <field name="name">Kemi</field>
+        <field name="display_name">Kemi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_19"></field>
+    </record>
+
+
+    <record id="city_fi_88" model="res.location_city">
+        <field name="name">Kemijärvi</field>
+        <field name="display_name">Kemijärvi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_19"></field>
+    </record>
+
+
+    <record id="city_fi_89" model="res.location_city">
+        <field name="name">Keminmaa</field>
+        <field name="display_name">Keminmaa</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_19"></field>
+    </record>
+
+
+    <record id="city_fi_90" model="res.location_city">
+        <field name="name">Kemiönsaari</field>
+        <field name="display_name">Kemiönsaari</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_02"></field>
+    </record>
+
+
+    <record id="city_fi_91" model="res.location_city">
+        <field name="name">Kempele</field>
+        <field name="display_name">Kempele</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_17"></field>
+    </record>
+
+
+    <record id="city_fi_92" model="res.location_city">
+        <field name="name">Kerava</field>
+        <field name="display_name">Kerava</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_01"></field>
+    </record>
+
+
+    <record id="city_fi_93" model="res.location_city">
+        <field name="name">Keuruu</field>
+        <field name="display_name">Keuruu</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_13"></field>
+    </record>
+
+
+    <record id="city_fi_94" model="res.location_city">
+        <field name="name">Kihniö</field>
+        <field name="display_name">Kihniö</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_06"></field>
+    </record>
+
+
+    <record id="city_fi_95" model="res.location_city">
+        <field name="name">Kinnula</field>
+        <field name="display_name">Kinnula</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_13"></field>
+    </record>
+
+
+    <record id="city_fi_96" model="res.location_city">
+        <field name="name">Kirkkonummi</field>
+        <field name="display_name">Kirkkonummi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_01"></field>
+    </record>
+
+
+    <record id="city_fi_97" model="res.location_city">
+        <field name="name">Kitee</field>
+        <field name="display_name">Kitee</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_12"></field>
+    </record>
+
+
+    <record id="city_fi_98" model="res.location_city">
+        <field name="name">Kittilä</field>
+        <field name="display_name">Kittilä</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_19"></field>
+    </record>
+
+
+    <record id="city_fi_99" model="res.location_city">
+        <field name="name">Kiuruvesi</field>
+        <field name="display_name">Kiuruvesi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_11"></field>
+    </record>
+
+
+    <record id="city_fi_100" model="res.location_city">
+        <field name="name">Kivijärvi</field>
+        <field name="display_name">Kivijärvi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_13"></field>
+    </record>
+
+
+    <record id="city_fi_101" model="res.location_city">
+        <field name="name">Kokemäki</field>
+        <field name="display_name">Kokemäki</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_04"></field>
+    </record>
+
+
+    <record id="city_fi_102" model="res.location_city">
+        <field name="name">Kokkola</field>
+        <field name="display_name">Kokkola</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_16"></field>
+    </record>
+
+
+    <record id="city_fi_103" model="res.location_city">
+        <field name="name">Kolari</field>
+        <field name="display_name">Kolari</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_19"></field>
+    </record>
+
+
+    <record id="city_fi_104" model="res.location_city">
+        <field name="name">Konnevesi</field>
+        <field name="display_name">Konnevesi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_13"></field>
+    </record>
+
+
+    <record id="city_fi_105" model="res.location_city">
+        <field name="name">Kontiolahti</field>
+        <field name="display_name">Kontiolahti</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_12"></field>
+    </record>
+
+
+    <record id="city_fi_106" model="res.location_city">
+        <field name="name">Korsnäs</field>
+        <field name="display_name">Korsnäs</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_15"></field>
+    </record>
+
+
+    <record id="city_fi_107" model="res.location_city">
+        <field name="name">KoskiTl</field>
+        <field name="display_name">KoskiTl</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_02"></field>
+    </record>
+
+
+    <record id="city_fi_108" model="res.location_city">
+        <field name="name">Kotka</field>
+        <field name="display_name">Kotka</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_08"></field>
+    </record>
+
+
+    <record id="city_fi_109" model="res.location_city">
+        <field name="name">Kouvola</field>
+        <field name="display_name">Kouvola</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_08"></field>
+    </record>
+
+
+    <record id="city_fi_110" model="res.location_city">
+        <field name="name">Kristiinankaupunki</field>
+        <field name="display_name">Kristiinankaupunki</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_15"></field>
+    </record>
+
+
+    <record id="city_fi_111" model="res.location_city">
+        <field name="name">Kruunupyy</field>
+        <field name="display_name">Kruunupyy</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_15"></field>
+    </record>
+
+
+    <record id="city_fi_112" model="res.location_city">
+        <field name="name">Kuhmo</field>
+        <field name="display_name">Kuhmo</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_18"></field>
+    </record>
+
+
+    <record id="city_fi_113" model="res.location_city">
+        <field name="name">Kuhmoinen</field>
+        <field name="display_name">Kuhmoinen</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_13"></field>
+    </record>
+
+
+    <record id="city_fi_114" model="res.location_city">
+        <field name="name">Kumlinge</field>
+        <field name="display_name">Kumlinge</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_21"></field>
+    </record>
+
+
+    <record id="city_fi_115" model="res.location_city">
+        <field name="name">Kuopio</field>
+        <field name="display_name">Kuopio</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_11"></field>
+    </record>
+
+
+    <record id="city_fi_116" model="res.location_city">
+        <field name="name">Kuortane</field>
+        <field name="display_name">Kuortane</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_14"></field>
+    </record>
+
+
+    <record id="city_fi_117" model="res.location_city">
+        <field name="name">Kurikka</field>
+        <field name="display_name">Kurikka</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_14"></field>
+    </record>
+
+
+    <record id="city_fi_118" model="res.location_city">
+        <field name="name">Kustavi</field>
+        <field name="display_name">Kustavi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_02"></field>
+    </record>
+
+
+    <record id="city_fi_119" model="res.location_city">
+        <field name="name">Kuusamo</field>
+        <field name="display_name">Kuusamo</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_17"></field>
+    </record>
+
+
+    <record id="city_fi_120" model="res.location_city">
+        <field name="name">Kyyjärvi</field>
+        <field name="display_name">Kyyjärvi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_13"></field>
+    </record>
+
+
+    <record id="city_fi_121" model="res.location_city">
+        <field name="name">Kärkölä</field>
+        <field name="display_name">Kärkölä</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_07"></field>
+    </record>
+
+
+    <record id="city_fi_122" model="res.location_city">
+        <field name="name">Kärsämäki</field>
+        <field name="display_name">Kärsämäki</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_17"></field>
+    </record>
+
+
+    <record id="city_fi_123" model="res.location_city">
+        <field name="name">Kökar</field>
+        <field name="display_name">Kökar</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_21"></field>
+    </record>
+
+
+    <record id="city_fi_124" model="res.location_city">
+        <field name="name">Lahti</field>
+        <field name="display_name">Lahti</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_07"></field>
+    </record>
+
+
+    <record id="city_fi_125" model="res.location_city">
+        <field name="name">Laihia</field>
+        <field name="display_name">Laihia</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_15"></field>
+    </record>
+
+
+    <record id="city_fi_126" model="res.location_city">
+        <field name="name">Laitila</field>
+        <field name="display_name">Laitila</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_02"></field>
+    </record>
+
+
+    <record id="city_fi_127" model="res.location_city">
+        <field name="name">Lapinjärvi</field>
+        <field name="display_name">Lapinjärvi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_01"></field>
+    </record>
+
+
+    <record id="city_fi_128" model="res.location_city">
+        <field name="name">Lapinlahti</field>
+        <field name="display_name">Lapinlahti</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_11"></field>
+    </record>
+
+
+    <record id="city_fi_129" model="res.location_city">
+        <field name="name">Lappajärvi</field>
+        <field name="display_name">Lappajärvi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_14"></field>
+    </record>
+
+
+    <record id="city_fi_130" model="res.location_city">
+        <field name="name">Lappeenranta</field>
+        <field name="display_name">Lappeenranta</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_09"></field>
+    </record>
+
+
+    <record id="city_fi_131" model="res.location_city">
+        <field name="name">Lapua</field>
+        <field name="display_name">Lapua</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_14"></field>
+    </record>
+
+
+    <record id="city_fi_132" model="res.location_city">
+        <field name="name">Laukaa</field>
+        <field name="display_name">Laukaa</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_13"></field>
+    </record>
+
+
+    <record id="city_fi_133" model="res.location_city">
+        <field name="name">Lemi</field>
+        <field name="display_name">Lemi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_09"></field>
+    </record>
+
+
+    <record id="city_fi_134" model="res.location_city">
+        <field name="name">Lemland</field>
+        <field name="display_name">Lemland</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_21"></field>
+    </record>
+
+
+    <record id="city_fi_135" model="res.location_city">
+        <field name="name">Lempäälä</field>
+        <field name="display_name">Lempäälä</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_06"></field>
+    </record>
+
+
+    <record id="city_fi_136" model="res.location_city">
+        <field name="name">Leppävirta</field>
+        <field name="display_name">Leppävirta</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_11"></field>
+    </record>
+
+
+    <record id="city_fi_137" model="res.location_city">
+        <field name="name">Lestijärvi</field>
+        <field name="display_name">Lestijärvi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_16"></field>
+    </record>
+
+
+    <record id="city_fi_138" model="res.location_city">
+        <field name="name">Lieksa</field>
+        <field name="display_name">Lieksa</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_12"></field>
+    </record>
+
+
+    <record id="city_fi_139" model="res.location_city">
+        <field name="name">Lieto</field>
+        <field name="display_name">Lieto</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_02"></field>
+    </record>
+
+
+    <record id="city_fi_140" model="res.location_city">
+        <field name="name">Liminka</field>
+        <field name="display_name">Liminka</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_17"></field>
+    </record>
+
+
+    <record id="city_fi_141" model="res.location_city">
+        <field name="name">Liperi</field>
+        <field name="display_name">Liperi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_12"></field>
+    </record>
+
+
+    <record id="city_fi_142" model="res.location_city">
+        <field name="name">Lohja</field>
+        <field name="display_name">Lohja</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_01"></field>
+    </record>
+
+
+    <record id="city_fi_143" model="res.location_city">
+        <field name="name">Loimaa</field>
+        <field name="display_name">Loimaa</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_02"></field>
+    </record>
+
+
+    <record id="city_fi_144" model="res.location_city">
+        <field name="name">Loppi</field>
+        <field name="display_name">Loppi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_05"></field>
+    </record>
+
+
+    <record id="city_fi_145" model="res.location_city">
+        <field name="name">Loviisa</field>
+        <field name="display_name">Loviisa</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_01"></field>
+    </record>
+
+
+    <record id="city_fi_146" model="res.location_city">
+        <field name="name">Luhanka</field>
+        <field name="display_name">Luhanka</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_13"></field>
+    </record>
+
+
+    <record id="city_fi_147" model="res.location_city">
+        <field name="name">Lumijoki</field>
+        <field name="display_name">Lumijoki</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_17"></field>
+    </record>
+
+
+    <record id="city_fi_148" model="res.location_city">
+        <field name="name">Lumparland</field>
+        <field name="display_name">Lumparland</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_21"></field>
+    </record>
+
+
+    <record id="city_fi_149" model="res.location_city">
+        <field name="name">Luoto</field>
+        <field name="display_name">Luoto</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_15"></field>
+    </record>
+
+
+    <record id="city_fi_150" model="res.location_city">
+        <field name="name">Luumäki</field>
+        <field name="display_name">Luumäki</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_09"></field>
+    </record>
+
+
+    <record id="city_fi_151" model="res.location_city">
+        <field name="name">Maalahti</field>
+        <field name="display_name">Maalahti</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_15"></field>
+    </record>
+
+
+    <record id="city_fi_152" model="res.location_city">
+        <field name="name">Maarianhamina</field>
+        <field name="display_name">Maarianhamina</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_21"></field>
+    </record>
+
+
+    <record id="city_fi_153" model="res.location_city">
+        <field name="name">Marttila</field>
+        <field name="display_name">Marttila</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_02"></field>
+    </record>
+
+
+    <record id="city_fi_154" model="res.location_city">
+        <field name="name">Masku</field>
+        <field name="display_name">Masku</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_02"></field>
+    </record>
+
+
+    <record id="city_fi_155" model="res.location_city">
+        <field name="name">Merijärvi</field>
+        <field name="display_name">Merijärvi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_17"></field>
+    </record>
+
+
+    <record id="city_fi_156" model="res.location_city">
+        <field name="name">Merikarvia</field>
+        <field name="display_name">Merikarvia</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_04"></field>
+    </record>
+
+
+    <record id="city_fi_157" model="res.location_city">
+        <field name="name">Miehikkälä</field>
+        <field name="display_name">Miehikkälä</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_08"></field>
+    </record>
+
+
+    <record id="city_fi_158" model="res.location_city">
+        <field name="name">Mikkeli</field>
+        <field name="display_name">Mikkeli</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_10"></field>
+    </record>
+
+
+    <record id="city_fi_159" model="res.location_city">
+        <field name="name">Muhos</field>
+        <field name="display_name">Muhos</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_17"></field>
+    </record>
+
+
+    <record id="city_fi_160" model="res.location_city">
+        <field name="name">Multia</field>
+        <field name="display_name">Multia</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_13"></field>
+    </record>
+
+
+    <record id="city_fi_161" model="res.location_city">
+        <field name="name">Muonio</field>
+        <field name="display_name">Muonio</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_19"></field>
+    </record>
+
+
+    <record id="city_fi_162" model="res.location_city">
+        <field name="name">Mustasaari</field>
+        <field name="display_name">Mustasaari</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_15"></field>
+    </record>
+
+
+    <record id="city_fi_163" model="res.location_city">
+        <field name="name">Muurame</field>
+        <field name="display_name">Muurame</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_13"></field>
+    </record>
+
+
+    <record id="city_fi_164" model="res.location_city">
+        <field name="name">Mynämäki</field>
+        <field name="display_name">Mynämäki</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_02"></field>
+    </record>
+
+
+    <record id="city_fi_165" model="res.location_city">
+        <field name="name">Myrskylä</field>
+        <field name="display_name">Myrskylä</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_01"></field>
+    </record>
+
+
+    <record id="city_fi_166" model="res.location_city">
+        <field name="name">Mäntsälä</field>
+        <field name="display_name">Mäntsälä</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_01"></field>
+    </record>
+
+
+    <record id="city_fi_167" model="res.location_city">
+        <field name="name">Mänttä-Vilppula</field>
+        <field name="display_name">Mänttä-Vilppula</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_06"></field>
+    </record>
+
+
+    <record id="city_fi_168" model="res.location_city">
+        <field name="name">Mäntyharju</field>
+        <field name="display_name">Mäntyharju</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_10"></field>
+    </record>
+
+
+    <record id="city_fi_169" model="res.location_city">
+        <field name="name">Naantali</field>
+        <field name="display_name">Naantali</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_02"></field>
+    </record>
+
+
+    <record id="city_fi_170" model="res.location_city">
+        <field name="name">Nakkila</field>
+        <field name="display_name">Nakkila</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_04"></field>
+    </record>
+
+
+    <record id="city_fi_171" model="res.location_city">
+        <field name="name">Nivala</field>
+        <field name="display_name">Nivala</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_17"></field>
+    </record>
+
+
+    <record id="city_fi_172" model="res.location_city">
+        <field name="name">Nokia</field>
+        <field name="display_name">Nokia</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_06"></field>
+    </record>
+
+
+    <record id="city_fi_173" model="res.location_city">
+        <field name="name">Nousiainen</field>
+        <field name="display_name">Nousiainen</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_02"></field>
+    </record>
+
+
+    <record id="city_fi_174" model="res.location_city">
+        <field name="name">Nurmes</field>
+        <field name="display_name">Nurmes</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_12"></field>
+    </record>
+
+
+    <record id="city_fi_175" model="res.location_city">
+        <field name="name">Nurmijärvi</field>
+        <field name="display_name">Nurmijärvi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_01"></field>
+    </record>
+
+
+    <record id="city_fi_176" model="res.location_city">
+        <field name="name">Närpiö</field>
+        <field name="display_name">Närpiö</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_15"></field>
+    </record>
+
+
+    <record id="city_fi_177" model="res.location_city">
+        <field name="name">Orimattila</field>
+        <field name="display_name">Orimattila</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_07"></field>
+    </record>
+
+
+    <record id="city_fi_178" model="res.location_city">
+        <field name="name">Oripää</field>
+        <field name="display_name">Oripää</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_02"></field>
+    </record>
+
+
+    <record id="city_fi_179" model="res.location_city">
+        <field name="name">Orivesi</field>
+        <field name="display_name">Orivesi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_06"></field>
+    </record>
+
+
+    <record id="city_fi_180" model="res.location_city">
+        <field name="name">Oulainen</field>
+        <field name="display_name">Oulainen</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_17"></field>
+    </record>
+
+
+    <record id="city_fi_181" model="res.location_city">
+        <field name="name">Oulu</field>
+        <field name="display_name">Oulu</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_17"></field>
+    </record>
+
+
+    <record id="city_fi_182" model="res.location_city">
+        <field name="name">Outokumpu</field>
+        <field name="display_name">Outokumpu</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_12"></field>
+    </record>
+
+
+    <record id="city_fi_183" model="res.location_city">
+        <field name="name">Padasjoki</field>
+        <field name="display_name">Padasjoki</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_07"></field>
+    </record>
+
+
+    <record id="city_fi_184" model="res.location_city">
+        <field name="name">Paimio</field>
+        <field name="display_name">Paimio</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_02"></field>
+    </record>
+
+
+    <record id="city_fi_185" model="res.location_city">
+        <field name="name">Paltamo</field>
+        <field name="display_name">Paltamo</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_18"></field>
+    </record>
+
+
+    <record id="city_fi_186" model="res.location_city">
+        <field name="name">Parainen</field>
+        <field name="display_name">Parainen</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_02"></field>
+    </record>
+
+
+    <record id="city_fi_187" model="res.location_city">
+        <field name="name">Parikkala</field>
+        <field name="display_name">Parikkala</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_09"></field>
+    </record>
+
+
+    <record id="city_fi_188" model="res.location_city">
+        <field name="name">Parkano</field>
+        <field name="display_name">Parkano</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_06"></field>
+    </record>
+
+
+    <record id="city_fi_189" model="res.location_city">
+        <field name="name">Pedersörenkunta</field>
+        <field name="display_name">Pedersörenkunta</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_15"></field>
+    </record>
+
+
+    <record id="city_fi_190" model="res.location_city">
+        <field name="name">Pelkosenniemi</field>
+        <field name="display_name">Pelkosenniemi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_19"></field>
+    </record>
+
+
+    <record id="city_fi_191" model="res.location_city">
+        <field name="name">Pello</field>
+        <field name="display_name">Pello</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_19"></field>
+    </record>
+
+
+    <record id="city_fi_192" model="res.location_city">
+        <field name="name">Perho</field>
+        <field name="display_name">Perho</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_16"></field>
+    </record>
+
+
+    <record id="city_fi_193" model="res.location_city">
+        <field name="name">Pertunmaa</field>
+        <field name="display_name">Pertunmaa</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_10"></field>
+    </record>
+
+
+    <record id="city_fi_194" model="res.location_city">
+        <field name="name">Petäjävesi</field>
+        <field name="display_name">Petäjävesi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_13"></field>
+    </record>
+
+
+    <record id="city_fi_195" model="res.location_city">
+        <field name="name">Pieksämäki</field>
+        <field name="display_name">Pieksämäki</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_10"></field>
+    </record>
+
+
+    <record id="city_fi_196" model="res.location_city">
+        <field name="name">Pielavesi</field>
+        <field name="display_name">Pielavesi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_11"></field>
+    </record>
+
+
+    <record id="city_fi_197" model="res.location_city">
+        <field name="name">Pietarsaari</field>
+        <field name="display_name">Pietarsaari</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_15"></field>
+    </record>
+
+
+    <record id="city_fi_198" model="res.location_city">
+        <field name="name">Pihtipudas</field>
+        <field name="display_name">Pihtipudas</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_13"></field>
+    </record>
+
+
+    <record id="city_fi_199" model="res.location_city">
+        <field name="name">Pirkkala</field>
+        <field name="display_name">Pirkkala</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_06"></field>
+    </record>
+
+
+    <record id="city_fi_200" model="res.location_city">
+        <field name="name">Polvijärvi</field>
+        <field name="display_name">Polvijärvi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_12"></field>
+    </record>
+
+
+    <record id="city_fi_201" model="res.location_city">
+        <field name="name">Pomarkku</field>
+        <field name="display_name">Pomarkku</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_04"></field>
+    </record>
+
+
+    <record id="city_fi_202" model="res.location_city">
+        <field name="name">Pori</field>
+        <field name="display_name">Pori</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_04"></field>
+    </record>
+
+
+    <record id="city_fi_203" model="res.location_city">
+        <field name="name">Pornainen</field>
+        <field name="display_name">Pornainen</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_01"></field>
+    </record>
+
+
+    <record id="city_fi_204" model="res.location_city">
+        <field name="name">Porvoo</field>
+        <field name="display_name">Porvoo</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_01"></field>
+    </record>
+
+
+    <record id="city_fi_205" model="res.location_city">
+        <field name="name">Posio</field>
+        <field name="display_name">Posio</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_19"></field>
+    </record>
+
+
+    <record id="city_fi_206" model="res.location_city">
+        <field name="name">Pudasjärvi</field>
+        <field name="display_name">Pudasjärvi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_17"></field>
+    </record>
+
+
+    <record id="city_fi_207" model="res.location_city">
+        <field name="name">Pukkila</field>
+        <field name="display_name">Pukkila</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_01"></field>
+    </record>
+
+
+    <record id="city_fi_208" model="res.location_city">
+        <field name="name">Punkalaidun</field>
+        <field name="display_name">Punkalaidun</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_06"></field>
+    </record>
+
+
+    <record id="city_fi_209" model="res.location_city">
+        <field name="name">Puolanka</field>
+        <field name="display_name">Puolanka</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_18"></field>
+    </record>
+
+
+    <record id="city_fi_210" model="res.location_city">
+        <field name="name">Puumala</field>
+        <field name="display_name">Puumala</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_10"></field>
+    </record>
+
+
+    <record id="city_fi_211" model="res.location_city">
+        <field name="name">Pyhtää</field>
+        <field name="display_name">Pyhtää</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_08"></field>
+    </record>
+
+
+    <record id="city_fi_212" model="res.location_city">
+        <field name="name">Pyhäjoki</field>
+        <field name="display_name">Pyhäjoki</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_17"></field>
+    </record>
+
+
+    <record id="city_fi_213" model="res.location_city">
+        <field name="name">Pyhäjärvi</field>
+        <field name="display_name">Pyhäjärvi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_17"></field>
+    </record>
+
+
+    <record id="city_fi_214" model="res.location_city">
+        <field name="name">Pyhäntä</field>
+        <field name="display_name">Pyhäntä</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_17"></field>
+    </record>
+
+
+    <record id="city_fi_215" model="res.location_city">
+        <field name="name">Pyhäranta</field>
+        <field name="display_name">Pyhäranta</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_02"></field>
+    </record>
+
+
+    <record id="city_fi_216" model="res.location_city">
+        <field name="name">Pälkäne</field>
+        <field name="display_name">Pälkäne</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_06"></field>
+    </record>
+
+
+    <record id="city_fi_217" model="res.location_city">
+        <field name="name">Pöytyä</field>
+        <field name="display_name">Pöytyä</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_02"></field>
+    </record>
+
+
+    <record id="city_fi_218" model="res.location_city">
+        <field name="name">Raahe</field>
+        <field name="display_name">Raahe</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_17"></field>
+    </record>
+
+
+    <record id="city_fi_219" model="res.location_city">
+        <field name="name">Raasepori</field>
+        <field name="display_name">Raasepori</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_01"></field>
+    </record>
+
+
+    <record id="city_fi_220" model="res.location_city">
+        <field name="name">Raisio</field>
+        <field name="display_name">Raisio</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_02"></field>
+    </record>
+
+
+    <record id="city_fi_221" model="res.location_city">
+        <field name="name">Rantasalmi</field>
+        <field name="display_name">Rantasalmi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_10"></field>
+    </record>
+
+
+    <record id="city_fi_222" model="res.location_city">
+        <field name="name">Ranua</field>
+        <field name="display_name">Ranua</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_19"></field>
+    </record>
+
+
+    <record id="city_fi_223" model="res.location_city">
+        <field name="name">Rauma</field>
+        <field name="display_name">Rauma</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_04"></field>
+    </record>
+
+
+    <record id="city_fi_224" model="res.location_city">
+        <field name="name">Rautalampi</field>
+        <field name="display_name">Rautalampi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_11"></field>
+    </record>
+
+
+    <record id="city_fi_225" model="res.location_city">
+        <field name="name">Rautavaara</field>
+        <field name="display_name">Rautavaara</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_11"></field>
+    </record>
+
+
+    <record id="city_fi_226" model="res.location_city">
+        <field name="name">Rautjärvi</field>
+        <field name="display_name">Rautjärvi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_09"></field>
+    </record>
+
+
+    <record id="city_fi_227" model="res.location_city">
+        <field name="name">Reisjärvi</field>
+        <field name="display_name">Reisjärvi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_17"></field>
+    </record>
+
+
+    <record id="city_fi_228" model="res.location_city">
+        <field name="name">Riihimäki</field>
+        <field name="display_name">Riihimäki</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_05"></field>
+    </record>
+
+
+    <record id="city_fi_229" model="res.location_city">
+        <field name="name">Ristijärvi</field>
+        <field name="display_name">Ristijärvi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_18"></field>
+    </record>
+
+
+    <record id="city_fi_230" model="res.location_city">
+        <field name="name">Rovaniemi</field>
+        <field name="display_name">Rovaniemi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_19"></field>
+    </record>
+
+
+    <record id="city_fi_231" model="res.location_city">
+        <field name="name">Ruokolahti</field>
+        <field name="display_name">Ruokolahti</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_09"></field>
+    </record>
+
+
+    <record id="city_fi_232" model="res.location_city">
+        <field name="name">Ruovesi</field>
+        <field name="display_name">Ruovesi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_06"></field>
+    </record>
+
+
+    <record id="city_fi_233" model="res.location_city">
+        <field name="name">Rusko</field>
+        <field name="display_name">Rusko</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_02"></field>
+    </record>
+
+
+    <record id="city_fi_234" model="res.location_city">
+        <field name="name">Rääkkylä</field>
+        <field name="display_name">Rääkkylä</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_12"></field>
+    </record>
+
+
+    <record id="city_fi_235" model="res.location_city">
+        <field name="name">Saarijärvi</field>
+        <field name="display_name">Saarijärvi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_13"></field>
+    </record>
+
+
+    <record id="city_fi_236" model="res.location_city">
+        <field name="name">Salla</field>
+        <field name="display_name">Salla</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_19"></field>
+    </record>
+
+
+    <record id="city_fi_237" model="res.location_city">
+        <field name="name">Salo</field>
+        <field name="display_name">Salo</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_02"></field>
+    </record>
+
+
+    <record id="city_fi_238" model="res.location_city">
+        <field name="name">Saltvik</field>
+        <field name="display_name">Saltvik</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_21"></field>
+    </record>
+
+
+    <record id="city_fi_239" model="res.location_city">
+        <field name="name">Sastamala</field>
+        <field name="display_name">Sastamala</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_06"></field>
+    </record>
+
+
+    <record id="city_fi_240" model="res.location_city">
+        <field name="name">Sauvo</field>
+        <field name="display_name">Sauvo</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_02"></field>
+    </record>
+
+
+    <record id="city_fi_241" model="res.location_city">
+        <field name="name">Savitaipale</field>
+        <field name="display_name">Savitaipale</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_09"></field>
+    </record>
+
+
+    <record id="city_fi_242" model="res.location_city">
+        <field name="name">Savonlinna</field>
+        <field name="display_name">Savonlinna</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_10"></field>
+    </record>
+
+
+    <record id="city_fi_243" model="res.location_city">
+        <field name="name">Savukoski</field>
+        <field name="display_name">Savukoski</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_19"></field>
+    </record>
+
+
+    <record id="city_fi_244" model="res.location_city">
+        <field name="name">Seinäjoki</field>
+        <field name="display_name">Seinäjoki</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_14"></field>
+    </record>
+
+
+    <record id="city_fi_245" model="res.location_city">
+        <field name="name">Sievi</field>
+        <field name="display_name">Sievi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_17"></field>
+    </record>
+
+
+    <record id="city_fi_246" model="res.location_city">
+        <field name="name">Siikainen</field>
+        <field name="display_name">Siikainen</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_04"></field>
+    </record>
+
+
+    <record id="city_fi_247" model="res.location_city">
+        <field name="name">Siikajoki</field>
+        <field name="display_name">Siikajoki</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_17"></field>
+    </record>
+
+
+    <record id="city_fi_248" model="res.location_city">
+        <field name="name">Siikalatva</field>
+        <field name="display_name">Siikalatva</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_17"></field>
+    </record>
+
+
+    <record id="city_fi_249" model="res.location_city">
+        <field name="name">Siilinjärvi</field>
+        <field name="display_name">Siilinjärvi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_11"></field>
+    </record>
+
+
+    <record id="city_fi_250" model="res.location_city">
+        <field name="name">Simo</field>
+        <field name="display_name">Simo</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_19"></field>
+    </record>
+
+
+    <record id="city_fi_251" model="res.location_city">
+        <field name="name">Sipoo</field>
+        <field name="display_name">Sipoo</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_01"></field>
+    </record>
+
+
+    <record id="city_fi_252" model="res.location_city">
+        <field name="name">Siuntio</field>
+        <field name="display_name">Siuntio</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_01"></field>
+    </record>
+
+
+    <record id="city_fi_253" model="res.location_city">
+        <field name="name">Sodankylä</field>
+        <field name="display_name">Sodankylä</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_19"></field>
+    </record>
+
+
+    <record id="city_fi_254" model="res.location_city">
+        <field name="name">Soini</field>
+        <field name="display_name">Soini</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_14"></field>
+    </record>
+
+
+    <record id="city_fi_255" model="res.location_city">
+        <field name="name">Somero</field>
+        <field name="display_name">Somero</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_02"></field>
+    </record>
+
+
+    <record id="city_fi_256" model="res.location_city">
+        <field name="name">Sonkajärvi</field>
+        <field name="display_name">Sonkajärvi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_11"></field>
+    </record>
+
+
+    <record id="city_fi_257" model="res.location_city">
+        <field name="name">Sotkamo</field>
+        <field name="display_name">Sotkamo</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_18"></field>
+    </record>
+
+
+    <record id="city_fi_258" model="res.location_city">
+        <field name="name">Sottunga</field>
+        <field name="display_name">Sottunga</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_21"></field>
+    </record>
+
+
+    <record id="city_fi_259" model="res.location_city">
+        <field name="name">Sulkava</field>
+        <field name="display_name">Sulkava</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_10"></field>
+    </record>
+
+
+    <record id="city_fi_260" model="res.location_city">
+        <field name="name">Sund</field>
+        <field name="display_name">Sund</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_21"></field>
+    </record>
+
+
+    <record id="city_fi_261" model="res.location_city">
+        <field name="name">Suomussalmi</field>
+        <field name="display_name">Suomussalmi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_18"></field>
+    </record>
+
+
+    <record id="city_fi_262" model="res.location_city">
+        <field name="name">Suonenjoki</field>
+        <field name="display_name">Suonenjoki</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_11"></field>
+    </record>
+
+
+    <record id="city_fi_263" model="res.location_city">
+        <field name="name">Sysmä</field>
+        <field name="display_name">Sysmä</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_07"></field>
+    </record>
+
+
+    <record id="city_fi_264" model="res.location_city">
+        <field name="name">Säkylä</field>
+        <field name="display_name">Säkylä</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_04"></field>
+    </record>
+
+
+    <record id="city_fi_265" model="res.location_city">
+        <field name="name">Taipalsaari</field>
+        <field name="display_name">Taipalsaari</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_09"></field>
+    </record>
+
+
+    <record id="city_fi_266" model="res.location_city">
+        <field name="name">Taivalkoski</field>
+        <field name="display_name">Taivalkoski</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_17"></field>
+    </record>
+
+
+    <record id="city_fi_267" model="res.location_city">
+        <field name="name">Taivassalo</field>
+        <field name="display_name">Taivassalo</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_02"></field>
+    </record>
+
+
+    <record id="city_fi_268" model="res.location_city">
+        <field name="name">Tammela</field>
+        <field name="display_name">Tammela</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_05"></field>
+    </record>
+
+
+    <record id="city_fi_269" model="res.location_city">
+        <field name="name">Tampere</field>
+        <field name="display_name">Tampere</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_06"></field>
+    </record>
+
+
+    <record id="city_fi_270" model="res.location_city">
+        <field name="name">Tervo</field>
+        <field name="display_name">Tervo</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_11"></field>
+    </record>
+
+
+    <record id="city_fi_271" model="res.location_city">
+        <field name="name">Tervola</field>
+        <field name="display_name">Tervola</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_19"></field>
+    </record>
+
+
+    <record id="city_fi_272" model="res.location_city">
+        <field name="name">Teuva</field>
+        <field name="display_name">Teuva</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_14"></field>
+    </record>
+
+
+    <record id="city_fi_273" model="res.location_city">
+        <field name="name">Tohmajärvi</field>
+        <field name="display_name">Tohmajärvi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_12"></field>
+    </record>
+
+
+    <record id="city_fi_274" model="res.location_city">
+        <field name="name">Toholampi</field>
+        <field name="display_name">Toholampi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_16"></field>
+    </record>
+
+
+    <record id="city_fi_275" model="res.location_city">
+        <field name="name">Toivakka</field>
+        <field name="display_name">Toivakka</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_13"></field>
+    </record>
+
+
+    <record id="city_fi_276" model="res.location_city">
+        <field name="name">Tornio</field>
+        <field name="display_name">Tornio</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_19"></field>
+    </record>
+
+
+    <record id="city_fi_277" model="res.location_city">
+        <field name="name">Turku</field>
+        <field name="display_name">Turku</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_02"></field>
+    </record>
+
+
+    <record id="city_fi_278" model="res.location_city">
+        <field name="name">Tuusniemi</field>
+        <field name="display_name">Tuusniemi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_11"></field>
+    </record>
+
+
+    <record id="city_fi_279" model="res.location_city">
+        <field name="name">Tuusula</field>
+        <field name="display_name">Tuusula</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_01"></field>
+    </record>
+
+
+    <record id="city_fi_280" model="res.location_city">
+        <field name="name">Tyrnävä</field>
+        <field name="display_name">Tyrnävä</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_17"></field>
+    </record>
+
+
+    <record id="city_fi_281" model="res.location_city">
+        <field name="name">Ulvila</field>
+        <field name="display_name">Ulvila</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_04"></field>
+    </record>
+
+
+    <record id="city_fi_282" model="res.location_city">
+        <field name="name">Urjala</field>
+        <field name="display_name">Urjala</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_06"></field>
+    </record>
+
+
+    <record id="city_fi_283" model="res.location_city">
+        <field name="name">Utajärvi</field>
+        <field name="display_name">Utajärvi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_17"></field>
+    </record>
+
+
+    <record id="city_fi_284" model="res.location_city">
+        <field name="name">Utsjoki</field>
+        <field name="display_name">Utsjoki</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_19"></field>
+    </record>
+
+
+    <record id="city_fi_285" model="res.location_city">
+        <field name="name">Uurainen</field>
+        <field name="display_name">Uurainen</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_13"></field>
+    </record>
+
+
+    <record id="city_fi_286" model="res.location_city">
+        <field name="name">Uusikaarlepyy</field>
+        <field name="display_name">Uusikaarlepyy</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_15"></field>
+    </record>
+
+
+    <record id="city_fi_287" model="res.location_city">
+        <field name="name">Uusikaupunki</field>
+        <field name="display_name">Uusikaupunki</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_02"></field>
+    </record>
+
+
+    <record id="city_fi_288" model="res.location_city">
+        <field name="name">Vaala</field>
+        <field name="display_name">Vaala</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_17"></field>
+    </record>
+
+
+    <record id="city_fi_289" model="res.location_city">
+        <field name="name">Vaasa</field>
+        <field name="display_name">Vaasa</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_15"></field>
+    </record>
+
+
+    <record id="city_fi_290" model="res.location_city">
+        <field name="name">Valkeakoski</field>
+        <field name="display_name">Valkeakoski</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_06"></field>
+    </record>
+
+
+    <record id="city_fi_291" model="res.location_city">
+        <field name="name">Vantaa</field>
+        <field name="display_name">Vantaa</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_01"></field>
+    </record>
+
+
+    <record id="city_fi_292" model="res.location_city">
+        <field name="name">Varkaus</field>
+        <field name="display_name">Varkaus</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_11"></field>
+    </record>
+
+
+    <record id="city_fi_293" model="res.location_city">
+        <field name="name">Vehmaa</field>
+        <field name="display_name">Vehmaa</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_02"></field>
+    </record>
+
+
+    <record id="city_fi_294" model="res.location_city">
+        <field name="name">Vesanto</field>
+        <field name="display_name">Vesanto</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_11"></field>
+    </record>
+
+
+    <record id="city_fi_295" model="res.location_city">
+        <field name="name">Vesilahti</field>
+        <field name="display_name">Vesilahti</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_06"></field>
+    </record>
+
+
+    <record id="city_fi_296" model="res.location_city">
+        <field name="name">Veteli</field>
+        <field name="display_name">Veteli</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_16"></field>
+    </record>
+
+
+    <record id="city_fi_297" model="res.location_city">
+        <field name="name">Vieremä</field>
+        <field name="display_name">Vieremä</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_11"></field>
+    </record>
+
+
+    <record id="city_fi_298" model="res.location_city">
+        <field name="name">Vihti</field>
+        <field name="display_name">Vihti</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_01"></field>
+    </record>
+
+
+    <record id="city_fi_299" model="res.location_city">
+        <field name="name">Viitasaari</field>
+        <field name="display_name">Viitasaari</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_13"></field>
+    </record>
+
+
+    <record id="city_fi_300" model="res.location_city">
+        <field name="name">Vimpeli</field>
+        <field name="display_name">Vimpeli</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_14"></field>
+    </record>
+
+
+    <record id="city_fi_301" model="res.location_city">
+        <field name="name">Virolahti</field>
+        <field name="display_name">Virolahti</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_08"></field>
+    </record>
+
+
+    <record id="city_fi_302" model="res.location_city">
+        <field name="name">Virrat</field>
+        <field name="display_name">Virrat</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_06"></field>
+    </record>
+
+
+    <record id="city_fi_303" model="res.location_city">
+        <field name="name">Vårdö</field>
+        <field name="display_name">Vårdö</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_21"></field>
+    </record>
+
+
+    <record id="city_fi_304" model="res.location_city">
+        <field name="name">Vöyri</field>
+        <field name="display_name">Vöyri</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_15"></field>
+    </record>
+
+
+    <record id="city_fi_305" model="res.location_city">
+        <field name="name">Ylitornio</field>
+        <field name="display_name">Ylitornio</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_19"></field>
+    </record>
+
+
+    <record id="city_fi_306" model="res.location_city">
+        <field name="name">Ylivieska</field>
+        <field name="display_name">Ylivieska</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_17"></field>
+    </record>
+
+
+    <record id="city_fi_307" model="res.location_city">
+        <field name="name">Ylöjärvi</field>
+        <field name="display_name">Ylöjärvi</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_06"></field>
+    </record>
+
+
+    <record id="city_fi_308" model="res.location_city">
+        <field name="name">Ypäjä</field>
+        <field name="display_name">Ypäjä</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_05"></field>
+    </record>
+
+
+    <record id="city_fi_309" model="res.location_city">
+        <field name="name">Ähtäri</field>
+        <field name="display_name">Ähtäri</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_14"></field>
+    </record>
+
+
+    <record id="city_fi_310" model="res.location_city">
+        <field name="name">Äänekoski</field>
+        <field name="display_name">Äänekoski</field>
+        <field name="country_id" ref="base.fi"/>
+        <field name="state_id" ref="l10n_fi_province.state_fi_13"></field>
+    </record>
+
+</odoo>
