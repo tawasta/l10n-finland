@@ -1,0 +1,174 @@
+<odoo>
+
+    <record id="mis_template_financial_report.kpi_profit" model="mis.report.kpi">
+        <field name="auto_expand_accounts">false</field>
+    </record>
+
+    <record id="mis_template_financial_report.kpi_loss" model="mis.report.kpi">
+        <field name="auto_expand_accounts">false</field>
+    </record>
+
+    <!-- Myynti -->
+    <record id="kpi_account_tag_deferred_tax_liabilities_are_short" model="mis.report.kpi">
+        <field name="name">deferred_tax_liabilities_are_short</field>
+        <field name="description">Myynti</field>
+        <field name="expression">-balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_sales').id))][]</field>
+        <field name="auto_expand_accounts">true</field>
+        <field name="auto_expand_accounts_style_id" ref="mis_template_financial_report.style_details" />
+        <field name="style_id" ref="mis_template_financial_report.style_header_indent" />
+        <field name="type">num</field>
+        <field name="compare_method">diff</field>
+        <field name="accumulation_method">sum</field>
+        <field name="sequence">10</field>
+        <field name="report_id" ref="mis_template_financial_report.report_pl" />
+    </record>
+
+    <record id="kpi_account_tag_sales_adjustment_items" model="mis.report.kpi">
+        <field name="name">account_tag_sales_adjustment_items</field>
+        <field name="description">Myynnin oikaisuerät</field>
+        <field name="expression">-balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_sales_adjustment_items').id))][]</field>
+        <field name="auto_expand_accounts">true</field>
+        <field name="auto_expand_accounts_style_id" ref="mis_template_financial_report.style_details" />
+        <field name="style_id" ref="mis_template_financial_report.style_header_indent" />
+        <field name="type">num</field>
+        <field name="compare_method">diff</field>
+        <field name="accumulation_method">sum</field>
+        <field name="sequence">11</field>
+        <field name="report_id" ref="mis_template_financial_report.report_pl" />
+    </record>
+
+    <record id="kpi_account_tag_manufacturing_warehouse_change" model="mis.report.kpi">
+        <field name="name">account_tag_manufacturing_warehouse_change</field>
+        <field name="description">Valmiiden ja keskeneräisten tuotteiden varastojen muutos</field>
+        <field name="expression">-balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_manufacturing_warehouse_change').id))][]</field>
+        <field name="auto_expand_accounts">true</field>
+        <field name="auto_expand_accounts_style_id" ref="mis_template_financial_report.style_details" />
+        <field name="style_id" ref="mis_template_financial_report.style_header_indent" />
+        <field name="type">num</field>
+        <field name="compare_method">diff</field>
+        <field name="accumulation_method">sum</field>
+        <field name="sequence">12</field>
+        <field name="report_id" ref="mis_template_financial_report.report_pl" />
+    </record>
+
+    <record id="kpi_account_tag_manufacturing_own_use" model="mis.report.kpi">
+        <field name="name">account_tag_manufacturing_own_use</field>
+        <field name="description">Valmistus omaan käyttöön</field>
+        <field name="expression">-balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_manufacturing_own_use').id))][]</field>
+        <field name="auto_expand_accounts">true</field>
+        <field name="auto_expand_accounts_style_id" ref="mis_template_financial_report.style_details" />
+        <field name="style_id" ref="mis_template_financial_report.style_header_indent" />
+        <field name="type">num</field>
+        <field name="compare_method">diff</field>
+        <field name="accumulation_method">sum</field>
+        <field name="sequence">13</field>
+        <field name="report_id" ref="mis_template_financial_report.report_pl" />
+    </record>
+
+    <record id="kpi_account_tag_income_other" model="mis.report.kpi">
+        <field name="name">account_tag_income_other</field>
+        <field name="description">Liiketoiminnan muut tuotot</field>
+        <field name="expression">-balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_income_other').id))][]</field>
+        <field name="auto_expand_accounts">true</field>
+        <field name="auto_expand_accounts_style_id" ref="mis_template_financial_report.style_details" />
+        <field name="style_id" ref="mis_template_financial_report.style_header_indent" />
+        <field name="type">num</field>
+        <field name="compare_method">diff</field>
+        <field name="accumulation_method">sum</field>
+        <field name="sequence">14</field>
+        <field name="report_id" ref="mis_template_financial_report.report_pl" />
+    </record>
+
+    <record id="kpi_account_tag_purchases" model="mis.report.kpi">
+        <field name="name">account_tag_purchases</field>
+        <field name="description">Ostot</field>
+        <field name="expression">balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_purchases').id))][]</field>
+        <field name="auto_expand_accounts">true</field>
+        <field name="auto_expand_accounts_style_id" ref="mis_template_financial_report.style_details" />
+        <field name="style_id" ref="mis_template_financial_report.style_header_indent" />
+        <field name="type">num</field>
+        <field name="compare_method">diff</field>
+        <field name="accumulation_method">sum</field>
+        <field name="sequence">110</field>
+        <field name="report_id" ref="mis_template_financial_report.report_pl" />
+    </record>
+
+    <record id="kpi_account_tag_purchases_adjustment_items" model="mis.report.kpi">
+        <field name="name">account_tag_purchases_adjustment_items</field>
+        <field name="description">Ostojen oikaisuerät</field>
+        <field name="expression">balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_purchases_adjustment_items').id))][]</field>
+        <field name="auto_expand_accounts">true</field>
+        <field name="auto_expand_accounts_style_id" ref="mis_template_financial_report.style_details" />
+        <field name="style_id" ref="mis_template_financial_report.style_header_indent" />
+        <field name="type">num</field>
+        <field name="compare_method">diff</field>
+        <field name="accumulation_method">sum</field>
+        <field name="sequence">111</field>
+        <field name="report_id" ref="mis_template_financial_report.report_pl" />
+    </record>
+
+    <record id="kpi_account_tag_change_in_inventories" model="mis.report.kpi">
+        <field name="name">account_tag_change_in_inventories</field>
+        <field name="description">Varastojen muutos</field>
+        <field name="expression">balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_change_in_inventories').id))][]</field>
+        <field name="auto_expand_accounts">true</field>
+        <field name="auto_expand_accounts_style_id" ref="mis_template_financial_report.style_details" />
+        <field name="style_id" ref="mis_template_financial_report.style_header_indent" />
+        <field name="type">num</field>
+        <field name="compare_method">diff</field>
+        <field name="accumulation_method">sum</field>
+        <field name="sequence">112</field>
+        <field name="report_id" ref="mis_template_financial_report.report_pl" />
+    </record>
+
+    <record id="kpi_account_tag_external_services" model="mis.report.kpi">
+        <field name="name">account_tag_external_services</field>
+        <field name="description">Ulkopuoliset palvelut</field>
+        <field name="expression">balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_external_services').id))][]</field>
+        <field name="auto_expand_accounts">true</field>
+        <field name="auto_expand_accounts_style_id" ref="mis_template_financial_report.style_details" />
+        <field name="style_id" ref="mis_template_financial_report.style_header_indent" />
+        <field name="type">num</field>
+        <field name="compare_method">diff</field>
+        <field name="accumulation_method">sum</field>
+        <field name="sequence">113</field>
+        <field name="report_id" ref="mis_template_financial_report.report_pl" />
+    </record>
+
+    <!-- Palkat ja palkkiot -->
+    <record id="kpi_account_tag_wages_and_salaries_in_production" model="mis.report.kpi">
+        <field name="name">account_tag_wages_and_salaries_in_production</field>
+        <field name="description">Palkat ja palkkiot</field>
+        <field name="expression">balp[('tag_ids', 'in', (
+            ref('l10n_fi.account_tag_wages_and_salaries_in_production').id,
+            ref('l10n_fi.account_tag_wages_and_salaries_other').id,
+            ))][]</field>
+        <field name="auto_expand_accounts">true</field>
+        <field name="auto_expand_accounts_style_id" ref="mis_template_financial_report.style_details" />
+        <field name="style_id" ref="mis_template_financial_report.style_header_indent" />
+        <field name="type">num</field>
+        <field name="compare_method">diff</field>
+        <field name="accumulation_method">sum</field>
+        <field name="sequence">114</field>
+        <field name="report_id" ref="mis_template_financial_report.report_pl" />
+    </record>
+
+    <!-- Eläkekulut -->
+    <record id="kpi_account_tag_pension_costs_of_production" model="mis.report.kpi">
+        <field name="name">account_tag_pension_costs_of_production</field>
+        <field name="description">Eläkekulut tuotanto</field>
+        <field name="expression">balp[('tag_ids', 'in', (
+            ref('l10n_fi.account_tag_pension_costs_of_production').id,
+            ref('l10n_fi.account_tag_pension_costs_other').id,
+            ))][]</field>
+        <field name="auto_expand_accounts">true</field>
+        <field name="auto_expand_accounts_style_id" ref="mis_template_financial_report.style_details" />
+        <field name="style_id" ref="mis_template_financial_report.style_header_indent" />
+        <field name="type">num</field>
+        <field name="compare_method">diff</field>
+        <field name="accumulation_method">sum</field>
+        <field name="sequence">116</field>
+        <field name="report_id" ref="mis_template_financial_report.report_pl" />
+    </record>
+
+</odoo>
