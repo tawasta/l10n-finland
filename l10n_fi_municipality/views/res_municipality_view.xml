@@ -12,6 +12,7 @@
                   <field name="municipality_form"/>
                   <field name="state_id"/>
                   <field name="state_code"/>
+                  <field name="social_security_area" />
                 </group>
             </form>
         </field>
@@ -27,6 +28,7 @@
           <field name="municipality_form"/>
           <field name="state_id"/>
           <field name="state_code"/>
+          <field name="social_security_area" />
       </tree>
       </field>
   </record>

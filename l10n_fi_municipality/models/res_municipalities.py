@@ -36,6 +36,8 @@ class ResMunicipalities(models.Model):
     state_code = fields.Char(
         string='Province code', help='Province code', related="state_id.code")
 
+    social_security_area = fields.Char(string="Social security area", help="Social security area")
+
     # 3. Default methods
 
     # 4. Compute and search fields, in the same order that fields declaration
