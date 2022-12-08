@@ -39,6 +39,7 @@
     'data': [
         'security/ir.model.access.csv',
         'views/res_municipality_view.xml',
+        "views/res_partner.xml",
         'menu/municipality_menu.xml',
 
     ],
