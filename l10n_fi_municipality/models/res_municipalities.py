@@ -19,7 +19,6 @@ class ResMunicipalities(models.Model):
     # 1. Private attributes
     _name = 'res.municipality'
     _description = "municipalities"
-    _order = 'code'
 
     name = fields.Char(
         string='Municipality name', required=True, help='Municipality name')
