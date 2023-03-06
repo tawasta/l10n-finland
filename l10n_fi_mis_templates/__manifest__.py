@@ -22,7 +22,7 @@
     "summary": "Add subsections for MIS templates",
     "version": "14.0.1.0.0",
     "category": "Localization",
-    "website": "https://gitlab.com/tawasta/odoo/l10n-finland/",
+    "website": "https://gitlab.com/tawasta/odoo/l10n-finland",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,

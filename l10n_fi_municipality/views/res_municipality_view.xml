@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
 
   <record model="ir.ui.view" id="municipalities_form">
@@ -7,11 +7,11 @@
         <field name="arch" type="xml">
             <form string="municipalities">
                 <group>
-                  <field name="code"/>
-                  <field name="name"/>
-                  <field name="municipality_form"/>
-                  <field name="state_id"/>
-                  <field name="state_code"/>
+                  <field name="code" />
+                  <field name="name" />
+                  <field name="municipality_form" />
+                  <field name="state_id" />
+                  <field name="state_code" />
                 </group>
             </form>
         </field>
@@ -22,11 +22,11 @@
       <field name="model">res.municipality</field>
       <field name="arch" type="xml">
         <tree string="municipalities">
-          <field name="code"/>
-          <field name="name"/>
-          <field name="municipality_form"/>
-          <field name="state_id"/>
-          <field name="state_code"/>
+          <field name="code" />
+          <field name="name" />
+          <field name="municipality_form" />
+          <field name="state_id" />
+          <field name="state_code" />
       </tree>
       </field>
   </record>

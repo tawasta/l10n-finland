@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
   <data>
       <!-- Create menuitem -->
@@ -12,9 +12,11 @@
         </field>
     </record>
 
-    <menuitem id="menu_municipalities"
-        name="Municipalities"
-        parent="contacts.menu_localisation"
-        action="municipalities_action"/>
+    <menuitem
+            id="menu_municipalities"
+            name="Municipalities"
+            parent="contacts.menu_localisation"
+            action="municipalities_action"
+        />
     </data>
 </odoo>

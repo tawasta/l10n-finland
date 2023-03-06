@@ -19,24 +19,21 @@
 ##############################################################################
 
 {
-    'name': 'Finland States Latitude and Longitude',
-    'summary': 'Finland States Latitude and Longitude',
-    'version': '14.0.1.0.0',
-    'category': 'Location',
-    'website': 'https://github.com/Tawasta/l10n-finland',
-    'author': 'Tawasta',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'external_dependencies': {
-        'python': [],
-        'bin': []
-    },
-    'depends': [
-        'l10n_fi_province',
+    "name": "Finland States Latitude and Longitude",
+    "summary": "Finland States Latitude and Longitude",
+    "version": "14.0.1.0.0",
+    "category": "Location",
+    "website": "https://gitlab.com/tawasta/odoo/l10n-finland",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "external_dependencies": {"python": [], "bin": []},
+    "depends": [
+        "l10n_fi_province",
     ],
-    'data': [
-        'data/latlng.xml',
+    "data": [
+        "data/latlng.xml",
     ],
-    'demo': [],
+    "demo": [],
 }

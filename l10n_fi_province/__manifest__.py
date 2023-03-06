@@ -19,19 +19,19 @@
 ##############################################################################
 
 {
-    'name': "Finland's provinces",
-    'summary': "All of Finland's provinces",
-    'version': '14.0.1.0.0',
-    'category': 'Localization',
-    'website': 'https://tawasta.fi',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': [
-        'base',
+    "name": "Finland's provinces",
+    "summary": "All of Finland's provinces",
+    "version": "14.0.1.0.0",
+    "category": "Localization",
+    "website": "https://gitlab.com/tawasta/odoo/l10n-finland",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": [
+        "base",
     ],
-    'data': [
-        'data/finnish_province.xml',
+    "data": [
+        "data/finnish_province.xml",
     ],
 }
