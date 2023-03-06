@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
@@ -20,29 +19,27 @@
 ##############################################################################
 
 {
-    'name': 'Finland municipality',
-    'summary': "Finland municipality",
-    'version': '14.0.0.1.0',
-    'category': 'Specific Industry Applications',
-    'website': 'http://www.tawasta.fi',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
+    "name": "Finland municipality",
+    "summary": "Finland municipality",
+    "version": "14.0.0.1.0",
+    "category": "Specific Industry Applications",
+    "website": "https://gitlab.com/tawasta/odoo/l10n-finland",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "external_dependencies": {
+        "python": [],
+        "bin": [],
     },
-    'depends': [
-        'base',
+    "depends": [
+        "base",
     ],
-    'data': [
-        'security/ir.model.access.csv',
-        'views/res_municipality_view.xml',
+    "data": [
+        "security/ir.model.access.csv",
+        "views/res_municipality_view.xml",
         "views/res_partner.xml",
-        'menu/municipality_menu.xml',
-
+        "menu/municipality_menu.xml",
     ],
-    'demo': [
-    ],
+    "demo": [],
 }

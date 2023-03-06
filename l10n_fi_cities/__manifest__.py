@@ -19,20 +19,20 @@
 ##############################################################################
 
 {
-    'name': 'Finnish Cities',
-    'summary': 'List of Finnish cities as res.city',
-    'version': '14.0.1.0.0',
-    'category': 'Location',
-    'website': 'https://github.com/Tawasta/l10n-finland',
-    'author': 'Tawasta',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': [
-        'base_address_city',
-        'l10n_fi_province',
+    "name": "Finnish Cities",
+    "summary": "List of Finnish cities as res.city",
+    "version": "14.0.1.0.0",
+    "category": "Location",
+    "website": "https://gitlab.com/tawasta/odoo/l10n-finland",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": [
+        "base_address_city",
+        "l10n_fi_province",
     ],
-    'data': [
-        'data/cities.xml',
+    "data": [
+        "data/cities.xml",
     ],
 }

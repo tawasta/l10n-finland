@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 # 1. Standard library imports:
 
 # 2. Known third party imports:
@@ -17,26 +15,30 @@ from odoo import fields, models
 class ResMunicipalities(models.Model):
 
     # 1. Private attributes
-    _name = 'res.municipality'
+    _name = "res.municipality"
     _description = "municipalities"
-    _order = 'code'
 
     name = fields.Char(
-        string='Municipality name', required=True, help='Municipality name')
+        string="Municipality name", required=True, help="Municipality name"
+    )
 
-    code = fields.Char(
-        string='Municipality code', help='Municipality code')
+    code = fields.Char(string="Municipality code", help="Municipality code")
 
     municipality_form = fields.Char(
-        string='Municipality form', help='Municipality form')
+        string="Municipality form", help="Municipality form"
+    )
 
     state_id = fields.Many2one(
-        string='Province name', help='Province name', comodel_name="res.country.state")
+        string="Province name", help="Province name", comodel_name="res.country.state"
+    )
 
     state_code = fields.Char(
-        string='Province code', help='Province code', related="state_id.code")
+        string="Province code", help="Province code", related="state_id.code"
+    )
 
-    social_security_area = fields.Char(string="Social security area", help="Social security area")
+    social_security_area = fields.Char(
+        string="Social security area", help="Social security area"
+    )
 
     # 3. Default methods
 
