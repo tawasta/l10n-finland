@@ -28,5 +28,5 @@
     "application": False,
     "installable": True,
     "depends": ["l10n_fi", "mis_template_financial_report"],
-    "data": ["data/mis_report_kpi_pl.xml"],
+    "data": ["data/mis_report_kpi_bs.xml", "data/mis_report_kpi_pl.xml"],
 }
