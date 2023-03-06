@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 # 1. Standard library imports:
 
 # 2. Known third party imports:
@@ -17,8 +15,7 @@ from odoo import fields, models
 class ResPartner(models.Model):
 
     # 1. Private attributes
-    _inherit = 'res.partner'
-
+    _inherit = "res.partner"
 
     municipality_id = fields.Many2one(
         string="Municipality",

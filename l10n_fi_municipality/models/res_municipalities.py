@@ -36,7 +36,9 @@ class ResMunicipalities(models.Model):
         string="Province code", help="Province code", related="state_id.code"
     )
 
-    social_security_area = fields.Char(string="Social security area", help="Social security area")
+    social_security_area = fields.Char(
+        string="Social security area", help="Social security area"
+    )
 
     # 3. Default methods
 

@@ -35,14 +35,11 @@
     "depends": [
         "base",
     ],
-    'data': [
-        'security/ir.model.access.csv',
-        'views/res_municipality_view.xml',
+    "data": [
+        "security/ir.model.access.csv",
+        "views/res_municipality_view.xml",
         "views/res_partner.xml",
-        'menu/municipality_menu.xml',
-
-    ],
-    'demo': [
+        "menu/municipality_menu.xml",
     ],
     "demo": [],
 }
