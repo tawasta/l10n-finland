@@ -17,7 +17,6 @@ class ResMunicipalities(models.Model):
     # 1. Private attributes
     _name = "res.municipality"
     _description = "municipalities"
-    _order = "code"
 
     name = fields.Char(
         string="Municipality name", required=True, help="Municipality name"
@@ -36,6 +35,8 @@ class ResMunicipalities(models.Model):
     state_code = fields.Char(
         string="Province code", help="Province code", related="state_id.code"
     )
+
+    social_security_area = fields.Char(string="Social security area", help="Social security area")
 
     # 3. Default methods
 
