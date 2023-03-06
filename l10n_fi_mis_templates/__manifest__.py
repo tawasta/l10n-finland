@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
+#    Copyright 2022 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -17,23 +17,16 @@
 #    along with this program. If not, see http://www.gnu.org/licenses/agpl.html
 #
 ##############################################################################
-
 {
-    "name": "Finland States Latitude and Longitude",
-    "summary": "Finland States Latitude and Longitude",
+    "name": "Profit & Loss / Balance sheet MIS templates subsections",
+    "summary": "Add subsections for MIS templates",
     "version": "14.0.1.0.0",
-    "category": "Location",
+    "category": "Localization",
     "website": "https://gitlab.com/tawasta/odoo/l10n-finland",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "external_dependencies": {"python": [], "bin": []},
-    "depends": [
-        "l10n_fi_province",
-    ],
-    "data": [
-        "data/latlng.xml",
-    ],
-    "demo": [],
+    "depends": ["l10n_fi", "mis_template_financial_report"],
+    "data": ["data/mis_report_kpi_bs.xml", "data/mis_report_kpi_pl.xml"],
 }

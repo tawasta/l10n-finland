@@ -22,7 +22,7 @@
     "summary": "Automatically compute VAT from business code, if applicable",
     "version": "14.0.1.0.0",
     "category": "CRM",
-    "website": "https://gitlab.com/tawasta/odoo/l10n-finland/",
+    "website": "https://gitlab.com/tawasta/odoo/l10n-finland",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,

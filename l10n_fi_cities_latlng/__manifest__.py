@@ -19,19 +19,19 @@
 ##############################################################################
 
 {
-    'name': 'Finnish Cities Latitude Longitude',
-    'summary': 'Finnish cities latitude and longitude',
-    'version': '14.0.1.0.0',
-    'category': 'Location',
-    'website': 'https://github.com/Tawasta/l10n-finland',
-    'author': 'Tawasta',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': [
-        'l10n_fi_cities',
+    "name": "Finnish Cities Latitude Longitude",
+    "summary": "Finnish cities latitude and longitude",
+    "version": "14.0.1.0.0",
+    "category": "Location",
+    "website": "https://gitlab.com/tawasta/odoo/l10n-finland",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": [
+        "l10n_fi_cities",
     ],
-    'data': [
-        'data/latlng.xml',
+    "data": [
+        "data/latlng.xml",
     ],
 }
