@@ -527,7 +527,7 @@
         >VOITTO (TAPPIO) ENNEN TILINPÄÄTÖSSIIRTOJA JA VEROJA</field>
         <field
             name="expression"
-        >pl_to_report - account_tag_income_from_shares_in_group - account_tag_income_from_associated_company - account_tag_investment_income_other_current_assets_group - account_tag_other_interest_and_financial_income - account_tag_impairment_losses - account_tag_financial_expenses</field>
+        >pl_to_report + account_tag_income_from_shares_in_group + account_tag_income_from_associated_company + account_tag_investment_income_other_current_assets_group + account_tag_other_interest_and_financial_income + account_tag_impairment_losses + account_tag_financial_expenses</field>
         <field name="auto_expand_accounts">false</field>
         <field
             name="auto_expand_accounts_style_id"
@@ -551,7 +551,7 @@
         <field name="description">Poistoeron muutos</field>
         <field
             name="expression"
-        >-balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_change_in_depreciation_difference').id))][]</field>
+        >balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_change_in_depreciation_difference').id))][]</field>
         <field name="auto_expand_accounts">true</field>
         <field
             name="auto_expand_accounts_style_id"
@@ -573,7 +573,7 @@
         <field name="description">Vapaaehtoisten varausten muutos</field>
         <field
             name="expression"
-        >-balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_change_in_provisions').id))][]</field>
+        >balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_change_in_provisions').id))][]</field>
         <field name="auto_expand_accounts">true</field>
         <field
             name="auto_expand_accounts_style_id"
@@ -619,7 +619,7 @@
         <field name="description">Tuloverot</field>
         <field
             name="expression"
-        >-balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_taxes_for_the_period').id, ref('l10n_fi.account_tag_deferred_taxes').id))][]</field>
+        >balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_taxes_for_the_period').id, ref('l10n_fi.account_tag_deferred_taxes').id))][]</field>
         <field name="auto_expand_accounts">true</field>
         <field
             name="auto_expand_accounts_style_id"
@@ -643,7 +643,7 @@
         <field name="description">Muut välittömät verot</field>
         <field
             name="expression"
-        >-balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_other_tax').id))][]</field>
+        >balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_other_tax').id))][]</field>
         <field name="auto_expand_accounts">true</field>
         <field
             name="auto_expand_accounts_style_id"
