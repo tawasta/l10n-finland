@@ -133,7 +133,7 @@
         <field name="description">Ostot</field>
         <field
             name="expression"
-        >balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_purchases').id))][]</field>
+        >-balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_purchases').id))][]</field>
         <field name="auto_expand_accounts">true</field>
         <field
             name="auto_expand_accounts_style_id"
@@ -155,7 +155,7 @@
         <field name="description">Ostojen oikaisuerät</field>
         <field
             name="expression"
-        >balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_purchases_adjustment_items').id))][]</field>
+        >-balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_purchases_adjustment_items').id))][]</field>
         <field name="auto_expand_accounts">true</field>
         <field
             name="auto_expand_accounts_style_id"
@@ -177,7 +177,7 @@
         <field name="description">Varastojen muutos</field>
         <field
             name="expression"
-        >balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_change_in_inventories').id))][]</field>
+        >-balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_change_in_inventories').id))][]</field>
         <field name="auto_expand_accounts">true</field>
         <field
             name="auto_expand_accounts_style_id"
@@ -199,7 +199,7 @@
         <field name="description">Ulkopuoliset palvelut</field>
         <field
             name="expression"
-        >balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_external_services').id))][]</field>
+        >-balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_external_services').id))][]</field>
         <field name="auto_expand_accounts">true</field>
         <field
             name="auto_expand_accounts_style_id"
@@ -226,7 +226,7 @@
         <field name="description">Palkat ja palkkiot</field>
         <field
             name="expression"
-        >balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_wages_and_salaries_in_production').id, ref('l10n_fi.account_tag_wages_and_salaries_other').id))][]</field>
+        >-balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_wages_and_salaries_in_production').id, ref('l10n_fi.account_tag_wages_and_salaries_other').id))][]</field>
         <field name="auto_expand_accounts">true</field>
         <field
             name="auto_expand_accounts_style_id"
@@ -248,7 +248,7 @@
         <field name="description">Henkilöstösivukulut</field>
         <field
             name="expression"
-        >balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_pension_costs_of_production').id, ref('l10n_fi.account_tag_pension_costs_other').id))][]</field>
+        >-balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_pension_costs_of_production').id, ref('l10n_fi.account_tag_pension_costs_other').id))][]</field>
         <field name="auto_expand_accounts">true</field>
         <field
             name="auto_expand_accounts_style_id"
@@ -270,7 +270,7 @@
         <field name="description">Muut henkilösivukulut</field>
         <field
             name="expression"
-        >balp[('tag_ids', 'in', ( ref('l10n_fi.account_tag_other_additional_expenses_production').id, ref('l10n_fi.account_tag_other_additional_expenses_other').id))][]</field>
+        >-balp[('tag_ids', 'in', ( ref('l10n_fi.account_tag_other_additional_expenses_production').id, ref('l10n_fi.account_tag_other_additional_expenses_other').id))][]</field>
         <field name="auto_expand_accounts">true</field>
         <field
             name="auto_expand_accounts_style_id"
@@ -294,7 +294,7 @@
         <field name="description">Suunnitelman mukaiset poistot</field>
         <field
             name="expression"
-        >balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_depreciation_according_to_plan').id))][]</field>
+        >-balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_depreciation_according_to_plan').id))][]</field>
         <field name="auto_expand_accounts">true</field>
         <field
             name="auto_expand_accounts_style_id"
@@ -318,7 +318,7 @@
         >Arvonalentumiset pysyvien vastaavien hyödykkeistä</field>
         <field
             name="expression"
-        >balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_impairment_of_fixed_assets').id, ref('l10n_fi.account_tag_impairment_losses_financial_assets_current_assets').id))][]</field>
+        >-balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_impairment_of_fixed_assets').id, ref('l10n_fi.account_tag_impairment_losses_financial_assets_current_assets').id))][]</field>
         <field name="auto_expand_accounts">true</field>
         <field
             name="auto_expand_accounts_style_id"
@@ -342,7 +342,7 @@
         <field name="description">Liiketoiminnan muut kulut</field>
         <field
             name="expression"
-        >balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_personnel_other').id, ref('l10n_fi.account_tag_premises_costs').id, ref('l10n_fi.account_tag_vehicle_expenses').id, ref('l10n_fi.account_tag_it_expenses').id, ref('l10n_fi.account_tag_in_machinery_and_equipment_expenses').id, ref('l10n_fi.account_tag_travelling').id, ref('l10n_fi.account_tag_representation').id, ref('l10n_fi.account_tag_selling_expenses').id, ref('l10n_fi.account_tag_marketing_expenses').id, ref('l10n_fi.account_tag_research_and_development').id, ref('l10n_fi.account_tag_administrative_services').id, ref('l10n_fi.account_tag_other_administrative_expenses').id, ref('l10n_fi.account_tag_other_fixed_costs').id))][]</field>
+        >-balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_personnel_other').id, ref('l10n_fi.account_tag_premises_costs').id, ref('l10n_fi.account_tag_vehicle_expenses').id, ref('l10n_fi.account_tag_it_expenses').id, ref('l10n_fi.account_tag_in_machinery_and_equipment_expenses').id, ref('l10n_fi.account_tag_travelling').id, ref('l10n_fi.account_tag_representation').id, ref('l10n_fi.account_tag_selling_expenses').id, ref('l10n_fi.account_tag_marketing_expenses').id, ref('l10n_fi.account_tag_research_and_development').id, ref('l10n_fi.account_tag_administrative_services').id, ref('l10n_fi.account_tag_other_administrative_expenses').id, ref('l10n_fi.account_tag_other_fixed_costs').id))][]</field>
         <field name="auto_expand_accounts">true</field>
         <field
             name="auto_expand_accounts_style_id"
@@ -381,7 +381,7 @@
         <field name="description">Tuotot osuuksista saman konsernin yrityksissä</field>
         <field
             name="expression"
-        >balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_income_from_shares_in_group').id))][]</field>
+        >-balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_income_from_shares_in_group').id))][]</field>
         <field name="auto_expand_accounts">true</field>
         <field
             name="auto_expand_accounts_style_id"
@@ -403,7 +403,7 @@
         <field name="description">Tuotot osuuksista omistusyhteysyrityksissä</field>
         <field
             name="expression"
-        >balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_income_from_associated_company').id))][]</field>
+        >-balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_income_from_associated_company').id))][]</field>
         <field name="auto_expand_accounts">true</field>
         <field
             name="auto_expand_accounts_style_id"
@@ -432,7 +432,7 @@
         >Tuotot muista pysyvien vastaavien sijoituksista</field>
         <field
             name="expression"
-        >balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_investment_income_other_current_assets_group').id, ref('l10n_fi.account_tag_other_investment_income_from_fixed_assets').id))][]</field>
+        >-balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_investment_income_other_current_assets_group').id, ref('l10n_fi.account_tag_other_investment_income_from_fixed_assets').id))][]</field>
         <field name="auto_expand_accounts">true</field>
         <field
             name="auto_expand_accounts_style_id"
@@ -457,7 +457,7 @@
         <field name="description">Muut korko- ja rahoitustuotot</field>
         <field
             name="expression"
-        >balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_interest_and_financial_income_from_group').id, ref('l10n_fi.account_tag_other_interest_and_financial_income').id))][]</field>
+        >-balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_interest_and_financial_income_from_group').id, ref('l10n_fi.account_tag_other_interest_and_financial_income').id))][]</field>
         <field name="auto_expand_accounts">true</field>
         <field
             name="auto_expand_accounts_style_id"
@@ -479,7 +479,7 @@
         <field name="description">Arvonalentumiset</field>
         <field
             name="expression"
-        >balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_impairment_losses_on_investments_in_fixed_assets').id))][]</field>
+        >-balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_impairment_losses_on_investments_in_fixed_assets').id))][]</field>
         <field name="auto_expand_accounts">true</field>
         <field
             name="auto_expand_accounts_style_id"
@@ -501,7 +501,7 @@
         <field name="description">Korkokulut ja muut rahoituskulut</field>
         <field
             name="expression"
-        >balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_financial_expenses_group').id, ref('l10n_fi.account_tag_other_financial_expenses').id))][]</field>
+        >-balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_financial_expenses_group').id, ref('l10n_fi.account_tag_other_financial_expenses').id))][]</field>
         <field name="auto_expand_accounts">true</field>
         <field
             name="auto_expand_accounts_style_id"
@@ -551,7 +551,7 @@
         <field name="description">Poistoeron muutos</field>
         <field
             name="expression"
-        >balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_change_in_depreciation_difference').id))][]</field>
+        >-balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_change_in_depreciation_difference').id))][]</field>
         <field name="auto_expand_accounts">true</field>
         <field
             name="auto_expand_accounts_style_id"
@@ -573,7 +573,7 @@
         <field name="description">Vapaaehtoisten varausten muutos</field>
         <field
             name="expression"
-        >balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_change_in_provisions').id))][]</field>
+        >-balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_change_in_provisions').id))][]</field>
         <field name="auto_expand_accounts">true</field>
         <field
             name="auto_expand_accounts_style_id"
@@ -595,7 +595,7 @@
         <field name="description">Konserniavustus</field>
         <field
             name="expression"
-        >balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_group_contribution').id))][]</field>
+        >-balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_group_contribution').id))][]</field>
         <field name="auto_expand_accounts">true</field>
         <field
             name="auto_expand_accounts_style_id"
@@ -619,7 +619,7 @@
         <field name="description">Tuloverot</field>
         <field
             name="expression"
-        >balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_taxes_for_the_period').id, ref('l10n_fi.account_tag_deferred_taxes').id))][]</field>
+        >-balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_taxes_for_the_period').id, ref('l10n_fi.account_tag_deferred_taxes').id))][]</field>
         <field name="auto_expand_accounts">true</field>
         <field
             name="auto_expand_accounts_style_id"
@@ -643,7 +643,7 @@
         <field name="description">Muut välittömät verot</field>
         <field
             name="expression"
-        >balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_other_tax').id))][]</field>
+        >-balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_other_tax').id))][]</field>
         <field name="auto_expand_accounts">true</field>
         <field
             name="auto_expand_accounts_style_id"
