@@ -181,7 +181,7 @@
     <!-- region Rahat ja pankkisaamiset -->
     <record id="kpi_account_tag_liquidity" model="mis.report.kpi">
         <field name="name">account_tag_liquidity</field>
-        <field name="description">Rahoitusarvopaperit</field>
+        <field name="description">Rahat ja pankkisaamiset</field>
         <field
             name="expression"
         >bale[('tag_ids', 'in', (ref('l10n_fi.account_tag_shares_in_the_consolidated_financial_securities').id,ref('l10n_fi.account_tag_other_shares_and_marketable_securities').id,ref('l10n_fi.account_tag_other_financial_assets').id))][]</field>
