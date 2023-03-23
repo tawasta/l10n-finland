@@ -230,7 +230,7 @@
         <field name="description">Oma pääoma</field>
         <field
             name="expression"
-        >-balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_stock_capital').id,ref('l10n_fi.account_tag_share_premium_account').id,ref('l10n_fi.account_tag_revaluation_reserve').id,ref('l10n_fi.account_tag_the_invested_unrestricted_equity_fund').id,ref('l10n_fi.account_tag_reserve').id,ref('l10n_fi.account_tag_the_articles_of_association_or_fund_under_the_rules').id,ref('l10n_fi.account_tag_the_fair_value_reserve').id,ref('l10n_fi.account_tag_other_reserves').id,ref('l10n_fi.account_tag_retained_earnings').id,ref('l10n_fi.account_tag_profit_for_the_period').id,ref('l10n_fi.account_tag_depreciation_difference').id))][]</field>
+        >-bale[('tag_ids', 'in', (ref('l10n_fi.account_tag_stock_capital').id,ref('l10n_fi.account_tag_share_premium_account').id,ref('l10n_fi.account_tag_revaluation_reserve').id,ref('l10n_fi.account_tag_the_invested_unrestricted_equity_fund').id,ref('l10n_fi.account_tag_reserve').id,ref('l10n_fi.account_tag_the_articles_of_association_or_fund_under_the_rules').id,ref('l10n_fi.account_tag_the_fair_value_reserve').id,ref('l10n_fi.account_tag_other_reserves').id,ref('l10n_fi.account_tag_retained_earnings').id,ref('l10n_fi.account_tag_profit_for_the_period').id,ref('l10n_fi.account_tag_depreciation_difference').id))][]</field>
         <field name="auto_expand_accounts">true</field>
         <field
             name="auto_expand_accounts_style_id"
