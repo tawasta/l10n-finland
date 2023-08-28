@@ -19,7 +19,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
-[l10n_fi_business_code_auto_vat](l10n_fi_business_code_auto_vat/) | 14.0.1.0.0 |  | Automatically compute VAT from business code, if applicable
+[l10n_fi_business_code_auto_vat](l10n_fi_business_code_auto_vat/) | 14.0.1.1.0 |  | Automatically compute VAT from business code, if applicable
 [l10n_fi_cities](l10n_fi_cities/) | 14.0.1.0.0 |  | List of Finnish cities as res.city
 [l10n_fi_cities_latlng](l10n_fi_cities_latlng/) | 14.0.1.0.0 |  | Finnish cities latitude and longitude
 [l10n_fi_country_groups](l10n_fi_country_groups/) | 14.0.1.0.0 |  | Adds Country Groups
