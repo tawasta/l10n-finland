@@ -20,7 +20,7 @@
 {
     "name": "Autofill VAT code from business code",
     "summary": "Automatically compute VAT from business code, if applicable",
-    "version": "14.0.1.1.0",
+    "version": "14.0.1.1.1",
     "category": "CRM",
     "website": "https://gitlab.com/tawasta/odoo/l10n-finland",
     "author": "Tawasta",

@@ -26,7 +26,7 @@ class ResPartner(models.Model):
     def write(self, vals):
         res = super().write(vals)
         if vals.get("vat") or vals.get("business_code"):
-            self.record.onchange_business_code_update_vat()
+            self.onchange_business_code_update_vat()
 
         return res
 
