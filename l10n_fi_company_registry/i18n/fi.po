@@ -1,0 +1,44 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_fi_company_registry
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20231120\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-10 15:18+0000\n"
+"PO-Revision-Date: 2024-01-10 17:19+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.2\n"
+
+#. module: l10n_fi_company_registry
+#: model:ir.model,name:l10n_fi_company_registry.model_res_partner
+msgid "Contact"
+msgstr "Kontakti"
+
+#. module: l10n_fi_company_registry
+#. odoo-python
+#: code:addons/l10n_fi_company_registry/models/res_partner.py:0
+#, python-format
+msgid "Please check the given Company ID."
+msgstr "Tarkista antamasi y-tunnus."
+
+#. module: l10n_fi_company_registry
+#. odoo-python
+#: code:addons/l10n_fi_company_registry/models/res_partner.py:0
+#, python-format
+msgid "Your Company ID validation digit is invalid."
+msgstr "Y-tunnuksesi tarkistenumero on virheellinen."
+
+#. module: l10n_fi_company_registry
+#. odoo-python
+#: code:addons/l10n_fi_company_registry/models/res_partner.py:0
+#, python-format
+msgid "Your business id is invalid. Please use format 1234567-1"
+msgstr "Y-tunnus ei ole kelvollinen. Käytä muotoa 1234567-1"
