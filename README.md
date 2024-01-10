@@ -6,4 +6,11 @@ Futural
 Odoo Futural Bundles
 
 [//]: # (addons)
+
+Available addons
+----------------
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[l10n_fi_company_registry](l10n_fi_company_registry/) | 17.0.1.0.0 |  | Adds validation and auto-fills company registry from VAT
+
 [//]: # (end addons)
