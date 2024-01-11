@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0-20231120\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-11 07:18+0000\n"
-"PO-Revision-Date: 2024-01-11 09:19+0200\n"
+"POT-Creation-Date: 2024-01-11 07:45+0000\n"
+"PO-Revision-Date: 2024-01-11 09:46+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fi\n"
@@ -26,19 +26,19 @@ msgstr "Kontakti"
 #. odoo-python
 #: code:addons/l10n_fi_company_registry/models/res_partner.py:0
 #, python-format
-msgid "Please check the given Company ID."
-msgstr "Tarkista antamasi y-tunnus."
+msgid "Please check the given Company Registry."
+msgstr "Tarkista antamasi Yritystunnus."
 
 #. module: l10n_fi_company_registry
 #. odoo-python
 #: code:addons/l10n_fi_company_registry/models/res_partner.py:0
 #, python-format
-msgid "Your Company ID validation digit is invalid."
-msgstr "Y-tunnuksesi tarkistenumero on virheellinen."
+msgid "Your Company Registry is invalid. Please use format 1234567-1"
+msgstr "Yritystunnus on virheellinen. Ole hyvä ja käytä muotoa 1234567-1"
 
 #. module: l10n_fi_company_registry
 #. odoo-python
 #: code:addons/l10n_fi_company_registry/models/res_partner.py:0
 #, python-format
-msgid "Your business id is invalid. Please use format 1234567-1"
-msgstr "Y-tunnus ei ole kelvollinen. Käytä muotoa 1234567-1"
+msgid "Your Company Registry validation digit is invalid."
+msgstr "Yritystunnuksen tarkistenumero on virheellinen."
