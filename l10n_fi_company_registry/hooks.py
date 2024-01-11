@@ -1,5 +1,4 @@
 def post_init_hook(env):
-    print("HOOKETY HOOK")
     # Migrate data from old "business_code"-field
     # This is done in hook instead of migration script, as this is a new standalone module
     env.cr.execute(

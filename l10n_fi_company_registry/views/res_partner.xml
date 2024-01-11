@@ -5,14 +5,13 @@
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form" />
         <field name="arch" type="xml">
-            <!-- TODO: move next to vat (label not showing up) -->
-            <field name="function" position="before">
+            <xpath expr="//span[@name='address_name']" position="before">
                 <field
                     name="company_registry"
                     position="move"
                     invisible="not is_company"
                 />
-            </field>
+            </xpath>
         </field>
     </record>
 
