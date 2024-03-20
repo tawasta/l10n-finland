@@ -94,7 +94,7 @@ class ResPartner(models.Model):
 
         # Validate business id formal format
         if not re.match("^[0-9]{7}[-][0-9]{1}$", company_registry):
-            msg = _("Your business id is invalid. Please use format 1234567-1")
+            msg = _("Your Company Registry is invalid. Please use format 1234567-1")
             raise ValidationError(msg)
 
         # The formal format is ok, check the validation number
@@ -117,7 +117,7 @@ class ResPartner(models.Model):
         if int(modulo) != int(validation_bit):
             # The validation bit doesn't match
             msg = "%s %s" % (
-                _("Your Company ID validation digit is invalid."),
-                _("Please check the given Company ID."),
+                _("Your Company Registry validation digit is invalid."),
+                _("Please check the given Company Registry."),
             )
             raise ValidationError(msg)
