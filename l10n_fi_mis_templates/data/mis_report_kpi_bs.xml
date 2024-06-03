@@ -184,7 +184,7 @@
         <field name="description">Rahat ja pankkisaamiset</field>
         <field
             name="expression"
-        >-balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_liquidity').id,ref('l10n_fi.account_tag_shares_in_the_consolidated_financial_securities').id,ref('l10n_fi.account_tag_other_shares_and_marketable_securities').id,ref('l10n_fi.account_tag_other_financial_assets').id))][]</field>
+        >-balp[('tag_ids', 'in', (ref('l10n_fi.account_tag_liquidity').id))][]</field>
         <field name="auto_expand_accounts">true</field>
         <field
             name="auto_expand_accounts_style_id"

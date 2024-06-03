@@ -23,7 +23,7 @@ addon | version | maintainers | summary
 [l10n_fi_cities](l10n_fi_cities/) | 14.0.1.0.0 |  | List of Finnish cities as res.city
 [l10n_fi_cities_latlng](l10n_fi_cities_latlng/) | 14.0.1.0.0 |  | Finnish cities latitude and longitude
 [l10n_fi_country_groups](l10n_fi_country_groups/) | 14.0.1.0.0 |  | Adds Country Groups
-[l10n_fi_mis_templates](l10n_fi_mis_templates/) | 14.0.1.0.0 |  | Add subsections for MIS templates
+[l10n_fi_mis_templates](l10n_fi_mis_templates/) | 14.0.1.0.1 |  | Add subsections for MIS templates
 [l10n_fi_municipality](l10n_fi_municipality/) | 14.0.0.1.0 |  | Finland municipality
 [l10n_fi_province](l10n_fi_province/) | 14.0.1.0.0 |  | All of Finland's provinces
 [l10n_fi_states_latlng](l10n_fi_states_latlng/) | 14.0.1.0.0 |  | Finland States Latitude and Longitude

@@ -20,7 +20,7 @@
 {
     "name": "Profit & Loss / Balance sheet MIS templates subsections",
     "summary": "Add subsections for MIS templates",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "Localization",
     "website": "https://gitlab.com/tawasta/odoo/l10n-finland",
     "author": "Tawasta",
