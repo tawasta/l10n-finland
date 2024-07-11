@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data noupdate="1">
+        <record id="tax_report_sales_25_5" model="account.tax.report.line">
+            <field name="name">25.5 %:n vero</field>
+            <field name="code">sale_25_5</field>
+            <field name="tag_name">fi_301</field>
+            <field name="sequence">-1</field>
+            <field name="report_id" ref="l10n_fi.vat_report" />
+            <field name="parent_id" ref="l10n_fi.tax_report_sales_title" />
+        </record>
+
+        <!--
+        <record id="tax_report_tax_payable" model="account.tax.report.line">
+            <field name="formula">sale_25_5 + sale_24 + sale_14 + sale_10 + goods_eu + service_eu + goods_no_eu + construct - deductible</field>
+        </record>
+        -->
+    </data>
+</odoo>
