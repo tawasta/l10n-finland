@@ -28,6 +28,7 @@
     "application": False,
     "installable": True,
     "depends": ["l10n_fi"],
+    "post_init_hook": "init_tax25_data",
     "data": [
         "data/account_tax_group_data.xml",
         "data/account_tax_report_line.xml",
