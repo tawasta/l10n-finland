@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Åland -->
+    <record id="aland_sales_goods_25_5" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="l10n_fi.aland" />
+        <field name="tax_src_id" ref="tax_dom_sales_goods_25_5" />
+        <field name="tax_dest_id" ref="l10n_fi.aland_sales_0" />
+    </record>
+
+    <record id="aland_sales_service_25_5" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="l10n_fi.aland" />
+        <field name="tax_src_id" ref="tax_dom_sales_service_25_5" />
+        <field name="tax_dest_id" ref="l10n_fi.aland_sales_0" />
+    </record>
+
+    <record id="aland_purchase_goods_25_5" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="l10n_fi.aland" />
+        <field name="tax_src_id" ref="tax_dom_purchase_goods_25_5" />
+        <field name="tax_dest_id" ref="tax_non_eu_purchase_goods_25_5" />
+    </record>
+
+    <record
+        id="aland_purchase_service_25_5"
+        model="account.fiscal.position.tax.template"
+    >
+        <field name="position_id" ref="l10n_fi.aland" />
+        <field name="tax_src_id" ref="tax_dom_purchase_service_25_5" />
+        <field name="tax_dest_id" ref="l10n_fi.tax_dom_purchase_0" />
+    </record>
+
+    <!-- EU -->
+    <record id="eu_sales_goods_25_5" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="l10n_fi.eu" />
+        <field name="tax_src_id" ref="tax_dom_sales_goods_25_5" />
+        <field name="tax_dest_id" ref="l10n_fi.tax_eu_sales_goods_0" />
+    </record>
+
+    <record id="eu_sales_service_25_5" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="l10n_fi.eu" />
+        <field name="tax_src_id" ref="tax_dom_sales_service_25_5" />
+        <field name="tax_dest_id" ref="l10n_fi.tax_eu_sales_service_0" />
+    </record>
+
+    <record id="eu_purchase_goods_25_5" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="l10n_fi.eu" />
+        <field name="tax_src_id" ref="tax_dom_purchase_goods_25_5" />
+        <field name="tax_dest_id" ref="tax_eu_purchase_goods_25_5" />
+    </record>
+
+    <record id="eu_purchase_service_25_5" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="l10n_fi.eu" />
+        <field name="tax_src_id" ref="tax_dom_purchase_service_25_5" />
+        <field name="tax_dest_id" ref="tax_eu_purchase_service_25_5" />
+    </record>
+
+    <!-- Non EU -->
+    <record id="non_eu_sale_25_5" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="l10n_fi.non_eu" />
+        <field name="tax_src_id" ref="tax_dom_sales_goods_25_5" />
+        <field name="tax_dest_id" ref="l10n_fi.vat0export" />
+    </record>
+
+    <record
+        id="non_eu_purchase_goods_25_5"
+        model="account.fiscal.position.tax.template"
+    >
+        <field name="position_id" ref="l10n_fi.non_eu" />
+        <field name="tax_src_id" ref="tax_dom_purchase_goods_25_5" />
+        <field name="tax_dest_id" ref="tax_non_eu_purchase_goods_25_5" />
+    </record>
+
+    <record id="non_eu_purchase_goods_14" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="l10n_fi.non_eu" />
+        <field name="tax_src_id" ref="l10n_fi.tax_dom_purchase_goods_14" />
+        <field name="tax_dest_id" ref="tax_non_eu_purchase_goods_25_5" />
+    </record>
+
+   <record id="non_eu_purchase_goods_10" model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="l10n_fi.non_eu" />
+        <field name="tax_src_id" ref="l10n_fi.tax_dom_purchase_goods_10" />
+        <field name="tax_dest_id" ref="tax_non_eu_purchase_goods_25_5" />
+    </record>
+
+    <record
+        id="non_eu_purchase_service_25_5"
+        model="account.fiscal.position.tax.template"
+    >
+        <field name="position_id" ref="l10n_fi.non_eu" />
+        <field name="tax_src_id" ref="tax_dom_purchase_service_25_5" />
+        <field name="tax_dest_id" ref="l10n_fi.tax_dom_purchase_0" />
+    </record>
+
+    <record
+        id="non_eu_purchase_brutto_25_5"
+        model="account.fiscal.position.tax.template"
+    >
+        <field name="position_id" ref="l10n_fi.non_eu" />
+        <field name="tax_src_id" ref="tax_dom_purchase_brutto_25_5" />
+        <field name="tax_dest_id" ref="l10n_fi.tax_dom_purchase_0" />
+    </record>
+
+    <record
+        id="construction_fiscpos_tax_1"
+        model="account.fiscal.position.tax.template"
+    >
+        <field name="position_id" ref="l10n_fi.construction" />
+        <field name="tax_src_id" ref="tax_construct_purchase_25_5" />
+        <field name="tax_dest_id" ref="tax_construct_purchase_25_5_finland" />
+    </record>
+
+    <record
+        id="construction_fiscpos_tax_2"
+        model="account.fiscal.position.tax.template"
+    >
+        <field name="position_id" ref="l10n_fi.construction" />
+        <field name="tax_src_id" ref="tax_dom_sales_goods_25_5" />
+        <field name="tax_dest_id" ref="l10n_fi.tax_construct_sales_0" />
+    </record>
+</odoo>
