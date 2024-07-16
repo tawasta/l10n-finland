@@ -65,7 +65,7 @@ class AccountChartTemplate(models.Model):
                 fp_xml_id = fp_template.get_external_id()[fp_template.id].replace(
                     "l10n_fi.", "l10n_fi.{}_".format(company.id)
                 )
-                fp = self.env.ref(fp_xml_id)
+                fp = self.env.ref(fp_xml_id, raise_if_not_found=False)
                 if not fp:
                     continue
 
