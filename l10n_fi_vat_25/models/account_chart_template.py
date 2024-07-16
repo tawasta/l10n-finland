@@ -66,6 +66,8 @@ class AccountChartTemplate(models.Model):
                     "l10n_fi.", "l10n_fi.{}_".format(company.id)
                 )
                 fp = self.env.ref(fp_xml_id)
+                if not fp:
+                    continue
 
                 _logger.info(
                     _(
