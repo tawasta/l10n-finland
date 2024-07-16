@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_order_form" model="ir.ui.view">
+        <field name="name">sale.order.form.tax.warning</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+
+            <field name="currency_id" position="after">
+                <field name="incorrect_tax_warning" invisible="1" />
+            </field>
+            <xpath expr="//header" position="after">
+                <div
+                    class="alert alert-danger"
+                    role="alert"
+                    attrs="{'invisible': [('incorrect_tax_warning', '=', False)]}"
+                >
+                Used tax might be incorrect! You should use VAT 25,5% for items delivered after 1.9.2024.
+                </div>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

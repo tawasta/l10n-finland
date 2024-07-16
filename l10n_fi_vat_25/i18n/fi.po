@@ -1,0 +1,77 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_fi_vat_25
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-16 08:21+0000\n"
+"PO-Revision-Date: 2024-07-16 08:21+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_fi_vat_25
+#: model:ir.model,name:l10n_fi_vat_25.model_account_chart_template
+msgid "Account Chart Template"
+msgstr "Tilikarttamalli"
+
+#. module: l10n_fi_vat_25
+#: code:addons/l10n_fi_vat_25/models/account_chart_template.py:0
+#, python-format
+msgid "Added 25,5% taxes"
+msgstr "25,5% verot lisätty"
+
+#. module: l10n_fi_vat_25
+#: code:addons/l10n_fi_vat_25/models/account_chart_template.py:0
+#, python-format
+msgid "Changed the default purchase tax from 24% to 25,5%"
+msgstr "Oston oletusvero vaihdettu 24 prosentista 25,5 prosenttiin"
+
+#. module: l10n_fi_vat_25
+#: code:addons/l10n_fi_vat_25/models/account_chart_template.py:0
+#, python-format
+msgid "Changed the default sales tax from 24% to 25,5%"
+msgstr "Myynnin oletusvero vaihdettu 24 prosentista 25,5 prosenttiin"
+
+#. module: l10n_fi_vat_25
+#: code:addons/l10n_fi_vat_25/models/account_chart_template.py:0
+#, python-format
+msgid "Could not find fiscal position '{}'"
+msgstr "Verokantaa '{}' ei löydy"
+
+#. module: l10n_fi_vat_25
+#: model:ir.model.fields,field_description:l10n_fi_vat_25.field_account_chart_template__display_name
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: l10n_fi_vat_25
+#: model:ir.model.fields,field_description:l10n_fi_vat_25.field_account_chart_template__id
+msgid "ID"
+msgstr "Tunniste (ID)"
+
+#. module: l10n_fi_vat_25
+#: model:ir.model.fields,field_description:l10n_fi_vat_25.field_account_chart_template____last_update
+msgid "Last Modified on"
+msgstr "Viimeksi muokattu"
+
+#. module: l10n_fi_vat_25
+#: code:addons/l10n_fi_vat_25/models/account_chart_template.py:0
+#, python-format
+msgid "Updated '{}' tax mappings for fiscal position '{}'"
+msgstr ""
+
+#. module: l10n_fi_vat_25
+#: code:addons/l10n_fi_vat_25/models/account_chart_template.py:0
+#, python-format
+msgid "Updating '{}' tax mappings for fiscal position '{}'"
+msgstr ""
+
+#. module: l10n_fi_vat_25
+#: model:account.tax.group,name:l10n_fi_vat_25.tax_group_25_5
+msgid "VAT 25.5%"
+msgstr "ALV 25,5%"
