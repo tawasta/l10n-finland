@@ -27,6 +27,8 @@ addon | version | maintainers | summary
 [l10n_fi_municipality](l10n_fi_municipality/) | 14.0.0.1.0 |  | Finland municipality
 [l10n_fi_province](l10n_fi_province/) | 14.0.1.0.0 |  | All of Finland's provinces
 [l10n_fi_states_latlng](l10n_fi_states_latlng/) | 14.0.1.0.0 |  | Finland States Latitude and Longitude
+[l10n_fi_vat_25](l10n_fi_vat_25/) | 14.0.1.0.0 |  | Adds 25.5% tax and fiscal position mappings
+[l10n_fi_vat_25_warning](l10n_fi_vat_25_warning/) | 14.0.1.0.0 |  | Shows warning if trying to use VAT 24% after 1.9.2024
 
 [//]: # (end addons)
 
