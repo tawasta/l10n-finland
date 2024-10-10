@@ -13,7 +13,7 @@ FINNISH_ID_DIGIT_MULTIPLIERS = [7, 9, 10, 5, 8, 4, 2]
 class ResPartner(models.Model):
     _inherit = "res.partner"
 
-    @api.constrains(
+    @api.onchange(
         "company_registry",
         "country_id",
     )
