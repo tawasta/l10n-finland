@@ -5,12 +5,20 @@
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form" />
         <field name="arch" type="xml">
+
+
+            <!-- Move company_registry field to precede the address -->
             <xpath expr="//span[@name='address_name']" position="before">
-                <field
-                    name="company_registry"
-                    position="move"
-                    invisible="not is_company"
-                />
+                <field name="company_registry" position="move" />
+            </xpath>
+
+            <!-- Override the original invisible-condition from original field -->
+            <field name="company_registry" position="attributes">
+                <attribute name="invisible">not is_company</attribute>
+            </field>
+
+            <xpath expr="//form//form//field[@name='name']" position="after">
+                <field name="company_registry" invisible="type == 'contact'" />
             </xpath>
         </field>
     </record>
