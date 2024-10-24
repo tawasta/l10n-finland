@@ -32,6 +32,8 @@ class ResPartner(models.Model):
                 continue
 
             country_code = record.country_id.code
+            if not country_code:
+                continue
 
             # Remove country code from company registry, if present
             company_registry = company_registry.replace(country_code, "")
