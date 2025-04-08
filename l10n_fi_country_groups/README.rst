@@ -48,7 +48,7 @@ Images
 Contributors
 ------------
 
-* Joona Isoaho <joona.isoaho@tawasta.fi>
+* Joona Isoaho <joona.isoaho@futural.fi>
 
 
 Maintainer

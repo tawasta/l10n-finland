@@ -9,7 +9,7 @@ def post_init_hook(env):
             env.cr.execute(
                 "UPDATE res_partner SET company_registry = business_code WHERE company_registry IS NULL"
             )
-        except UndefinedColumn:
+        except UndefinedColumn:  # pylint: disable=except-pass
             # If column doesn't exist, do nothing
             pass
 
