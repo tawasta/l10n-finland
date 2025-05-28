@@ -19,9 +19,9 @@ class ResPartner(models.Model):
     )
     def _check_company_registry(self):
         for record in self:
+            record._compute_vat_from_company_registry()
             record.validate_company_registry()
 
-    @api.onchange("company_registry", "country_id")
     def _compute_vat_from_company_registry(self):
         # When company registry is filled, autofill VAT
         for record in self:
