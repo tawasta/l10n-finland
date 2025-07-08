@@ -1,1 +1,1 @@
-from . import operator
+from . import operator as operator
