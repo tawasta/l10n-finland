@@ -1,4 +1,4 @@
-# Copyright 2017 Oy Tawasta OS Technologies Ltd.
+# Copyright 2017 Futural Oy
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 import re
@@ -19,9 +19,9 @@ class ResPartner(models.Model):
     )
     def _check_company_registry(self):
         for record in self:
+            record._compute_vat_from_company_registry()
             record.validate_company_registry()
 
-    @api.onchange("company_registry", "country_id")
     def _compute_vat_from_company_registry(self):
         # When company registry is filled, autofill VAT
         for record in self:
@@ -32,6 +32,8 @@ class ResPartner(models.Model):
                 continue
 
             country_code = record.country_id.code
+            if not country_code:
+                continue
 
             # Remove country code from company registry, if present
             company_registry = company_registry.replace(country_code, "")

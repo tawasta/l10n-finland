@@ -1,7 +1,7 @@
 ##############################################################################
 #
-#    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2017 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Author: Futural Oy
+#    Copyright 2017 Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,10 +19,10 @@
 {
     "name": "Company registry (business id) for Finnish companies",
     "summary": "Adds validation and auto-fills company registry from VAT",
-    "version": "17.0.1.0.4",
+    "version": "17.0.1.0.5",
     "category": "CRM",
-    "website": "https://gitlab.com/tawasta/odoo/l10n-finland",
-    "author": "Tawasta, Odoo Community Association (OCA)",
+    "website": "https://github.com/tawasta/l10n-finland",
+    "author": "Futural, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
