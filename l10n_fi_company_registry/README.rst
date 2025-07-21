@@ -29,9 +29,9 @@ Successor for l10n_fi_business_code and l10n_fi_business_code_validate
 
 Supported countries:
 
-- Finland
+-  Finland
 
-  - https://www.vero.fi/globalassets/tietoa-verohallinnosta/ohjelmistokehittajille/yritys--ja-yhteis%C3%B6tunnuksen-ja-henkil%C3%B6tunnuksen-tarkistusmerkin-tarkistuslaskenta.pdf
+   -  https://www.vero.fi/globalassets/tietoa-verohallinnosta/ohjelmistokehittajille/yritys--ja-yhteis%C3%B6tunnuksen-ja-henkil%C3%B6tunnuksen-tarkistusmerkin-tarkistuslaskenta.pdf
 
 **Table of contents**
 
@@ -49,13 +49,13 @@ Changelog
 17.0.1.0.0 (2024-01-10)
 -----------------------
 
-- [MIGRATION] from 14.0 to 17.0
-- [ADD] Auto-fill company registry from VAT
+-  [MIGRATION] from 14.0 to 17.0
+-  [ADD] Auto-fill company registry from VAT
 
 14.0.1.0.0 (2021-10-01)
 -----------------------
 
-- [MIGRATION] from 12.0 to 14.0
+-  [MIGRATION] from 12.0 to 14.0
 
 Bug Tracker
 ===========
@@ -78,7 +78,7 @@ Authors
 Contributors
 ------------
 
-- Jarmo Kortetjärvi <jarmo.kortetjarvi@futural.fi>
+-  Jarmo Kortetjärvi <jarmo.kortetjarvi@futural.fi>
 
 Other credits
 -------------
@@ -86,8 +86,8 @@ Other credits
 Images
 ~~~~~~
 
-- Odoo Community Association:
-  `Icon <https://github.com/OCA/maintainer-tools/blob/master/template/module/static/description/icon.svg>`__.
+-  Odoo Community Association:
+   `Icon <https://github.com/OCA/maintainer-tools/blob/master/template/module/static/description/icon.svg>`__.
 
 Maintainers
 -----------
