@@ -19,7 +19,7 @@
 {
     "name": "Company registry (business id) for Finnish companies",
     "summary": "Adds validation and auto-fills company registry from VAT",
-    "version": "17.0.1.0.5",
+    "version": "17.0.1.0.6",
     "category": "CRM",
     "website": "https://github.com/tawasta/l10n-finland",
     "author": "Futural, Odoo Community Association (OCA)",
