@@ -13,6 +13,22 @@ FINNISH_ID_DIGIT_MULTIPLIERS = [7, 9, 10, 5, 8, 4, 2]
 class ResPartner(models.Model):
     _inherit = "res.partner"
 
+    @api.model
+    def create(self, values):
+        res = super().create(values)
+        if "vat" in values:
+            res._compute_company_registry_from_vat()
+
+        return res
+
+    def write(self, values):
+        res = super().write(values)
+
+        if "vat" in values:
+            self._compute_company_registry_from_vat()
+
+        return res
+
     @api.onchange(
         "company_registry",
         "country_id",
@@ -57,7 +73,11 @@ class ResPartner(models.Model):
         # Compute company registry when VAT is given without company registry
         for record in self:
             country_code = record.country_id.code
-            if country_code == "FI" and record.vat and not record.company_registry:
+            if (
+                country_code == "FI"
+                and record.vat
+                and record.company_registry in [False, record.vat]
+            ):
                 vat = record.vat.replace(country_code, "")
                 record.company_registry = "{}-{}".format(vat[0:-1], vat[-1:])
 
