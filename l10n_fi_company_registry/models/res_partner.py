@@ -42,7 +42,9 @@ class ResPartner(models.Model):
         # When company registry is filled, autofill VAT
         for record in self:
             company_registry = record.company_registry
-            if not company_registry:
+            if not company_registry and not (
+                record.commercial_partner_id and record.commercial_partner_id.vat
+            ):
                 # Unset VAT
                 record.vat = False
                 continue
