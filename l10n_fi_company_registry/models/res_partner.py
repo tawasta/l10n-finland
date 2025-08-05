@@ -16,7 +16,10 @@ class ResPartner(models.Model):
     @api.model
     def create(self, values):
         res = super().create(values)
-        if "vat" in values:
+
+        if "company_registry" in values:
+            res._compute_vat_from_company_registry()
+        elif "vat" in values:
             res._compute_company_registry_from_vat()
 
         return res
@@ -24,7 +27,9 @@ class ResPartner(models.Model):
     def write(self, values):
         res = super().write(values)
 
-        if "vat" in values:
+        if "company_registry" in values:
+            self._compute_vat_from_company_registry()
+        elif "vat" in values:
             self._compute_company_registry_from_vat()
 
         return res
