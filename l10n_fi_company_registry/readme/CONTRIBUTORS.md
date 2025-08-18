@@ -1,1 +1,0 @@
-- Jarmo Kortetjärvi \<<jarmo.kortetjarvi@futural.fi>\>

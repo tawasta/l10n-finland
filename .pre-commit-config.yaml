@@ -52,7 +52,7 @@ repos:
       - id: oca-gen-addon-readme
         args:
           - --addons-dir=.
-          - --branch=17.0
+          - --branch=18.0
           - --org-name=Tawasta
           - --repo-name=l10n-finland
           - --if-source-changed
