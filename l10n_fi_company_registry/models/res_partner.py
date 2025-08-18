@@ -58,23 +58,24 @@ class ResPartner(models.Model):
             if not country_code:
                 continue
 
-            # Remove country code from company registry, if present
-            company_registry = company_registry.replace(country_code, "")
-            if record.country_id.code == "FI":
-                # Reformat business id from 12345671 to 1234567-1
-                if re.match("^[0-9]{8}$", company_registry):
-                    record.company_registry = "{}-{}".format(
-                        company_registry[:7], company_registry[7:]
-                    )
+            if company_registry:
+                # Remove country code from company registry, if present
+                company_registry = company_registry.replace(country_code, "")
+                if record.country_id.code == "FI":
+                    # Reformat business id from 12345671 to 1234567-1
+                    if re.match("^[0-9]{8}$", company_registry):
+                        record.company_registry = "{}-{}".format(
+                            company_registry[:7], company_registry[7:]
+                        )
 
-                # Construct the VAT code:
-                # Country code + company registry without dash
-                # E.g. 1234567-1 -> FI12345671
-                vat = "{}{}".format(
-                    record.country_id.code,
-                    company_registry.replace("-", ""),
-                )
-                record.vat = vat
+                    # Construct the VAT code:
+                    # Country code + company registry without dash
+                    # E.g. 1234567-1 -> FI12345671
+                    vat = "{}{}".format(
+                        record.country_id.code,
+                        company_registry.replace("-", ""),
+                    )
+                    record.vat = vat
 
     def _compute_company_registry_from_vat(self):
         # Compute company registry when VAT is given without company registry
