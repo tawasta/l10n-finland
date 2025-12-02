@@ -87,7 +87,7 @@ class ResPartner(models.Model):
                 and record.company_registry in [False, record.vat]
             ):
                 vat = record.vat.replace(country_code, "")
-                record.company_registry = "{}-{}".format(vat[0:-1], vat[-1:])
+                record.company_registry = f"{vat[0:-1]}-{vat[-1:]}"
 
     def validate_business_code(self):
         # Deprecated. For backwards-compatibility
@@ -136,7 +136,9 @@ class ResPartner(models.Model):
         validation_bit = company_registry_number[7:8]
 
         # Test the validation bit
-        for number, multiplier in zip(company_registry_number[0:7], multipliers):
+        for number, multiplier in zip(
+            company_registry_number[0:7], multipliers, strict=True
+        ):
             validation_multiplier += multiplier * int(number)
         modulo = validation_multiplier % 11
 
@@ -146,8 +148,6 @@ class ResPartner(models.Model):
 
         if int(modulo) != int(validation_bit):
             # The validation bit doesn't match
-            msg = "%s %s" % (
-                _("Your Company Registry validation digit is invalid."),
-                _("Please check the given Company Registry."),
-            )
-            raise ValidationError(msg)
+            m1 = _("Your Company Registry validation digit is invalid.")
+            m2 = _("Please check the given Company Registry.")
+            raise ValidationError(f"{m1} {m2}")

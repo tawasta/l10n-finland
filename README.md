@@ -12,8 +12,9 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
-[l10n_fi_company_registry](l10n_fi_company_registry/) | 17.0.1.0.4 |  | Adds validation and auto-fills company registry from VAT
+[l10n_fi_company_registry](l10n_fi_company_registry/) | 17.0.1.0.8 |  | Adds validation and auto-fills company registry from VAT
 [l10n_fi_country_groups](l10n_fi_country_groups/) | 17.0.1.0.0 |  | Adds Country Groups
+[l10n_fi_edicode_display_fix](l10n_fi_edicode_display_fix/) | 17.0.1.0.0 |  | Fix TypeError in eInvoice Operator _compute_display_name
 [l10n_fi_mis_templates](l10n_fi_mis_templates/) | 17.0.1.0.1 |  | Add subsections for MIS templates
 
 [//]: # (end addons)
