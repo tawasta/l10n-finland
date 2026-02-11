@@ -102,7 +102,7 @@ class ResPartner(models.Model):
                 # "_company_registry_validate_{lowercase_country_code}"
                 # e.g. "_company_registry_validate_fi"
                 validator_method_name = (
-                    "_company_registry_validate_%s" % record.country_id.code.lower()
+                    f"_company_registry_validate_{record.country_id.code.lower()}"
                 )
 
                 # Check if the method exists
@@ -152,4 +152,4 @@ class ResPartner(models.Model):
             # The validation bit doesn't match
             m1 = self.env._("Your Company Registry validation digit is invalid.")
             m2 = self.env._("Please check the given Company Registry.")
-            raise ValidationError(f"{m1} {m2}")
+            raise ValidationError(m1 + m2)
