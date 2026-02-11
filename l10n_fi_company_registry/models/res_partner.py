@@ -3,7 +3,7 @@
 
 import re
 
-from odoo import _, api, models
+from odoo import api, models
 from odoo.exceptions import ValidationError
 
 # Number-space specific multipliers
@@ -124,7 +124,9 @@ class ResPartner(models.Model):
 
         # Validate business id formal format
         if not re.match("^[0-9]{7}[-][0-9]{1}$", company_registry):
-            msg = _("Your Company Registry is invalid. Please use format 1234567-1")
+            msg = self.env._(
+                "Your Company Registry is invalid. Please use format 1234567-1"
+            )
             raise ValidationError(msg)
 
         # The formal format is ok, check the validation number
@@ -148,6 +150,6 @@ class ResPartner(models.Model):
 
         if int(modulo) != int(validation_bit):
             # The validation bit doesn't match
-            m1 = _("Your Company Registry validation digit is invalid.")
-            m2 = _("Please check the given Company Registry.")
+            m1 = self.env._("Your Company Registry validation digit is invalid.")
+            m2 = self.env._("Please check the given Company Registry.")
             raise ValidationError(f"{m1} {m2}")
