@@ -64,8 +64,8 @@ class ResPartner(models.Model):
                 if record.country_id.code == "FI":
                     # Reformat business id from 12345671 to 1234567-1
                     if re.match("^[0-9]{8}$", company_registry):
-                        record.company_registry = "{}-{}".format(
-                            company_registry[:7], company_registry[7:]
+                        record.company_registry = (
+                            f"{company_registry[:7]}-{company_registry[7:]}"
                         )
 
                     # Construct the VAT code:
