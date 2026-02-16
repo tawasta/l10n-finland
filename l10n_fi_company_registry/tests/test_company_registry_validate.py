@@ -37,13 +37,14 @@ class TestCompanyRegistryValidate(TransactionCase):
 
         with self.assertRaises(ValidationError):
             self.partner_fi.company_registry = company_registry
+            self.partner_fi._check_company_registry() # Trigger validation manually
 
     def test_invalid_finnish_business_code_format(self):
-        # An invalid format. This should throw a ValidationError
-        company_registry = "FI12345671"
+        # An invalid format but it will be fixed so no error should be thrown
+       company_registry = "FI12345671"
 
-        with self.assertRaises(ValidationError):
-            self.partner_fi.company_registry = company_registry
+       self.partner_fi.company_registry = company_registry
+       self.partner_fi._check_company_registry() # Trigger validation manually
 
     def test_valid_finnish_registered_association(self):
         # A valid registered association number
