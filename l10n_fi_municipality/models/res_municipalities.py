@@ -13,7 +13,6 @@ from odoo import fields, models
 
 
 class ResMunicipalities(models.Model):
-
     # 1. Private attributes
     _name = "res.municipality"
     _description = "municipalities"

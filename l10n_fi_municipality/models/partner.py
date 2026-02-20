@@ -13,7 +13,6 @@ from odoo import fields, models
 
 
 class ResPartner(models.Model):
-
     # 1. Private attributes
     _inherit = "res.partner"
 
