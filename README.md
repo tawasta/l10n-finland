@@ -16,5 +16,6 @@ addon | version | maintainers | summary
 [l10n_fi_country_groups](l10n_fi_country_groups/) | 17.0.1.0.0 |  | Adds Country Groups
 [l10n_fi_edicode_display_fix](l10n_fi_edicode_display_fix/) | 17.0.1.0.0 |  | Fix TypeError in eInvoice Operator _compute_display_name
 [l10n_fi_mis_templates](l10n_fi_mis_templates/) | 17.0.1.0.1 |  | Add subsections for MIS templates
+[l10n_fi_municipality](l10n_fi_municipality/) | 17.0.0.1.0 |  | Finland municipality
 
 [//]: # (end addons)
