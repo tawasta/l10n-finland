@@ -1,0 +1,1 @@
+Add auxiliary company support in Finvoice
