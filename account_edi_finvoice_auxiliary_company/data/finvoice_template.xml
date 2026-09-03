@@ -2,11 +2,7 @@
 <odoo>
   <template id="export_finvoice" inherit_id="account_edi_finvoice.export_finvoice">
     <xpath expr="//t[@t-set='company']" position="after">
-      <t
-        t-if="record.aux_company_id"
-        t-set="auxiliary_company"
-        t-value="record.aux_company_id"
-      />
+      <t t-if="record.aux_company_id" t-set="company" t-value="record.aux_company_id" />
     </xpath>
   </template>
 </odoo>
