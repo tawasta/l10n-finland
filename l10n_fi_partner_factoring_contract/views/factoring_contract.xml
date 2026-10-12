@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+  <record id="factoring_contract_view_form" model="ir.ui.view">
+    <field name="name">factoring.contract.view.form.inherit</field>
+    <field name="model">factoring.contract</field>
+    <field
+      name="inherit_id"
+      ref="partner_factoring_contract.factoring_contract_view_form"
+    />
+    <field name="arch" type="xml">
+      <field name="identifier" position="after">
+        <field name="identifier_in_payment_reference" invisible="not identifier" />
+      </field>
+    </field>
+  </record>
+</odoo>
