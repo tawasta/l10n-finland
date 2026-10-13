@@ -1,0 +1,54 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_fi_partner_factoring_contract
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0-20260817\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-12 13:01+0000\n"
+"PO-Revision-Date: 2026-10-12 16:01+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.9\n"
+
+#. module: l10n_fi_partner_factoring_contract
+#: model:ir.model.fields,field_description:l10n_fi_partner_factoring_contract.field_account_move__display_name
+#: model:ir.model.fields,field_description:l10n_fi_partner_factoring_contract.field_factoring_contract__display_name
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: l10n_fi_partner_factoring_contract
+#: model:ir.model,name:l10n_fi_partner_factoring_contract.model_factoring_contract
+msgid "Factoring Contract"
+msgstr "Factoring-sopimus"
+
+#. module: l10n_fi_partner_factoring_contract
+#: model:ir.model.fields,field_description:l10n_fi_partner_factoring_contract.field_account_move__id
+#: model:ir.model.fields,field_description:l10n_fi_partner_factoring_contract.field_factoring_contract__id
+msgid "ID"
+msgstr "Tunnus"
+
+#. module: l10n_fi_partner_factoring_contract
+#: model:ir.model.fields,field_description:l10n_fi_partner_factoring_contract.field_factoring_contract__identifier_in_payment_reference
+msgid "Identifier in Payment Reference"
+msgstr "Tunniste maksuviitteessä"
+
+#. module: l10n_fi_partner_factoring_contract
+#: model:ir.model.fields,help:l10n_fi_partner_factoring_contract.field_factoring_contract__identifier_in_payment_reference
+msgid ""
+"Indicates whether the factoring agreement identifier should be prefixed to "
+"the payment reference."
+msgstr ""
+"Ilmaisee, tuleeko factoring-sopimuksen tunniste lisätä maksutunnisteen "
+"eteen."
+
+#. module: l10n_fi_partner_factoring_contract
+#: model:ir.model,name:l10n_fi_partner_factoring_contract.model_account_move
+msgid "Journal Entry"
+msgstr "Päiväkirjan kirjaus"
