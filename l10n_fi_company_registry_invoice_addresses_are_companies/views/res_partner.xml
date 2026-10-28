@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<odoo>
+    <record id="view_partner_form" model="ir.ui.view">
+        <field
+            name="name"
+        >res.partner.form.inherit.invoice.address.company.registry</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="l10n_fi_company_registry.view_partner_form" />
+        <field name="arch" type="xml">
+            <!-- Only the main form field, not the one in the child_ids inline form.
+            An invoice address gets the company ID before it is a company. -->
+            <xpath
+                expr="//field[@name='company_registry'][not(ancestor::field)]"
+                position="attributes"
+            >
+                <attribute
+                    name="invisible"
+                >not is_company and type != 'invoice'</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>
