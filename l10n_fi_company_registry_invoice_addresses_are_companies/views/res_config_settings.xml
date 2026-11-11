@@ -22,6 +22,12 @@
                         confirm="All invoice addresses that have their own Company ID will be marked as companies. Continue?"
                     />
                 </setting>
+                <setting
+                    id="suggest_company_invoice_address"
+                    help="On sale orders and other documents, suggest the partner's invoice address that is a company, if it has exactly one"
+                >
+                    <field name="suggest_company_invoice_address" />
+                </setting>
             </block>
         </field>
     </record>
