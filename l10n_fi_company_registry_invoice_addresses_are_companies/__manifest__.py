@@ -21,7 +21,7 @@
 {
     "name": "Partner: Mark Invoice Addresses with Company ID as Companies",
     "summary": "Invoice addresses with a different company ID are set as companies",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.1.0",
     "category": "CRM",
     "website": "https://github.com/tawasta/l10n-finland",
     "author": "Futural",
