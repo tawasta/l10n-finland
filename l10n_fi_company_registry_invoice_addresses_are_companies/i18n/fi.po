@@ -58,3 +58,17 @@ msgid ""
 msgstr ""
 "Merkitse yrityksiksi olemassa olevat laskutusosoitteet, joilla on oma "
 "yritystunnus"
+
+#. module: l10n_fi_company_registry_invoice_addresses_are_companies
+#: model_terms:ir.ui.view,arch_db:l10n_fi_company_registry_invoice_addresses_are_companies.res_config_settings_view_form
+msgid ""
+"On sale orders and other documents, suggest the partner's invoice address "
+"that is a company, if it has exactly one"
+msgstr ""
+"Ehdota myyntitilauksilla ja muissa asiakirjoissa kumppanin yritysmuotoista "
+"laskutusosoitetta, jos sillä on niitä täsmälleen yksi"
+
+#. module: l10n_fi_company_registry_invoice_addresses_are_companies
+#: model:ir.model.fields,field_description:l10n_fi_company_registry_invoice_addresses_are_companies.field_res_config_settings__suggest_company_invoice_address
+msgid "Suggest Company Invoice Address"
+msgstr "Salli yritysmuotoisen laskutusosoitteen ehdottaminen"

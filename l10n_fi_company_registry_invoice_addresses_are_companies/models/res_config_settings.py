@@ -1,8 +1,12 @@
-from odoo import _, models
+from odoo import _, fields, models
 
 
 class ResConfigSettings(models.TransientModel):
     _inherit = "res.config.settings"
+
+    suggest_company_invoice_address = fields.Boolean(
+        config_parameter="l10n_fi_company_registry_invoice_addresses_are_companies.suggest_company_invoice_address"
+    )
 
     def action_mark_invoice_addresses_as_company(self):
         """

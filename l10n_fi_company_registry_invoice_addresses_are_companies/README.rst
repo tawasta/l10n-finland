@@ -18,7 +18,12 @@ Partner: Mark Invoice Addresses with Company ID as Companies
 
 Configuration
 =============
-* None needed
+* Optionally: go to Settings > General Settings > Contacts and enable
+  "Suggest Company Invoice Address". Odoo then suggests the partner's
+  invoice address that is a company as the invoice address, e.g. on sale
+  orders, if the partner has exactly one such address. The suggestion
+  can be changed on the document. Without the setting, Odoo suggests the
+  partner itself.
 
 Usage
 =====
@@ -34,9 +39,11 @@ Known issues / Roadmap
 * An invoice address with its own Company ID is kept as a company. Changing
   it back to an individual, removing the Company ID or changing the address
   type does not revert it automatically.
-* Odoo does not automatically select company-type child addresses on sale
-  orders. Select the invoice address manually, or set a default invoice
-  address with the module `partner_default_invoice_address`.
+* Odoo does not suggest company-type invoice addresses (e.g. on sale
+  orders) when the setting "Suggest Company Invoice Address" is off, or
+  when the partner has several of them. 
+* Only the partner's own invoice addresses are considered, not those of
+  its parent company.
 * Note that with this module, an invoice address is its own commercial partner.
   Its invoices, receivables and follow-ups are on the address itself, and
   accounting settings such as payment terms and fiscal position are not
